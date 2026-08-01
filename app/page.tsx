@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "14+", label: "years in software engineering" },
-  { value: "7M+", label: "daily users served by recent platforms" },
-  { value: "62%", label: "production issue reduction through RCA" },
-  { value: "40%", label: "shipment cost reduction with SenseEngine" },
+  { value: "14+", label: "years leading backend, platform and architecture delivery" },
+  { value: "7M+", label: "daily users supported across distributed product platforms" },
+  { value: "62%", label: "production issue reduction through observability and RCA" },
+  { value: "40%", label: "shipment cost reduction through SenseEngine intelligence" },
 ];
 
 const strengths = [
