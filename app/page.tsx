@@ -1,3 +1,12 @@
+import { useEffect, useState } from "react";
+
+const visitorCounter = {
+  namespace: "premtomar.com",
+  name: "portfolio-visitors",
+  baseUrl: "https://api.counterapi.dev/v1",
+  storageKey: "premtomar:portfolio:visit-recorded",
+};
+
 const metrics = [
   { value: "14+", label: "years in software engineering" },
   { value: "7M+", label: "daily users served by recent platforms" },
@@ -117,6 +126,104 @@ const practices = [
     text: "I use AI tools for small, reviewable diff-set generation, refactoring analysis, unit-test scaffolding, static-analysis triage and performance investigation, while retaining ownership through review, tests and profiling.",
   },
 ];
+
+type CounterPayload = {
+  count?: number;
+  value?: number;
+  data?: {
+    count?: number;
+    value?: number;
+  };
+};
+
+function counterUrl(increment: boolean) {
+  const namespace = encodeURIComponent(visitorCounter.namespace);
+  const name = encodeURIComponent(visitorCounter.name);
+  return `${visitorCounter.baseUrl}/${namespace}/${name}${increment ? "/up" : ""}`;
+}
+
+function readCounterValue(payload: CounterPayload) {
+  const rawValue =
+    payload.count ?? payload.value ?? payload.data?.count ?? payload.data?.value;
+  const value = Number(rawValue);
+
+  return Number.isFinite(value) ? value : null;
+}
+
+function hasRecordedVisit() {
+  try {
+    return window.localStorage.getItem(visitorCounter.storageKey) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function markVisitRecorded() {
+  try {
+    window.localStorage.setItem(visitorCounter.storageKey, "true");
+  } catch {
+    // The counter still works when storage is unavailable; repeat visits may be counted.
+  }
+}
+
+function VisitorCounter() {
+  const [count, setCount] = useState("Syncing");
+  const [label, setLabel] = useState("visitor counter");
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function syncCounter() {
+      const shouldIncrement = !hasRecordedVisit();
+      const response = await fetch(counterUrl(shouldIncrement), {
+        cache: "no-store",
+      });
+
+      if (!response.ok) {
+        throw new Error("Visitor counter request failed");
+      }
+
+      const payload = (await response.json()) as CounterPayload;
+      const value = readCounterValue(payload);
+
+      if (value === null) {
+        throw new Error("Visitor counter response missing count");
+      }
+
+      if (shouldIncrement) {
+        markVisitRecorded();
+      }
+
+      if (!cancelled) {
+        setCount(new Intl.NumberFormat("en-IN").format(value));
+        setLabel("portfolio visits");
+      }
+    }
+
+    syncCounter().catch(() => {
+      if (!cancelled) {
+        setCount("Live");
+        setLabel("counter temporarily unavailable");
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <aside className="visitor-counter" aria-label="Portfolio visitor count" aria-live="polite">
+      <span className="visitor-prompt" aria-hidden="true">
+        %
+      </span>
+      <div>
+        <strong>{count}</strong>
+        <span>{label}</span>
+      </div>
+    </aside>
+  );
+}
 
 export default function Home() {
   const whatsappUrl =
@@ -355,16 +462,19 @@ export default function Home() {
             opportunity.
           </p>
         </div>
-        <div className="contact-actions">
-          <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
-            Chat on WhatsApp
-          </a>
-          <a className="button button-secondary" href="mailto:prem.tomar.blr@gmail.com">
-            prem.tomar.blr@gmail.com
-          </a>
-          <a className="button button-quiet" href="tel:+919606379003">
-            +91 9606379003
-          </a>
+        <div className="contact-side">
+          <VisitorCounter />
+          <div className="contact-actions">
+            <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
+              Chat on WhatsApp
+            </a>
+            <a className="button button-secondary" href="mailto:prem.tomar.blr@gmail.com">
+              prem.tomar.blr@gmail.com
+            </a>
+            <a className="button button-quiet" href="tel:+919606379003">
+              +91 9606379003
+            </a>
+          </div>
         </div>
       </section>
     </main>
