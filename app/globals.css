@@ -936,57 +936,6 @@ h3 {
   justify-content: flex-end;
 }
 
-.contact-side {
-  display: grid;
-  gap: 16px;
-  justify-items: end;
-}
-
-.visitor-counter {
-  display: grid;
-  width: min(100%, 340px);
-  grid-template-columns: 30px minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-  border: 1px solid rgba(21, 21, 21, 0.14);
-  border-left: 4px solid var(--teal);
-  border-radius: 8px;
-  background:
-    linear-gradient(120deg, rgba(0, 107, 103, 0.18), transparent 48%),
-    #151713;
-  padding: 16px 18px;
-  color: #f9f7f1;
-  box-shadow: 0 16px 42px rgba(31, 34, 31, 0.1);
-}
-
-.visitor-prompt {
-  display: inline-grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 6px;
-  background: rgba(155, 216, 199, 0.12);
-  color: #9bd8c7;
-  font-family: var(--font-code);
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.visitor-counter strong {
-  display: block;
-  color: #f7f0df;
-  font-family: var(--font-code);
-  font-size: 1.35rem;
-  line-height: 1;
-}
-
-.visitor-counter span:last-child {
-  display: block;
-  margin-top: 6px;
-  color: rgba(249, 247, 241, 0.72);
-  font-size: 0.82rem;
-}
-
 @media (max-width: 1080px) {
   .hero-content {
     margin-top: 120px;
@@ -1118,9 +1067,6 @@ h3 {
     justify-content: flex-start;
   }
 
-  .contact-side {
-    justify-items: start;
-  }
 }
 
 @media (max-width: 560px) {
@@ -1150,10 +1096,6 @@ h3 {
   }
 
   .button {
-    width: 100%;
-  }
-
-  .visitor-counter {
     width: 100%;
   }
 
