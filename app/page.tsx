@@ -359,8 +359,8 @@ export default function Home() {
           <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
             Chat on WhatsApp
           </a>
-          <a className="button button-secondary" href="mailto:me@premtomar.com">
-            me@premtomar.com
+          <a className="button button-secondary" href="mailto:prem.tomar.blr@gmail.com">
+            prem.tomar.blr@gmail.com
           </a>
           <a className="button button-quiet" href="tel:+919606379003">
             +91 9606379003
