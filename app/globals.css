@@ -325,28 +325,55 @@ h3 {
   color: var(--ink);
 }
 
-.scope-band {
+.metrics {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   max-width: 1160px;
   margin: -44px auto 0;
+  overflow: visible;
   border: 1px solid rgba(249, 247, 241, 0.14);
   border-radius: 8px;
   background:
-    linear-gradient(120deg, rgba(0, 107, 103, 0.36), transparent 42%),
-    linear-gradient(270deg, rgba(180, 107, 27, 0.18), transparent 46%),
+    linear-gradient(120deg, rgba(0, 107, 103, 0.42), transparent 38%),
+    linear-gradient(270deg, rgba(180, 107, 27, 0.22), transparent 42%),
     #181b17;
-  padding: 26px 30px;
   box-shadow: var(--shadow);
 }
 
-.scope-band p {
-  max-width: 1020px;
-  margin: 0;
-  color: rgba(249, 247, 241, 0.84);
-  font-size: 1.02rem;
-  font-weight: 700;
-  line-height: 1.48;
+.metric {
+  display: flex;
+  min-height: 154px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 22px 24px 24px;
+  border-left: 1px solid rgba(249, 247, 241, 0.16);
+  background: transparent;
+}
+
+.metric:first-child {
+  border-left: 0;
+}
+
+.metric strong {
+  display: block;
+  flex: 0 0 auto;
+  color: #d8f3e6;
+  font-family: var(--font-code);
+  font-size: clamp(1.45rem, 2.1vw, 2.15rem);
+  line-height: 1.08;
+  white-space: normal;
+}
+
+.metric span {
+  display: block;
+  margin-top: 0;
+  color: rgba(249, 247, 241, 0.82);
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.4;
 }
 
 .section {
@@ -931,7 +958,7 @@ h3 {
   }
 
   .section,
-  .scope-band,
+  .metrics,
   .contact-section {
     margin-left: 24px;
     margin-right: 24px;
@@ -976,6 +1003,7 @@ h3 {
     grid-template-columns: repeat(3, 98px);
   }
 
+  .metrics,
   .system-grid,
   .intro-grid,
   .code-grid,
@@ -1016,9 +1044,17 @@ h3 {
     padding-right: 18px;
   }
 
-  .scope-band {
+  .metrics {
     margin-top: -38px;
-    padding: 22px;
+  }
+
+  .metric {
+    border-left: 0;
+    border-top: 1px solid rgba(249, 247, 241, 0.14);
+  }
+
+  .metric:first-child {
+    border-top: 0;
   }
 
   .code-card {
@@ -1077,7 +1113,7 @@ h3 {
   }
 
   .section,
-  .scope-band,
+  .metrics,
   .contact-section {
     margin-left: 18px;
     margin-right: 18px;

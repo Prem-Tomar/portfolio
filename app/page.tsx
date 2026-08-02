@@ -1,3 +1,10 @@
+const metrics = [
+  { value: "Architecture", label: "backend, platform and cloud-native systems shaped from design to production" },
+  { value: "Scale", label: "millions of daily users and transactions across distributed systems" },
+  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards, logistics, transportation and social media" },
+  { value: "Reusable IP", label: "generic systems, accelerators and reference implementations that became benchmark code" },
+];
+
 const strengths = [
   "Java / Spring Boot service architecture",
   "Go services and concurrency-focused modernization",
@@ -167,12 +174,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="scope-band" aria-label="Architecture scope">
-        <p>
-          Architected systems across insurance, health, fintech, telecom, broadcasting, sports,
-          gift cards, logistics, transportation and social media, with focus on reusable IP,
-          scalable delivery, performance, cost discipline and release velocity.
-        </p>
+      <section className="metrics" aria-label="Architecture achievement highlights">
+        {metrics.map((item) => (
+          <div className="metric" key={item.label}>
+            <strong>{item.value}</strong>
+            <span>{item.label}</span>
+          </div>
+        ))}
       </section>
 
       <section className="section intro-section">
