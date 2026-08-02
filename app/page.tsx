@@ -1,8 +1,8 @@
 const metrics = [
   { value: "14+", label: "years architecting backend, platform and cloud-native systems" },
-  { value: "7M+", label: "daily users on media, sports, fintech and engagement platforms" },
-  { value: "Logistics", label: "commerce architecture across checkout, courier and shipment workflows" },
-  { value: "Production", label: "ownership from system design through release, observability and RCA" },
+  { value: "Millions", label: "users served through cloud-native distributed systems" },
+  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards and logistics" },
+  { value: "Tech Fit", label: "use-case-led stacks balancing performance, cost and release velocity" },
 ];
 
 const strengths = [
