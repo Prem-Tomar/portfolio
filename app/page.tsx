@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "14+", label: "years leading backend, platform and architecture delivery" },
-  { value: "7M+", label: "daily users supported across distributed product platforms" },
-  { value: "62%", label: "production issue reduction through observability and RCA" },
-  { value: "40%", label: "shipment cost reduction through SenseEngine intelligence" },
+  { value: "14+", label: "years architecting backend, platform and cloud-native systems" },
+  { value: "7M+", label: "daily users on media, sports, fintech and engagement platforms" },
+  { value: "Logistics", label: "commerce architecture across checkout, courier and shipment workflows" },
+  { value: "Production", label: "ownership from system design through release, observability and RCA" },
 ];
 
 const strengths = [
