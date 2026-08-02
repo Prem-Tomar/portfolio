@@ -1,10 +1,3 @@
-const metrics = [
-  { value: "14+", label: "years delivering backend, platform and cloud-native architecture" },
-  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards, logistics, transportation and social media" },
-  { value: "Reusable IP", label: "generic systems, accelerators and reference implementations that became benchmark code" },
-  { value: "System Fit", label: "use-case-led Java, Go, Rust, Node and cloud designs balancing performance, cost and release velocity" },
-];
-
 const strengths = [
   "Java / Spring Boot service architecture",
   "Go services and concurrency-focused modernization",
@@ -156,10 +149,11 @@ export default function Home() {
 
         <div className="hero-content">
           <p className="eyebrow">Principal Solutions Architect / Senior Backend Engineer</p>
-          <h1>Building resilient backend platforms for high-scale product teams.</h1>
+          <h1>14+ years building resilient backend platforms for high-scale product teams.</h1>
           <p className="hero-copy">
-            I design and modernize Java/Spring Boot, Go, Rust and cloud-native systems with strong
-            attention to architecture, performance, observability, secure delivery and production
+            I work as an architect-leaning senior IC, defining service boundaries, platform
+            patterns, integration contracts and cloud architecture while staying close enough to
+            implementation to protect performance, observability, security and production
             reliability.
           </p>
           <div className="hero-actions" aria-label="Portfolio actions">
@@ -173,13 +167,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="metrics" aria-label="Impact metrics">
-        {metrics.map((item) => (
-          <div className="metric" key={item.label}>
-            <strong>{item.value}</strong>
-            <span>{item.label}</span>
-          </div>
-        ))}
+      <section className="scope-band" aria-label="Architecture scope">
+        <p>
+          Architected systems across insurance, health, fintech, telecom, broadcasting, sports,
+          gift cards, logistics, transportation and social media, with focus on reusable IP,
+          scalable delivery, performance, cost discipline and release velocity.
+        </p>
       </section>
 
       <section className="section intro-section">
