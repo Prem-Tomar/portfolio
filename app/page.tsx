@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "14+", label: "years architecting backend, platform and cloud-native systems" },
-  { value: "Millions", label: "users served through cloud-native distributed systems" },
-  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards and logistics" },
-  { value: "Tech Fit", label: "use-case-led stacks balancing performance, cost and release velocity" },
+  { value: "14+", label: "years delivering backend, platform and cloud-native architecture" },
+  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards, logistics, transportation and social media" },
+  { value: "Reusable IP", label: "generic systems, accelerators and reference implementations that became benchmark code" },
+  { value: "System Fit", label: "use-case-led Java, Go, Rust, Node and cloud designs balancing performance, cost and release velocity" },
 ];
 
 const strengths = [
