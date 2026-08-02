@@ -247,7 +247,7 @@ export default function Home() {
                   <code>
                     {"  "}
                     <span className="syntax-keyword">private final String</span> role ={" "}
-                    <span className="syntax-string">"senior-backend-platform"</span>;
+                    <span className="syntax-string">"principal-solutions-architect"</span>;
                   </code>
                 </div>
                 <div className="code-row">
