@@ -383,15 +383,15 @@ h3 {
 }
 
 .section-heading {
-  display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
-  gap: 48px;
-  align-items: start;
   margin-bottom: 30px;
 }
 
 .section-heading .eyebrow {
-  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  max-width: 920px;
 }
 
 .intro-grid {
@@ -1066,7 +1066,6 @@ h3 {
     border-bottom: 0;
   }
 
-  .section-heading,
   .practice-item,
   .timeline-item {
     grid-template-columns: 1fr;
