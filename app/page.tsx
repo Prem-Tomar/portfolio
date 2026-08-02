@@ -158,10 +158,10 @@ export default function Home() {
           <p className="eyebrow">Principal Solutions Architect / Senior Backend Engineer</p>
           <h1>14+ years building resilient backend platforms for high-scale product teams.</h1>
           <p className="hero-copy">
-            I work as an architect-leaning senior IC, defining service boundaries, platform
-            patterns, integration contracts and cloud architecture while staying close enough to
-            implementation to protect performance, observability, security and production
-            reliability.
+            I work as an architect-leaning senior IC who has stayed hands-on throughout my career,
+            shaping service boundaries, platform patterns, integration contracts and cloud
+            architecture while still owning code reviews, implementation trade-offs, performance,
+            observability, security and production reliability.
           </p>
           <div className="hero-actions" aria-label="Portfolio actions">
             <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
