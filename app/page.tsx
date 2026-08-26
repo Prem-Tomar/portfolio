@@ -1,42 +1,45 @@
 const metrics = [
-  { value: "Architecture", label: "backend, platform and cloud-native systems shaped from design to production" },
-  { value: "Scale", label: "millions of daily users and transactions across distributed systems" },
-  { value: "Domains", label: "insurance, health, fintech, telecom, broadcasting, sports, gift cards, logistics, transportation and social media" },
-  { value: "Reusable IP", label: "generic systems, accelerators and reference implementations that became benchmark code" },
+  { value: "14+ years", label: "in product engineering, platform architecture and technical leadership" },
+  { value: "7M+ users", label: "served daily across high-scale media, fintech and engagement ecosystems" },
+  { value: "300K+ orders", label: "optimized monthly through shipment intelligence and ML-driven decisioning" },
+  { value: "End to end", label: "from platform roadmap and architecture governance to production RCA" },
 ];
 
 const strengths = [
-  "Java / Spring Boot service architecture",
-  "Go services and concurrency-focused modernization",
-  "Rust workers for event and data processing",
-  "Node.js APIs, integrations and internal tooling",
-  "Distributed systems architecture",
-  "Microservices and REST contracts",
-  "Event-driven systems and data pipelines",
-  "AWS, Kubernetes and CI/CD",
-  "Performance profiling and observability",
-  "Production RCA and reliability",
-  "Mentoring and architecture reviews",
+  "Go, Java / Spring Boot, Python / FastAPI, Rust and Node.js",
+  "Distributed systems, microservices, REST and gRPC-style contracts",
+  "BPMN, Camunda, Temporal and workflow orchestration",
+  "Kafka-style event streams and analytics-ready data pipelines",
+  "AWS, Kubernetes, Aurora / PostgreSQL, MongoDB and Redis / Valkey",
+  "Observability, performance profiling and production RCA",
+  "AWS Bedrock, RAG / LLM integrations and ML-driven decisioning",
+  "Architecture governance, technical standards and senior mentorship",
 ];
 
 const systems = [
   {
     name: "Runtime and Micro-App Platform",
     detail:
-      "Plug-and-play platform for client-specific modules, adaptive UI flows, rapid onboarding and low-change delivery across large customer ecosystems.",
-    stack: "Java, Spring Boot, Go, AWS, Kubernetes, Redis, REST APIs",
+      "Reusable plug-and-play modules, shared service contracts, common onboarding flows and configurable runtime capabilities for high-scale client ecosystems.",
+    stack: "Go, Java, Spring Boot, AWS, Kubernetes, Aurora, AppSync, Valkey",
+  },
+  {
+    name: "Workflow and Decisioning Platform",
+    detail:
+      "Stateful orchestration for intelligent routing, approvals, case lifecycles, SLA visibility and audit-friendly event-driven execution.",
+    stack: "BPMN, Camunda, Temporal, REST APIs, event-driven architecture",
   },
   {
     name: "Event and Insight Processing",
     detail:
-      "Rust workers that process millions of event and insight payloads, normalize analytics-ready records and dispatch them into big-data pipelines.",
-    stack: "Rust, Go, AWS, event streams, data pipelines, observability",
+      "Rust workers and data paths that transform high-volume telemetry, engagement and shipment payloads into analytics-ready streams and feature-ready datasets.",
+    stack: "Rust, Go, Kafka-style streams, Spark-style processing, observability",
   },
   {
     name: "Commerce and Logistics Platform",
     detail:
-      "Checkout, payments, courier orchestration, merchant workflows, shipment intelligence and nationwide address validation at production scale.",
-    stack: "Java, Go, Node.js, Angular, MySQL, MongoDB, AWS",
+      "Checkout, payment and courier orchestration, merchant workflows, partner integrations and ML-driven shipment intelligence at production scale.",
+    stack: "Go, Java, Python, Rust, Node.js, MySQL, MongoDB, AWS",
   },
 ];
 
@@ -46,9 +49,9 @@ const experience = [
     company: "SwissClear Services Global Pvt. Ltd. (TAPPP)",
     period: "Feb 2024 - Present",
     points: [
-      "Architected backend platforms serving 7M+ daily users across media, sports, fintech, betting and engagement products.",
-      "Reduced API latency and improved throughput through Java-to-Go modernization, async processing, private AWS paths and platform modernization.",
-      "Led architecture reviews, code reviews, profiling, production diagnosis, RCA and reliability follow-through.",
+      "Direct product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
+      "Drive platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
+      "Lead Java-to-Go modernization, workflow orchestration, AI/ML integrations, architecture governance, release planning and production RCA.",
     ],
   },
   {
@@ -56,9 +59,9 @@ const experience = [
     company: "Link to Any",
     period: "May 2023 - Feb 2024",
     points: [
-      "Built backend services and internal tools for migrations, partner integrations, QA traceability and operations.",
-      "Delivered REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed.",
-      "Improved system efficiency by 39% and reduced production issues by 62% through observability, automation and durable fixes.",
+      "Built distributed backend systems and internal tools for data migrations, partner integrations, workflow automation, QA traceability and operations.",
+      "Designed reliable REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed.",
+      "Modernized selected Java and Node.js components to Go and strengthened observability, CI/CD governance and RCA-led fixes.",
     ],
   },
   {
@@ -66,19 +69,29 @@ const experience = [
     company: "MavQ",
     period: "Aug 2021 - May 2023",
     points: [
-      "Led development of a no-code automation platform with API-first services and reusable abstractions.",
-      "Created shared database and platform capabilities, reducing service rollout time by 34%.",
-      "Delivered AWS Connect CXC work and contributed to Intelligent Document Processing automation systems.",
+      "Led product delivery for no-code automation and workflow-oriented platform capabilities using API-first architecture and reusable abstractions.",
+      "Owned complex modules from service design and data modeling through testing, release planning and production support.",
+      "Delivered AWS Connect customer-experience capabilities and contributed to Intelligent Document Processing automation.",
     ],
   },
   {
     role: "Platform Lead / Senior Software Engineer",
     company: "Swift",
-    period: "Mar 2018 - Aug 2021",
+    period: "Nov 2019 - Aug 2021",
     points: [
-      "Built e-commerce platform capabilities covering checkout, payments, integrations, courier orchestration and shipment intelligence.",
-      "Migrated selected Java components to Go-based services for performance gains, lower overhead and stronger concurrency control.",
-      "Created SenseEngine, reducing shipment cost by 40% across 300K+ monthly orders through ML-driven shipment intelligence.",
+      "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",
+      "Designed resilient Java and Go microservices and Rust-backed processing paths for large-scale logistics datasets.",
+      "Created SenseEngine, supporting ML-driven shipment optimization across 300K+ monthly orders.",
+    ],
+  },
+  {
+    role: "Senior Full-Stack Developer / Full-Stack & Mobile Developer",
+    company: "D-SYS Data Solutions, Gwalior",
+    period: "Dec 2014 - Nov 2019",
+    points: [
+      "Delivered transportation and e-way billing, safety/security, mobile, marketplace, database and production-server systems.",
+      "Expanded Python, Go and Rust work into data analysis, ML data collection, sentiment signals, recommendation logic and multi-model experiments.",
+      "Owned backend and application features from design through implementation, deployment support and client-facing resolution.",
     ],
   },
   {
@@ -86,41 +99,32 @@ const experience = [
     company: "Aadi Infotech Pvt. Ltd., Gwalior",
     period: "Feb 2010 - Nov 2014",
     points: [
-      "Built and supported transportation, education, MLM, social/image-editing, mobile and internal-tool products.",
-      "Progressed from implementation support into full software development ownership across Java, MySQL, Apache/Linux and .NET/C# systems.",
-      "Redesigned standalone applications into distributed/thin-client Java systems and supported domestic and international clients.",
-    ],
-  },
-  {
-    role: "Full-Stack / Mobile Developer",
-    company: "Freelance Consulting Engagements",
-    period: "Dec 2014 - Feb 2018",
-    points: [
-      "Delivered mobile, backend, database and marketplace capabilities for Millennial Group Inc., Cloud Digital Arts and Cargo 3 IVS / FindACargo.",
-      "Covered requirements analysis, API/service implementation, production support, release coordination and server operations.",
-      "Built Android/iOS applications, P2P/server components, .NET MVC marketplace features and operational workflows end to end.",
+      "Progressed from intern/associate to software developer across transportation, education, social/image-editing, mobile and enterprise products.",
+      "Built primarily Java-backed web and enterprise systems with Python/Django support for APIs, admin workflows and internal tools.",
+      "Helped redesign standalone applications into maintainable object-oriented and thin-client architectures.",
     ],
   },
 ];
 
 const practices = [
   {
-    title: "Architecture with operational accountability",
-    text: "I define service boundaries, data flows and integration contracts with production support, scaling behavior and security controls in mind.",
+    title: "Platform architecture and governance",
+    text: "I translate product, business, compliance and operational expectations into service boundaries, platform roadmaps, API standards, data contracts and secure production controls.",
   },
   {
-    title: "Performance work grounded in evidence",
-    text: "I use profiling, traces, logs and throughput data to guide latency reduction, CPU and memory tuning, async processing and platform modernization.",
+    title: "Delivery and operational excellence",
+    text: "I connect architecture decisions to release planning, observability, capacity, production readiness and RCA-led improvements in throughput, resilience and auditability.",
   },
   {
-    title: "AI as a controlled engineering accelerator",
-    text: "I use AI tools for small, reviewable diff-set generation, refactoring analysis, unit-test scaffolding, static-analysis triage and performance investigation, while retaining ownership through review, tests and profiling.",
+    title: "Cross-functional technical leadership",
+    text: "I lead architecture and code reviews, mentor senior and architect-level engineers, and align product, QA, infrastructure, DevOps/SRE, compliance, operations and client stakeholders.",
   },
 ];
 
 export default function Home() {
   const whatsappUrl =
     "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
+  const linkedinUrl = "https://www.linkedin.com/in/ppst89/";
 
   return (
     <main>
@@ -150,18 +154,18 @@ export default function Home() {
           <div className="nav-links">
             <a href="#work">Work</a>
             <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
 
         <div className="hero-content">
-          <p className="eyebrow">Principal Solutions Architect / Senior Backend Engineer</p>
-          <h1>14+ years building resilient backend platforms for high-scale product teams.</h1>
+          <p className="eyebrow">Senior Architect &amp; Engineering Leader</p>
+          <h1>Building platforms, teams and delivery systems that perform at scale.</h1>
           <p className="hero-copy">
-            I work as an architect-leaning senior IC who has stayed hands-on throughout my career,
-            shaping service boundaries, platform patterns, integration contracts and cloud
-            architecture while still owning code reviews, implementation trade-offs, performance,
-            observability, security and production reliability.
+            I bring 14+ years of hands-on product engineering and platform architecture experience
+            across distributed systems, workflow platforms, cloud-native backends and integration-heavy
+            products - translating complex stakeholder needs into reliable technology and execution.
           </p>
           <div className="hero-actions" aria-label="Portfolio actions">
             <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
@@ -169,6 +173,12 @@ export default function Home() {
             </a>
             <a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
               Download resume
+            </a>
+            <a className="button button-linkedin" href={linkedinUrl} target="_blank" rel="noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M5.2 7.9H1.4V20h3.8V7.9ZM3.3 2A2.2 2.2 0 1 0 3.3 6.4 2.2 2.2 0 0 0 3.3 2ZM20.8 13.1c0-3.7-2-5.5-4.7-5.5-2.2 0-3.1 1.2-3.7 2v-1.7H8.6V20h3.8v-6c0-1.6.3-3.2 2.3-3.2 2 0 2 1.8 2 3.3V20h3.8l.3-6.9Z" />
+              </svg>
+              LinkedIn
             </a>
           </div>
         </div>
@@ -186,7 +196,7 @@ export default function Home() {
       <section className="section intro-section">
         <div className="section-heading">
           <p className="eyebrow">Core Profile</p>
-          <h2>Senior backend architecture, kept close to production reality.</h2>
+          <h2>Product engineering leadership with hands-on platform depth.</h2>
         </div>
         <div className="profile-workbench" aria-label="Core profile editor and terminal">
           <div className="workbench-top">
@@ -278,12 +288,12 @@ export default function Home() {
               </p>
               <div className="terminal-output">
                 <code>    Updating production profile index</code>
-                <code>      Adding Java / Spring Boot service architecture</code>
-                <code>      Adding Go runtime modernization</code>
-                <code>      Adding Rust event workers</code>
-                <code>      Adding Node.js APIs and tooling</code>
+                <code>      Adding distributed platform architecture</code>
+                <code>      Adding workflow and decision orchestration</code>
+                <code>      Adding AI / ML-enabled engineering</code>
+                <code>      Adding architecture governance</code>
                 <code>             Focus areas:</code>
-                {strengths.slice(4).map((strength) => (
+                {strengths.map((strength) => (
                   <code key={strength}>             - {strength}</code>
                 ))}
               </div>
@@ -295,7 +305,7 @@ export default function Home() {
       <section className="section" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected Systems</p>
-          <h2>Platforms, data flows and runtime systems.</h2>
+          <h2>Platforms, workflows and intelligent systems.</h2>
         </div>
         <div className="system-grid">
           {systems.map((system) => (
@@ -311,7 +321,7 @@ export default function Home() {
       <section className="section practice-section">
         <div className="section-heading">
           <p className="eyebrow">Engineering Practice</p>
-          <h2>Architecture decisions that teams can operate.</h2>
+          <h2>Architecture that connects product strategy to production outcomes.</h2>
         </div>
         <div className="practice-list">
           {practices.map((practice) => (
@@ -326,7 +336,7 @@ export default function Home() {
       <section className="section" id="experience">
         <div className="section-heading">
           <p className="eyebrow">Experience</p>
-          <h2>Company-wise engineering leadership.</h2>
+          <h2>A progression from hands-on delivery to platform leadership.</h2>
         </div>
         <div className="timeline">
           {experience.map((item) => (
@@ -346,14 +356,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section education-section" id="education">
+        <div className="section-heading">
+          <p className="eyebrow">Education</p>
+          <h2>Technical foundations strengthened by data science and AI/ML.</h2>
+        </div>
+        <div className="education-grid">
+          <article>
+            <span>Postgraduate Program</span>
+            <h3>Data Science and AI/ML</h3>
+            <p>Great Learning</p>
+          </article>
+          <article>
+            <span>Bachelor of Engineering</span>
+            <h3>Information Technology</h3>
+            <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p>
+          </article>
+        </div>
+        <p className="consulting-note">
+          Additional consulting exposure includes Millennial Group Inc., Cloud Digital Arts,
+          Cargo 3 IVS / FindACargo and independent client delivery from 2014 to 2019.
+        </p>
+      </section>
+
       <section className="contact-section" id="contact">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Open to senior backend, platform and architecture roles.</h2>
+          <h2>Let&apos;s build dependable platforms and high-performing engineering teams.</h2>
           <p>
-            Based in Pune, India. Remote collaboration is preferred, with openness to relocate to
-            Bengaluru, Hyderabad, NCR or international locations for the right senior engineering
-            opportunity.
+            Based in Pune, India. Connect with me about senior architecture, platform engineering
+            and product engineering leadership opportunities.
           </p>
         </div>
         <div className="contact-actions">
@@ -365,6 +397,12 @@ export default function Home() {
           </a>
           <a className="button button-quiet" href="tel:+919606379003">
             +91 9606379003
+          </a>
+          <a className="button button-linkedin-dark" href={linkedinUrl} target="_blank" rel="noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5.2 7.9H1.4V20h3.8V7.9ZM3.3 2A2.2 2.2 0 1 0 3.3 6.4 2.2 2.2 0 0 0 3.3 2ZM20.8 13.1c0-3.7-2-5.5-4.7-5.5-2.2 0-3.1 1.2-3.7 2v-1.7H8.6V20h3.8v-6c0-1.6.3-3.2 2.3-3.2 2 0 2 1.8 2 3.3V20h3.8l.3-6.9Z" />
+            </svg>
+            LinkedIn profile
           </a>
         </div>
       </section>
