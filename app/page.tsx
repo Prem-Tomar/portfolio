@@ -172,12 +172,12 @@ export default function Home() {
 
   return (
     <main id="top">
-      <a className="skip-link" href="#experience">Skip to experience</a>
+      <a className="skip-link" href="#experience">Skip to career chapters</a>
       <header className="site-header">
         <nav className="nav content-width" aria-label="Primary navigation">
           <a href="#top" className="brand">Prem P S Tomar<span aria-hidden="true">.</span></a>
           <div className="nav-links">
-            <a href="#experience">Experience</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a><a href="#console">Recruiters</a>
+            <a href="#experience">Chapters</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a><a href="#console">Recruiters</a>
             <a className="nav-resume" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="Download resume (PDF)">Resume <span aria-hidden="true">↗</span></a>
           </div>
         </nav>

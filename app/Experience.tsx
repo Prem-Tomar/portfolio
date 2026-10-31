@@ -177,7 +177,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
     <section className="experience-section" id="experience" ref={sectionRef} aria-labelledby="experience-heading">
       <div className="experience-sticky" ref={stickyRef}>
         <div className="experience-heading content-width">
-          <div><p className="eyebrow">Career / 2026 — 2010</p><h2 id="experience-heading">Experience.</h2></div>
+          <div><p className="eyebrow">Career / 2026 — 2010</p><h2 id="experience-heading">Chapters.</h2></div>
           <p className="experience-hint"><span className="pinned-hint">Scroll to explore</span><span className="swipe-hint">Swipe or use the arrows</span><span aria-hidden="true"> →</span></p>
         </div>
         <div className="experience-window" ref={windowRef} aria-label="Company experience cards">
