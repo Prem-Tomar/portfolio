@@ -1,6 +1,6 @@
 import Experience from "./Experience";
 import ProfileConsole from "./ProfileConsole";
-import type { ProfileTopic } from "./ProfileConsole";
+import { getRecruiterTopics } from "./recruiterProfile";
 
 const metrics = [
   { value: "Architecture", label: "Technical direction, service boundaries and platform modernization, with hands-on ownership through production." },
@@ -169,26 +169,6 @@ export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
   const resumeUrl = "/resume.pdf?v=20261031-r7";
-  const consoleTopics: ProfileTopic[] = [
-    { command: "about", label: "Overview", aliases: ["whoami", "profile", "location", "overview"], items: [{ title: "Prem Pratap Singh Tomar", meta: "Software Architect / Principal Engineer · 14+ years · Pune, India", detail: profileSummary }] },
-    { command: "experience", label: "Experience", aliases: ["career", "roles"], items: [
-      ...experience.map((company) => ({ title: company.company, meta: `${company.role} · ${company.period}`, detail: company.status, points: company.points })),
-      { title: "Additional consulting", meta: "2014 - 2019", detail: consultingNote },
-    ] },
-    { command: "skills", label: "Skills", aliases: ["stack"], items: [{ title: "Core skills", points: strengths }] },
-    { command: "systems", label: "Systems", aliases: ["projects"], items: systems.map((system) => ({ title: system.name, detail: system.detail, meta: system.stack })) },
-    { command: "domains", label: "Domains", items: [{ title: "Domain coverage", detail: metrics.find((item) => item.value === "Domains")!.label }] },
-    { command: "education", label: "Education", aliases: ["qualifications"], items: education.map((item) => ({ title: `${item.type} — ${item.subject}`, detail: item.institute, meta: item.period })) },
-    { command: "learning", label: "Learning", items: learningAreas.map((area) => ({ title: area.title, meta: "Ongoing / planned learning", detail: area.text })) },
-    { command: "practice", label: "Approach", aliases: ["approach"], items: practices.map((practice) => ({ title: practice.title, detail: practice.text })) },
-    { command: "resume", label: "Resume", aliases: ["cv"], items: [{ title: "Resume", detail: "Full professional experience, skills and education.", links: [{ label: "Open resume (PDF)", href: resumeUrl, newTab: true }] }] },
-    { command: "contact", label: "Contact", items: [{ title: "Connect with Prem", meta: "Pune, India", detail: "Email, phone, WhatsApp and LinkedIn.", links: [
-      { label: "prem.tomar.blr@gmail.com", href: "mailto:prem.tomar.blr@gmail.com" },
-      { label: "+91 9606379003", href: "tel:+919606379003" },
-      { label: "WhatsApp", href: whatsappUrl, newTab: true },
-      { label: "LinkedIn", href: linkedinUrl, newTab: true },
-    ] }] },
-  ];
 
   return (
     <main id="top">
@@ -197,7 +177,7 @@ export default function Home() {
         <nav className="nav content-width" aria-label="Primary navigation">
           <a href="#top" className="brand">Prem P S Tomar<span aria-hidden="true">.</span></a>
           <div className="nav-links">
-            <a href="#experience">Experience</a><a href="#console">Console</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a>
+            <a href="#experience">Experience</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a><a href="#console">Recruiters</a>
             <a className="nav-resume" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="Download resume (PDF)">Resume <span aria-hidden="true">↗</span></a>
           </div>
         </nav>
@@ -232,8 +212,6 @@ export default function Home() {
       <section className="metrics content-width" aria-label="Architecture achievement highlights">
         {metrics.map((item) => <article className="metric" key={item.value}><h2>{item.value}</h2><p>{item.label}</p></article>)}
       </section>
-
-      <ProfileConsole topics={consoleTopics} />
 
       <section className="section content-width" id="work" aria-labelledby="systems-heading">
         <div className="section-heading"><p className="eyebrow">Selected systems</p><h2 id="systems-heading">Platforms, workflows<br />and intelligent systems.</h2></div>
@@ -283,6 +261,7 @@ export default function Home() {
           <a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a>
         </div>
       </section>
+      <ProfileConsole topics={getRecruiterTopics(resumeUrl)} />
       <footer className="site-footer content-width"><span>Prem P S Tomar</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
     </main>
   );
