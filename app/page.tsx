@@ -1,4 +1,6 @@
 import Experience from "./Experience";
+import ProfileConsole from "./ProfileConsole";
+import type { ProfileTopic } from "./ProfileConsole";
 
 const metrics = [
   { value: "Architecture", label: "Technical direction, service boundaries and platform modernization, with hands-on ownership through production." },
@@ -155,10 +157,38 @@ const learningAreas = [
   },
 ];
 
+const education = [
+  { type: "Master of Technology / In progress", subject: "Artificial Intelligence and Machine Learning", institute: "Birla Institute of Technology and Science, Pilani", period: "October 2026 - October 2028 (expected)" },
+  { type: "Postgraduate Program", subject: "Artificial Intelligence and Machine Learning", institute: "The University of Texas at Austin", period: "Facilitated by Great Learning" },
+  { type: "Bachelor of Engineering", subject: "Information Technology", institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)", period: "2007 - 2012" },
+];
+const profileSummary = "I set technical direction for distributed platforms and stay hands-on from system design and code to production. I balance scale, performance and reliability with cost, delivery speed and a lean, maintainable stack.";
+const consultingNote = "Additional consulting exposure includes Millennial Group Inc., Cloud Digital Arts, Cargo 3 IVS / FindACargo and independent client delivery from 2014 to 2019.";
+
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
   const resumeUrl = "/resume.pdf?v=20261031-r7";
+  const consoleTopics: ProfileTopic[] = [
+    { command: "about", label: "Overview", aliases: ["whoami", "profile", "location", "overview"], items: [{ title: "Prem Pratap Singh Tomar", meta: "Software Architect / Principal Engineer · 14+ years · Pune, India", detail: profileSummary }] },
+    { command: "experience", label: "Experience", aliases: ["career", "roles"], items: [
+      ...experience.map((company) => ({ title: company.company, meta: `${company.role} · ${company.period}`, detail: company.status, points: company.points })),
+      { title: "Additional consulting", meta: "2014 - 2019", detail: consultingNote },
+    ] },
+    { command: "skills", label: "Skills", aliases: ["stack"], items: [{ title: "Core skills", points: strengths }] },
+    { command: "systems", label: "Systems", aliases: ["projects"], items: systems.map((system) => ({ title: system.name, detail: system.detail, meta: system.stack })) },
+    { command: "domains", label: "Domains", items: [{ title: "Domain coverage", detail: metrics.find((item) => item.value === "Domains")!.label }] },
+    { command: "education", label: "Education", aliases: ["qualifications"], items: education.map((item) => ({ title: `${item.type} — ${item.subject}`, detail: item.institute, meta: item.period })) },
+    { command: "learning", label: "Learning", items: learningAreas.map((area) => ({ title: area.title, meta: "Ongoing / planned learning", detail: area.text })) },
+    { command: "practice", label: "Approach", aliases: ["approach"], items: practices.map((practice) => ({ title: practice.title, detail: practice.text })) },
+    { command: "resume", label: "Resume", aliases: ["cv"], items: [{ title: "Resume", detail: "Full professional experience, skills and education.", links: [{ label: "Open resume (PDF)", href: resumeUrl, newTab: true }] }] },
+    { command: "contact", label: "Contact", items: [{ title: "Connect with Prem", meta: "Pune, India", detail: "Email, phone, WhatsApp and LinkedIn.", links: [
+      { label: "prem.tomar.blr@gmail.com", href: "mailto:prem.tomar.blr@gmail.com" },
+      { label: "+91 9606379003", href: "tel:+919606379003" },
+      { label: "WhatsApp", href: whatsappUrl, newTab: true },
+      { label: "LinkedIn", href: linkedinUrl, newTab: true },
+    ] }] },
+  ];
 
   return (
     <main id="top">
@@ -167,7 +197,7 @@ export default function Home() {
         <nav className="nav content-width" aria-label="Primary navigation">
           <a href="#top" className="brand">Prem P S Tomar<span aria-hidden="true">.</span></a>
           <div className="nav-links">
-            <a href="#experience">Experience</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a>
+            <a href="#experience">Experience</a><a href="#console">Console</a><a href="#work">Systems</a><a href="#education">Education</a><a href="#learning">Learning</a><a href="#contact">Contact</a>
             <a className="nav-resume" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="Download resume (PDF)">Resume <span aria-hidden="true">↗</span></a>
           </div>
         </nav>
@@ -180,7 +210,7 @@ export default function Home() {
             <h1 id="hero-heading">Prem Tomar</h1>
             <p className="hero-fullname">Prem Pratap Singh Tomar</p>
             <p className="hero-lead">Technical direction.<br />Hands-on engineering.</p>
-            <p className="hero-copy">I set technical direction for distributed platforms and stay hands-on from system design and code to production. I balance scale, performance and reliability with cost, delivery speed and a lean, maintainable stack.</p>
+            <p className="hero-copy">{profileSummary}</p>
             <div className="hero-actions" aria-label="Portfolio actions">
               <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Contact me <span aria-hidden="true">↗</span></a>
               <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="View resume PDF">Resume <span aria-hidden="true">↓</span></a>
@@ -202,6 +232,8 @@ export default function Home() {
       <section className="metrics content-width" aria-label="Architecture achievement highlights">
         {metrics.map((item) => <article className="metric" key={item.value}><h2>{item.value}</h2><p>{item.label}</p></article>)}
       </section>
+
+      <ProfileConsole topics={consoleTopics} />
 
       <section className="section content-width" id="work" aria-labelledby="systems-heading">
         <div className="section-heading"><p className="eyebrow">Selected systems</p><h2 id="systems-heading">Platforms, workflows<br />and intelligent systems.</h2></div>
@@ -230,11 +262,9 @@ export default function Home() {
       <section className="section education-section content-width" id="education" aria-labelledby="education-heading">
         <div className="section-heading"><p className="eyebrow">Education</p><h2 id="education-heading">Technical foundations.<br />Continued development.</h2></div>
         <div className="education-grid">
-          <article><span className="eyebrow">Master of Technology / In progress</span><h3>Artificial Intelligence and Machine Learning</h3><p>Birla Institute of Technology and Science, Pilani</p><p className="education-period">October 2026 - October 2028 (expected)</p></article>
-          <article><span className="eyebrow">Postgraduate Program</span><h3>Artificial Intelligence and Machine Learning</h3><p>The University of Texas at Austin</p><p className="education-period">Facilitated by Great Learning</p></article>
-          <article><span className="eyebrow">Bachelor of Engineering</span><h3>Information Technology</h3><p>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p><p className="education-period">2007 - 2012</p></article>
+          {education.map((item) => <article key={item.type}><span className="eyebrow">{item.type}</span><h3>{item.subject}</h3><p>{item.institute}</p><p className="education-period">{item.period}</p></article>)}
         </div>
-        <p className="consulting-note">Additional consulting exposure includes Millennial Group Inc., Cloud Digital Arts, Cargo 3 IVS / FindACargo and independent client delivery from 2014 to 2019.</p>
+        <p className="consulting-note">{consultingNote}</p>
       </section>
 
       <section className="section learning-section content-width" id="learning" aria-labelledby="learning-heading">
