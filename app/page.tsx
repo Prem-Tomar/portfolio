@@ -1,7 +1,7 @@
 const metrics = [
   { value: "Architecture", label: "Technical direction, service boundaries and platform modernization, with hands-on ownership through production." },
   { value: "Scale", label: "Cloud-native, distributed systems serving millions of daily users and transactions." },
-  { value: "Domains", label: "Fintech, insurance, health, media, telecom, sports, commerce, logistics, transportation and social platforms. Upcoming DDN focus: data storage, parallel file systems, HPC and AI infrastructure." },
+  { value: "Domains", label: "Fintech, insurance, health, media, telecom, sports, commerce, logistics, transportation, social platforms, data storage, parallel file systems, HPC and AI infrastructure." },
   { value: "Reusable IP", label: "Shared platforms, integration contracts and reference implementations that give teams a stronger foundation to build on." },
 ];
 
@@ -49,7 +49,7 @@ const experience = [
     role: "Staff Engineer",
     company: "DDN",
     period: "Starting 2 November 2026",
-    status: "Upcoming appointment. Domain focus: high-performance data storage, parallel file systems, HPC and AI infrastructure.",
+    status: "Upcoming appointment.",
     points: [],
   },
   {
@@ -149,7 +149,7 @@ const learningAreas = [
   },
   {
     title: "Storage, HPC and AI infrastructure",
-    text: "Preparing for my upcoming DDN role through a separate learning programme in Rust, C and selected C++ for Linux systems programming, high-performance data storage, distributed and parallel file systems including Lustre, and high-performance computing (HPC). Planned practice covers parallel I/O, NUMA, RDMA, ultra-low-latency design, reliability and recovery, plus data feeding, checkpoint recovery and inference-cache placement for AI training and inference workloads.",
+    text: "Pursuing a separate learning programme in Rust, C and selected C++ for Linux systems programming, high-performance data storage, distributed and parallel file systems including Lustre, and high-performance computing (HPC). Planned practice covers parallel I/O, NUMA, RDMA, ultra-low-latency design, reliability and recovery, plus data feeding, checkpoint recovery and inference-cache placement for AI training and inference workloads.",
   },
 ];
 
