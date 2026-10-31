@@ -24,7 +24,7 @@ const ignoredWords = new Set(["a", "an", "and", "at", "for", "in", "is", "me", "
 
 function matches(item: ProfileItem, query: string) {
   const terms = query.toLowerCase().split(/\s+/).filter((term) => term && !ignoredWords.has(term));
-  const text = [item.title, item.detail, item.meta, ...(item.points ?? []), ...(item.links?.map((link) => link.label) ?? [])].join(" ").toLowerCase();
+  const text = [item.title, item.detail, item.meta, ...(item.points ?? []), ...(item.links?.flatMap((link) => [link.label, link.href]) ?? [])].join(" ").toLowerCase();
   return terms.length > 0 && terms.every((term) => {
     // Short language names such as C and Go must match words, not fragments.
     if (term.length > 2) return text.includes(term);

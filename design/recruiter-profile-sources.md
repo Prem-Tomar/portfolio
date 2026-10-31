@@ -8,6 +8,10 @@ career, education and contact sections remain the detailed source for those topi
 
 - User-confirmed public details: open to work **No**, notice period **30 days**,
   date of birth **14 February 1989**.
+- User-confirmed AI/ML exposure: sentiment analysis, fraud detection, customer
+  heat profiling, recommendation engines, live translation engines and event
+  simulation. Keep these at exposure level; no employer attribution, duration,
+  production-delivery claim or outcome metric has been supplied for this list.
 - Skill-to-role mapping and professional project details: the checked-in resume
   `resume/Prem_P_S_Tomar_Resume_2026-10-31.docx` and its authoring source
   `resume/tools/build_architect_resume.py`. Role dates are employment dates,
@@ -30,7 +34,12 @@ come from each default-branch README, except the Swift notebook:
 - [data-reliability-platform](https://github.com/Prem-Tomar/data-reliability-platform/blob/master/README.md)
 - [production-data-ai-engineering](https://github.com/Prem-Tomar/production-data-ai-engineering/blob/master/README.md)
 - [fieldops-mastery](https://github.com/Prem-Tomar/fieldops-mastery/blob/master/README.md)
-- [portfolio](https://github.com/Prem-Tomar/portfolio/blob/main/README.md)
+
+The repository topic is labelled "Open Source" at the user's request. The
+portfolio repository is omitted from that list; eight public project repositories
+remain.
+Display project names with readable words and consistent capitalization; preserve
+repository URL slugs and support searching those original identifiers.
 
 Library implementations, research baselines and curriculum/roadmap repositories
 have different status labels. No README benchmark or detector score is promoted
