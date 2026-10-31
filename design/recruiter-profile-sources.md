@@ -8,6 +8,8 @@ career, education and contact sections remain the detailed source for those topi
 
 - User-confirmed public details: open to work **No**, notice period **30 days**,
   date of birth **14 February 1989**.
+- The user confirmed DDN's Indian registered entity as **DataDirect Networks India
+  Private Limited**. DDN remains the display brand for the career heading.
 - User-confirmed AI/ML exposure: sentiment analysis, fraud detection, customer
   heat profiling, recommendation engines, live translation engines and event
   simulation. Keep these at exposure level; no employer attribution, duration,

@@ -51,7 +51,7 @@ const systems = [
 const experience = [
   {
     role: "Incoming Staff Engineer",
-    company: "DDN",
+    company: "DataDirect Networks India Private Limited",
     period: "Starting 2 November 2026",
     status: "Upcoming appointment.",
     points: [],
