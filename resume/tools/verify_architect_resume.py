@@ -1,0 +1,92 @@
+import json
+import re
+from pathlib import Path
+
+import pdfplumber
+from docx import Document
+from pypdf import PdfReader
+
+
+root = Path(__file__).resolve().parents[2]
+resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-10-31.pdf'
+source = root / 'public/resume.pdf'
+docx = Document(resume.with_suffix('.docx'))
+reader = PdfReader(resume)
+pages = [p.extract_text() for p in reader.pages]
+normalize = lambda text: re.sub(r'\s+', ' ', text).strip()
+text = normalize(' '.join(pages))
+source_text = normalize(' '.join(p.extract_text() for p in PdfReader(source).pages))
+assert len(pages) == 3
+assert all(len(page) > 2000 for page in pages)
+assert pages[0].startswith('PREM P S TOMAR')
+assert 'AI-assisted engineering:' in pages[0]
+assert text.index('AI-assisted engineering:') < text.index('PROFESSIONAL EXPERIENCE')
+assert 'AI ASSISTED ENGINEERING' not in text
+assert 'Systems programming: Rust, C++, C, Python;' in text
+assert text.index('Systems programming:') < text.index('AI/ML and Generative AI:') < text.index('Backend and architecture:')
+assert text.index('EDUCATION') < text.index('Ongoing study and planned practice:')
+assert 'Ongoing study and planned practice:' in pages[2]
+assert 'Agentic AI and tooling:' in pages[2]
+assert 'Go (Golang), Java/Spring Boot, Node.js' in text
+assert not docx.tables
+assert not docx.inline_shapes
+for para in docx.paragraphs:
+    if para.text.strip():
+        assert normalize(para.text) in text, f'Missing or changed text: {para.text}'
+for term in [
+    'Incoming Staff Engineer', 'Starts 2 November 2026', 'Feb 2024 - Oct 2026',
+    'May 2023 - Jan 2024', 'Apr 2021 - Aug 2022', 'Aug 2022 - May 2023', 'Feb 2010 - Feb 2014',
+    'Fermyon Technologies India Private Limited', 'Maverick Quantum India Private Limited',
+    'GoSprint Logistics Private Limited', 'SwissClear Services Private Limited',
+    'D-SYS Data Solutions Private Limited', 'Dec 2014 - Nov 2020',
+    'D-SYS outsourced assignments on client payrolls', 'Omega Healthcare Management Solutions (Nov 2019)',
+    'Collasys Global Services (Dec 2019 - Feb 2020)', 'Technosoft Consulting (Feb 2020 - May 2020)',
+    'Cooey Technologies (Jul 2020 - Nov 2020)', 'The University of Texas at Austin',
+    'Great Learning', 'BITS Pilani', 'Oct 2028 (expected)',
+    'diff-set generation', 'prem.tomar.blr@gmail.com', '9606379003',
+    'GenAI', 'Model Context Protocol (MCP)', 'LangChain', 'LangGraph', 'MLOps/LLMOps',
+    'Lustre', 'HPC', 'ultra-low-latency',
+]:
+    assert term in text, f'Missing expected detail: {term}'
+for term in ['ppst89', 'Present', 'Oracle-ready', 'Est Id', 'Member Id', 'Jun 2024 - Oct 2026', 'Sep 2021 - Aug 2022', 'Nov 2019 - Aug 2021', 'Aug 2021 - May 2023']:
+    assert term not in text, f'Unexpected or outdated text: {term}'
+
+inside_dsys = False
+dsys_count = 0
+for para in docx.paragraphs:
+    if para.text.startswith('D-SYS Data Solutions Private Limited |'):
+        inside_dsys = True
+    elif para.text.startswith('Aadi Infotech'):
+        inside_dsys = False
+    if inside_dsys and para.style.name == 'List Bullet':
+        assert normalize(para.text) in source_text, 'D-SYS responsibility was altered'
+        dsys_count += 1
+assert dsys_count == 11
+
+links = []
+for page in reader.pages:
+    for annotation in page.get('/Annots', []):
+        item = annotation.get_object()
+        action = item.get('/A', {})
+        if '/URI' in action:
+            links.append(str(action['/URI']))
+assert 'mailto:prem.tomar.blr@gmail.com' in links
+assert 'https://premtomar.com' in links
+assert 'https://www.linkedin.com/in/prem-tomar/' in links
+
+with pdfplumber.open(resume) as pdf:
+    for page in pdf.pages:
+        assert not page.images, 'PDF contains rasterized content'
+        assert page.chars, 'PDF text is not searchable'
+        for char in page.chars:
+            assert 0 <= char['x0'] <= char['x1'] <= page.width
+            assert 0 <= char['top'] <= char['bottom'] <= page.height
+
+result = {'pages': len(pages), 'characters_per_page': list(map(len, pages)),
+          'docx_text_matches_pdf': True, 'dsys_bullets_preserved': dsys_count,
+          'links': links, 'text_only_pdf': True, 'text_within_page_bounds': True,
+          'note': 'Local parsing and layout checks; not certification by an external ATS.'}
+dest = root / 'resume/qa/checks.json'
+dest.parent.mkdir(parents=True, exist_ok=True)
+dest.write_text(json.dumps(result, indent=2), encoding='utf-8')
+print(json.dumps(result, indent=2))

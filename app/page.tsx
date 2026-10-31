@@ -1,18 +1,19 @@
 const metrics = [
-  { value: "14+ years", label: "in product engineering, platform architecture and technical leadership" },
-  { value: "7M+ users", label: "served daily across high-scale media, fintech and engagement ecosystems" },
-  { value: "300K+ orders", label: "optimized monthly through shipment intelligence and ML-driven decisioning" },
-  { value: "End to end", label: "from platform roadmap and architecture governance to production RCA" },
+  { value: "Architecture", label: "Technical direction, service boundaries and platform modernization, with hands-on ownership through production." },
+  { value: "Scale", label: "Cloud-native, distributed systems serving millions of daily users and transactions." },
+  { value: "Domains", label: "Fintech, insurance, health, media, telecom, sports, commerce, logistics, transportation and social platforms." },
+  { value: "Reusable IP", label: "Shared platforms, integration contracts and reference implementations that give teams a stronger foundation to build on." },
 ];
 
 const strengths = [
-  "Go, Java / Spring Boot, Python / FastAPI, Rust and Node.js",
+  "Rust, C++, C, Python / FastAPI, Go, Java / Spring Boot and Node.js",
   "Distributed systems, microservices, REST and gRPC-style contracts",
   "BPMN, Camunda, Temporal and workflow orchestration",
   "Kafka-style event streams and analytics-ready data pipelines",
   "AWS, Kubernetes, Aurora / PostgreSQL, MongoDB and Redis / Valkey",
   "Observability, performance profiling and production RCA",
-  "AWS Bedrock, RAG / LLM integrations and ML-driven decisioning",
+  "Generative AI, AWS Bedrock, RAG / LLM integrations and ML decisioning",
+  "AI-assisted tooling, scoped changes, tests and human review",
   "Architecture governance, technical standards and senior mentorship",
 ];
 
@@ -45,19 +46,26 @@ const systems = [
 
 const experience = [
   {
-    role: "Principal Solutions Architect",
-    company: "SwissClear Services Global Pvt. Ltd. (TAPPP)",
-    period: "Feb 2024 - Present",
+    role: "Staff Engineer",
+    company: "DDN",
+    period: "Starting 2 November 2026",
+    status: "Upcoming appointment.",
+    points: [],
+  },
+  {
+    role: "Senior Architect / Principal Solutions Architect",
+    company: "SwissClear Services Private Limited (TAPPP)",
+    period: "Feb 2024 - Oct 2026",
     points: [
-      "Direct product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
-      "Drive platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
-      "Lead Java-to-Go modernization, workflow orchestration, AI/ML integrations, architecture governance, release planning and production RCA.",
+      "Directed product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
+      "Drove platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
+      "Built Rust event-processing workers and integrated AWS Bedrock with RAG/LLM decision support; led Java-to-Go modernization, workflow orchestration and production RCA.",
     ],
   },
   {
-    role: "Engineering Mentor and Senior Software Engineer",
-    company: "Link to Any",
-    period: "May 2023 - Feb 2024",
+    role: "Senior Software Engineer / Engineering Mentor",
+    company: "Fermyon Technologies India Private Limited (LINK, formerly ShoppinPal)",
+    period: "May 2023 - Jan 2024",
     points: [
       "Built distributed backend systems and internal tools for data migrations, partner integrations, workflow automation, QA traceability and operations.",
       "Designed reliable REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed.",
@@ -66,8 +74,8 @@ const experience = [
   },
   {
     role: "Software Development Lead",
-    company: "MavQ",
-    period: "Aug 2021 - May 2023",
+    company: "Maverick Quantum India Private Limited (mavQ)",
+    period: "Aug 2022 - May 2023",
     points: [
       "Led product delivery for no-code automation and workflow-oriented platform capabilities using API-first architecture and reusable abstractions.",
       "Owned complex modules from service design and data modeling through testing, release planning and production support.",
@@ -75,9 +83,9 @@ const experience = [
     ],
   },
   {
-    role: "Platform Lead / Senior Software Engineer",
-    company: "Swift",
-    period: "Nov 2019 - Aug 2021",
+    role: "Platform Lead",
+    company: "GoSprint Logistics Private Limited (Swift)",
+    period: "Apr 2021 - Aug 2022",
     points: [
       "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",
       "Designed resilient Java and Go microservices and Rust-backed processing paths for large-scale logistics datasets.",
@@ -86,20 +94,21 @@ const experience = [
   },
   {
     role: "Senior Full-Stack Developer / Full-Stack & Mobile Developer",
-    company: "D-SYS Data Solutions, Gwalior",
-    period: "Dec 2014 - Nov 2019",
+    company: "D-SYS Data Solutions Private Limited, Gwalior",
+    period: "Dec 2014 - Nov 2020",
     points: [
       "Delivered transportation and e-way billing, safety/security, mobile, marketplace, database and production-server systems.",
       "Expanded Python, Go and Rust work into data analysis, ML data collection, sentiment signals, recommendation logic and multi-model experiments.",
       "Owned backend and application features from design through implementation, deployment support and client-facing resolution.",
+      "D-SYS outsourced assignments on client payrolls included Omega Healthcare Management Solutions (Nov 2019), Collasys Global Services (Dec 2019 - Feb 2020), Technosoft Consulting (Feb 2020 - May 2020) and Cooey Technologies (Jul 2020 - Nov 2020).",
     ],
   },
   {
     role: "Software Developer",
     company: "Aadi Infotech Pvt. Ltd., Gwalior",
-    period: "Feb 2010 - Nov 2014",
+    period: "Feb 2010 - Feb 2014",
     points: [
-      "Progressed from intern/associate to software developer across transportation, education, social/image-editing, mobile and enterprise products.",
+      "Progressed from Software Intern (2010-2012) to Software Developer (2012-2014), contributing to transportation, education, social/image-editing, mobile and enterprise products.",
       "Built primarily Java-backed web and enterprise systems with Python/Django support for APIs, admin workflows and internal tools.",
       "Helped redesign standalone applications into maintainable object-oriented and thin-client architectures.",
     ],
@@ -119,32 +128,41 @@ const practices = [
     title: "Cross-functional technical leadership",
     text: "I lead architecture and code reviews, mentor senior and architect-level engineers, and align product, QA, infrastructure, DevOps/SRE, compliance, operations and client stakeholders.",
   },
+  {
+    title: "AI-assisted engineering and tooling",
+    text: "I use AI tools and coding agents for bounded tasks: diff-set generation, refactoring analysis, test scaffolding and performance investigation. I review each step and validate changes through tests, profiling and code review, retaining ownership of architecture and code integrity.",
+  },
+];
+
+const learningAreas = [
+  {
+    title: "AI/ML foundations and applications",
+    text: "Studying the foundations behind model development, training and evaluation, then working toward implementations that connect model behavior to application requirements.",
+  },
+  {
+    title: "Generative AI and LLM systems",
+    text: "Building on my professional Bedrock and RAG integration work, my study roadmap covers transformers, embeddings, hybrid retrieval, reranking, fine-tuning and LLM evaluation. Planned MLOps/LLMOps work connects model serving and observability with inference latency, cost, release controls and rollback.",
+  },
+  {
+    title: "Agentic AI and tooling",
+    text: "Planned hands-on work includes tool calling, Model Context Protocol (MCP), LangChain and LangGraph. The focus is controlled execution: explicit tool permissions, agent state, human approvals, recovery and evaluations that make multi-step workflows reviewable and reliable.",
+  },
+  {
+    title: "Storage, HPC and infrastructure",
+    text: "Pursuing a separate learning programme in Rust, C and selected C++ for Linux systems programming, storage, Lustre and high-performance computing (HPC). Planned work explores ultra-low-latency design, parallel I/O, NUMA, RDMA, reliability and recovery, including data feeding, checkpoint recovery and inference-cache placement for AI workloads.",
+  },
 ];
 
 export default function Home() {
   const whatsappUrl =
     "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
-  const linkedinUrl = "https://www.linkedin.com/in/ppst89/";
+  const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
 
   return (
     <main>
       <section className="hero" id="top">
         <div className="hero-background" aria-hidden="true">
-          <div className="signal-grid">
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="system-map">
-            <div className="node node-primary">Java Services</div>
-            <div className="node">Go Runtime</div>
-            <div className="node">Rust Workers</div>
-            <div className="node">AWS / Kubernetes</div>
-            <div className="node">Data Pipelines</div>
-          </div>
+          <img src="/architecture-fabric.png" alt="" width="1792" height="896" fetchPriority="high" />
         </div>
 
         <nav className="nav" aria-label="Primary navigation">
@@ -155,24 +173,26 @@ export default function Home() {
             <a href="#work">Work</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
+            <a href="#learning">Learning</a>
             <a href="#contact">Contact</a>
           </div>
         </nav>
 
         <div className="hero-content">
-          <p className="eyebrow">Senior Architect &amp; Engineering Leader</p>
-          <h1>Building platforms, teams and delivery systems that perform at scale.</h1>
+          <p className="eyebrow">14+ years / Architecture &amp; engineering</p>
+          <h1>Prem Tomar</h1>
+          <p className="hero-role">Software architect.<br /><span>Principal engineer.</span></p>
           <p className="hero-copy">
-            I bring 14+ years of hands-on product engineering and platform architecture experience
-            across distributed systems, workflow platforms, cloud-native backends and integration-heavy
-            products - translating complex stakeholder needs into reliable technology and execution.
+            I set technical direction for distributed platforms and stay hands-on from system
+            design and code to production. I balance scale, performance and reliability with
+            cost, delivery speed and a lean, maintainable stack.
           </p>
           <div className="hero-actions" aria-label="Portfolio actions">
             <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
               Contact me
             </a>
-            <a className="button button-secondary" href="/resume.pdf" target="_blank" rel="noreferrer">
-              Download resume
+            <a className="button button-secondary" href="/resume.pdf?v=20261031-r7" target="_blank" rel="noreferrer" aria-label="Download resume (PDF)">
+              Resume
             </a>
             <a className="button button-linkedin" href={linkedinUrl} target="_blank" rel="noreferrer">
               <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -181,6 +201,14 @@ export default function Home() {
               LinkedIn
             </a>
           </div>
+          <p className="hero-appointment">
+            <span className="hero-kicker">Next</span>
+            <strong>Staff Engineer at DDN</strong>
+            <span>Starting <time dateTime="2026-11-02">2 November 2026</time></span>
+          </p>
+          <a className="hero-direction" href="#learning">
+            Ongoing study: AI/ML, storage &amp; HPC <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </section>
 
@@ -265,9 +293,11 @@ export default function Home() {
                   <span className="line-number">11</span>
                   <code>
                     {"  "}
-                    <span className="syntax-keyword">private final String</span>[] runtimes = {"{"}
-                    <span className="syntax-string">"Java"</span>, <span className="syntax-string">"Go"</span>,{" "}
-                    <span className="syntax-string">"Rust"</span>, <span className="syntax-string">"Node.js"</span>
+                    <span className="syntax-keyword">private final String</span>[] languages = {"{"}
+                    <span className="syntax-string">"Rust"</span>, <span className="syntax-string">"C++"</span>,{" "}
+                    <span className="syntax-string">"C"</span>, <span className="syntax-string">"Python"</span>,{" "}
+                    <span className="syntax-string">"Go"</span>, <span className="syntax-string">"Java"</span>,{" "}
+                    <span className="syntax-string">"Node.js"</span>
                     {"}"};
                   </code>
                 </div>
@@ -284,13 +314,13 @@ export default function Home() {
               </div>
               <p className="terminal-command">
                 <span>prem@MacBook-Pro</span> ~/Documents/Projects/backend-platform % portfolio
-                profile --experience=14+ --stack=java,go,rust,node --mode=production
+                profile --experience=14+ --stack=rust,cpp,c,python,go,java,node --mode=production
               </p>
               <div className="terminal-output">
                 <code>    Updating production profile index</code>
                 <code>      Adding distributed platform architecture</code>
                 <code>      Adding workflow and decision orchestration</code>
-                <code>      Adding AI / ML-enabled engineering</code>
+                <code>      Adding AI / ML and Generative AI integration</code>
                 <code>      Adding architecture governance</code>
                 <code>             Focus areas:</code>
                 {strengths.map((strength) => (
@@ -346,11 +376,15 @@ export default function Home() {
                 <h3>{item.role}</h3>
                 <p className="company">{item.company}</p>
               </div>
-              <ul>
-                {item.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
+              {item.points.length > 0 ? (
+                <ul>
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="role-note">{item.status}</p>
+              )}
             </article>
           ))}
         </div>
@@ -363,14 +397,22 @@ export default function Home() {
         </div>
         <div className="education-grid">
           <article>
+            <span>Master of Technology / In progress</span>
+            <h3>Artificial Intelligence and Machine Learning</h3>
+            <p>Birla Institute of Technology and Science, Pilani</p>
+            <p>October 2026 - October 2028 (expected)</p>
+          </article>
+          <article>
             <span>Postgraduate Program</span>
-            <h3>Data Science and AI/ML</h3>
-            <p>Great Learning</p>
+            <h3>Artificial Intelligence and Machine Learning</h3>
+            <p>The University of Texas at Austin</p>
+            <p>Facilitated by Great Learning</p>
           </article>
           <article>
             <span>Bachelor of Engineering</span>
             <h3>Information Technology</h3>
             <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)</p>
+            <p>2007 - 2012</p>
           </article>
         </div>
         <p className="consulting-note">
@@ -379,13 +421,38 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="section learning-section" id="learning" aria-labelledby="learning-heading">
+        <div className="section-heading">
+          <p className="eyebrow">Ongoing Learning</p>
+          <h2 id="learning-heading">Extending systems architecture into AI and data infrastructure.</h2>
+        </div>
+        <p className="learning-intro">
+          Alongside my hands-on architecture career, I am deepening my AI/ML understanding
+          through M.Tech study and independent engineering practice. These are active
+          learning directions, distinct from the production experience above.
+        </p>
+        <div className="learning-list">
+          {learningAreas.map((area) => (
+            <article className="learning-item" key={area.title}>
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+            </article>
+          ))}
+        </div>
+        <p className="learning-method">
+          My approach: understand the mechanisms, implement and evaluate, investigate failures,
+          and document reproducible evidence. Architecture first, grounded in hands-on code and
+          experiments, with clear limits on what a lab or simulation demonstrates.
+        </p>
+      </section>
+
       <section className="contact-section" id="contact">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>Let&apos;s build dependable platforms and high-performing engineering teams.</h2>
+          <h2>Let&apos;s talk architecture, systems and engineering.</h2>
           <p>
-            Based in Pune, India. Connect with me about senior architecture, platform engineering
-            and product engineering leadership opportunities.
+            Based in Pune, India. Connect with me to exchange ideas on platform architecture,
+            distributed systems and hands-on engineering.
           </p>
         </div>
         <div className="contact-actions">

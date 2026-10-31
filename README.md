@@ -2,6 +2,13 @@
 
 Static portfolio website for Prem P S Tomar, built with React and Vite.
 
+## Continue on Another System
+
+Start with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) for confirmed content, current
+decisions and verification steps. [resume/README.md](resume/README.md) describes
+the editable DOCX and reproducible resume build. The website download is
+`public/resume.pdf`.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`
@@ -15,6 +22,8 @@ npm run build
 ```
 
 Local preview runs at `http://127.0.0.1:3000/`.
+On Windows PowerShell, use `npm.cmd` and `npx.cmd` if script execution policy
+blocks the `.ps1` wrappers. Do not weaken the execution policy just for npm.
 
 ## Deployment
 
