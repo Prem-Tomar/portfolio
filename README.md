@@ -29,6 +29,9 @@ blocks the `.ps1` wrappers. Do not weaken the execution policy just for npm.
 
 - Cloudflare Pages: build command `npm run build`, output directory `dist`.
 - GitHub Pages: workflow is included in `.github/workflows/deploy.yml`.
+- Repository Settings > Pages > Build and deployment > Source must be
+  **GitHub Actions**, not "Deploy from a branch". Only the workflow's `dist`
+  artifact is deployable; repository-root HTML references unbuilt TypeScript.
 - Custom domain: `public/CNAME` is set to `premtomar.com`.
 
 ## Useful Commands

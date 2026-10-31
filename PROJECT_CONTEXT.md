@@ -12,6 +12,10 @@ Last updated: 31 October 2026. Owner: Prem P S Tomar.
 - Resume download: `public/resume.pdf`, linked with `?v=20261031-r7`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
+- Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
+  On 31 October it was corrected from legacy branch publishing, which competed
+  with the workflow and served raw `/src/main.tsx` with a missing `/resume.pdf`.
+  Keep workflow publishing enabled; do not select "Deploy from a branch".
 - Domain config: `public/CNAME`. Keep root `CNAME` consistent.
 - No backend, visitor counter, account system or secret is needed to run this site.
 
