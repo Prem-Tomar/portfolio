@@ -58,7 +58,7 @@ const experience = [
   },
   {
     role: "Senior Architect / Principal Solutions Architect",
-    company: "SwissClear Services Private Limited (TAPPP)",
+    company: "SwissClear Services Private Limited",
     period: "Feb 2024 - Oct 2026",
     points: [
       "Directed product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
@@ -68,7 +68,8 @@ const experience = [
   },
   {
     role: "Senior Software Engineer / Engineering Mentor",
-    company: "Fermyon Technologies India Private Limited (LINK, formerly ShoppinPal)",
+    company: "Fermyon Technologies India Private Limited",
+    formerBrand: "ShoppinPal",
     period: "May 2023 - Jan 2024",
     points: [
       "Built distributed backend systems and internal tools for data migrations, partner integrations, workflow automation, QA traceability and operations.",
@@ -78,7 +79,7 @@ const experience = [
   },
   {
     role: "Software Development Lead",
-    company: "Maverick Quantum India Private Limited (mavQ)",
+    company: "Maverick Quantum India Private Limited",
     period: "Aug 2022 - May 2023",
     points: [
       "Led product delivery for no-code automation and workflow-oriented platform capabilities using API-first architecture and reusable abstractions.",
@@ -88,7 +89,7 @@ const experience = [
   },
   {
     role: "Platform Lead",
-    company: "GoSprint Logistics Private Limited (Swift)",
+    company: "GoSprint Logistics Private Limited",
     period: "Apr 2021 - Aug 2022",
     points: [
       "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",

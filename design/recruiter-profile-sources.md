@@ -10,6 +10,9 @@ career, education and contact sections remain the detailed source for those topi
   date of birth **14 February 1989**.
 - The user confirmed DDN's Indian registered entity as **DataDirect Networks India
   Private Limited**. DDN remains the display brand for the career heading.
+- Chapter company-detail lines use legal entities without repeated brand aliases.
+  TAPPP, LINK, mavQ and Swift remain chapter headings. The former ShoppinPal brand
+  stays in LINK's expandable role details so that historical context is retained.
 - User-confirmed AI/ML exposure: sentiment analysis, fraud detection, customer
   heat profiling, recommendation engines, live translation engines and event
   simulation. Keep these at exposure level; no employer attribution, duration,

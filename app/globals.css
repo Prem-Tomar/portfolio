@@ -92,6 +92,7 @@ h3 { font-size: 23px; font-weight: 600; letter-spacing: -.025em; }
 .experience-card details { margin-top: 16px; font-size: 12px; color: #c8c3dc; }
 .experience-card summary { width: fit-content; padding: 3px 0; }
 .experience-card details ul { margin-top: 12px; }
+.experience-history { margin-top: 12px; color: var(--muted); font-size: 12px; }
 .experience-company { color: #9ea0ae; margin-top: 24px; font-size: 12px; line-height: 1.5; }
 .experience-incoming { margin-top: 27px; display: grid; gap: 15px; color: var(--muted); font-size: 14px; }
 .experience-controls { display: flex; align-items: center; gap: 22px; padding-top: 22px; }
