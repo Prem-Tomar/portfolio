@@ -44,7 +44,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
     if (!section || !sticky || !viewport || !track) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let geometry = { pinned: false, travel: 0, step: 1, top: 0 };
+    let geometry = { pinned: false, wheel: false, travel: 0, step: 1, top: 0 };
     let scrollFrame = 0;
     let measureFrame = 0;
 
@@ -75,12 +75,20 @@ export default function Experience({ companies }: { companies: CompanyExperience
       const step = first.offsetWidth + (parseFloat(getComputedStyle(track).columnGap) || 0);
       const travel = Math.max(0, track.scrollWidth - viewport.clientWidth);
       const top = section.getBoundingClientRect().top + window.scrollY;
-      // Portrait monitors, tall cards and small screens use the compact native carousel.
-      const pinned = !reducedMotion.matches && window.innerWidth >= 900 && window.innerWidth > window.innerHeight && sticky.offsetHeight < window.innerHeight - 20;
+      const fits = sticky.offsetHeight < window.innerHeight - 20;
+      const desktop = window.innerWidth >= 900 && !reducedMotion.matches;
+      const portrait = window.innerWidth <= window.innerHeight;
+      const pinned = desktop && !portrait && fits;
+      // Portrait wheel input moves the compact carousel without reserving page height.
+      const wheel = desktop && portrait && fits && travel > 0;
       const wasPinned = geometry.pinned;
+      const wasWheel = geometry.wheel;
       const wasInSection = window.scrollY >= geometry.top && window.scrollY <= geometry.top + geometry.travel;
-      geometry = { pinned, travel, step, top };
+      geometry = { pinned, wheel, travel, step, top };
+      if (wheel && !wasWheel) window.addEventListener("wheel", onWheel, { passive: false });
+      else if (!wheel && wasWheel) window.removeEventListener("wheel", onWheel);
       section.dataset.pinned = String(pinned);
+      section.dataset.wheel = String(wheel);
       section.style.height = pinned ? `${sticky.offsetHeight + travel}px` : "";
       if (pinned) {
         viewport.scrollLeft = 0;
@@ -96,6 +104,39 @@ export default function Experience({ companies }: { companies: CompanyExperience
 
     const queueMeasure = () => {
       if (!measureFrame) measureFrame = window.requestAnimationFrame(measure);
+    };
+
+    const onWheel = (event: WheelEvent) => {
+      if (!geometry.wheel || event.defaultPrevented || !event.cancelable || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+      if (!event.deltaY || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+
+      // Preserve input controls and independent vertical scrollers under the pointer.
+      let target = event.target instanceof Element ? event.target : null;
+      if (target?.closest("input, textarea, select, [contenteditable='true']")) return;
+      while (target && target !== document.body && target !== document.documentElement) {
+        if (target.scrollHeight > target.clientHeight + 1 && /auto|scroll/.test(getComputedStyle(target).overflowY)) return;
+        target = target.parentElement;
+      }
+
+      const forward = event.deltaY > 0;
+      const offset = viewport.scrollLeft;
+      if (forward ? offset >= geometry.travel - 1 : offset <= 1) return;
+
+      const bounds = sticky.getBoundingClientRect();
+      if (bounds.bottom <= 0 || bounds.top >= window.innerHeight) return;
+      // Only engage when entering the section or when its entire content is visible.
+      if (forward ? bounds.top < -1 : bounds.bottom > window.innerHeight + 1) return;
+
+      event.preventDefault();
+      if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
+        const spaceAbove = Math.max(16, (window.innerHeight - bounds.height) / 2);
+        window.scrollTo({ top: Math.max(0, window.scrollY + bounds.top - spaceAbove), behavior: "instant" });
+        return;
+      }
+
+      const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
+      const distance = Math.max(-geometry.step, Math.min(geometry.step, event.deltaY * unit * 1.5));
+      viewport.scrollTo({ left: Math.max(0, Math.min(geometry.travel, offset + distance)), behavior: "instant" });
     };
 
     navigateRef.current = (index) => {
@@ -119,6 +160,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("wheel", onWheel);
       viewport.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", queueMeasure);
       reducedMotion.removeEventListener("change", queueMeasure);
@@ -126,6 +168,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
       window.cancelAnimationFrame(measureFrame);
       section.style.height = "";
       delete section.dataset.pinned;
+      delete section.dataset.wheel;
       track.style.transform = "";
     };
   }, [companies]);

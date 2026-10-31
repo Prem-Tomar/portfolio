@@ -67,8 +67,11 @@ h3 { font-size: 23px; font-weight: 600; letter-spacing: -.025em; }
 .pinned-hint { display: none; }
 .experience-section[data-pinned="true"] .pinned-hint { display: inline; }
 .experience-section[data-pinned="true"] .swipe-hint { display: none; }
+.experience-section[data-wheel="true"] .pinned-hint { display: inline; }
+.experience-section[data-wheel="true"] .swipe-hint { display: none; }
 .experience-window { width: calc(100% - 64px); max-width: 1160px; margin-inline: auto; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #625d78 #11121b; padding-bottom: 6px; }
 .experience-section[data-pinned="true"] .experience-window { overflow: hidden; scroll-snap-type: none; padding-bottom: 0; }
+.experience-section[data-wheel="true"] .experience-window { scroll-snap-type: none; }
 .experience-track { display: flex; column-gap: 22px; width: 100%; align-items: stretch; }
 .experience-section[data-pinned="true"] .experience-track { will-change: transform; }
 .experience-card { position: relative; isolation: isolate; flex: 0 0 calc(100% - 94px); min-width: 0; min-height: 350px; padding: 28px 34px 24px; border: 1px solid #3a3746; background: linear-gradient(115deg, #22232c, #13141c 65%, #24202e); scroll-snap-align: start; overflow: hidden; }
