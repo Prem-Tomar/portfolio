@@ -32,7 +32,7 @@ function matches(item: ProfileItem, query: string) {
   });
 }
 
-export function resolveProfileCommand(command: string, topics: ProfileTopic[]): Response {
+function resolveProfileCommand(command: string, topics: ProfileTopic[]): Response {
   const [name, ...args] = command.trim().toLowerCase().split(/\s+/);
   const query = args.join(" ").replace(/\bcpp\b/g, "c++").replace(/\bnodejs\b/g, "node.js");
   if (name === "help") {
@@ -61,6 +61,20 @@ export function resolveProfileCommand(command: string, topics: ProfileTopic[]): 
     : { title: "No matching profile information", items: [{ title: searchQuery || "Enter a keyword", detail: "Try skills Rust, github paykit or plans. Type help to see all topics." }] };
 }
 
+function ResponseContent({ response }: { response: Response }) {
+  return <>
+    <p className="console-response-title">{response.title}</p>
+    <div className="console-results">{response.items.map((item, index) => <article className="console-result" key={`${item.title}-${index}`}>
+      <h3>{item.title}</h3>
+      {item.meta && <p className="console-result-meta">{item.meta}</p>}
+      {item.detail && <p>{item.detail}</p>}
+      {item.points?.length ? <ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul> : null}
+      {item.links && <div className="console-result-links">{item.links.map((link) => <a key={link.href} href={link.href} target={link.newTab ? "_blank" : undefined} rel={link.newTab ? "noreferrer" : undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>}
+    </article>)}</div>
+    {response.note && <p className="console-response-note">{response.note}</p>}
+  </>;
+}
+
 export default function ProfileConsole({ topics }: { topics: ProfileTopic[] }) {
   const [value, setValue] = useState("");
   const [entry, setEntry] = useState<Entry | null>(() => ({ id: 0, command: topics[0].command, response: resolveProfileCommand(topics[0].command, topics) }));
@@ -70,6 +84,10 @@ export default function ProfileConsole({ topics }: { topics: ProfileTopic[] }) {
   const sequenceRef = useRef(0);
   const outputRef = useRef<HTMLDivElement>(null);
   const shortcuts = [...topics.slice(0, -1), { command: "help", label: "Help" }, ...topics.slice(-1)];
+  const normalizedCommand = entry?.command.trim().toLowerCase();
+  const activeTopic = topics.find((topic) => topic.command === normalizedCommand || topic.aliases?.includes(normalizedCommand ?? ""));
+  const selectedCommand = normalizedCommand?.split(/\s+/)[0];
+  const selectedTopic = topics.find((topic) => topic.command === selectedCommand || topic.aliases?.includes(selectedCommand ?? ""));
 
   useEffect(() => {
     const output = outputRef.current;
@@ -124,21 +142,14 @@ export default function ProfileConsole({ topics }: { topics: ProfileTopic[] }) {
           <button className="console-reset" type="button" onClick={() => run("clear")}>Reset</button>
         </form>
         <nav className="console-shortcuts" aria-label="Profile console topics">
-          {shortcuts.map((topic) => <button type="button" key={topic.command} aria-pressed={entry?.command.toLowerCase().split(/\s+/)[0] === topic.command} onClick={() => run(topic.command)}>{topic.label}</button>)}
+          {shortcuts.map((topic) => <button type="button" key={topic.command} aria-controls="console-output" aria-pressed={selectedTopic?.command === topic.command || selectedCommand === topic.command} onClick={() => run(topic.command)}>{topic.label}</button>)}
         </nav>
-        <div className="console-output" ref={outputRef} role="region" aria-label="Profile console response" aria-live="polite" aria-atomic="true" tabIndex={0}>
+        <div className="console-output" id="console-output" ref={outputRef} role="region" aria-label="Profile console response" aria-live="polite" aria-atomic="true" tabIndex={0}>
           {!entry && <p className="console-empty">Choose a topic above or type help below.</p>}
-          {entry && <div className="console-entry" key={entry.id}>
-            <p className="console-response-title">{entry.response.title}</p>
-            <div className="console-results">{entry.response.items.map((item, index) => <article className="console-result" key={`${item.title}-${index}`}>
-              <h3>{item.title}</h3>
-              {item.meta && <p className="console-result-meta">{item.meta}</p>}
-              {item.detail && <p>{item.detail}</p>}
-              {item.points?.length ? <ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul> : null}
-              {item.links && <div className="console-result-links">{item.links.map((link) => <a key={link.href} href={link.href} target={link.newTab ? "_blank" : undefined} rel={link.newTab ? "noreferrer" : undefined}>{link.label}<span aria-hidden="true"> ↗</span></a>)}</div>}
-            </article>)}</div>
-            {entry.response.note && <p className="console-response-note">{entry.response.note}</p>}
-          </div>}
+          {topics.map((topic) => <div className="console-entry" id={`console-topic-${topic.command}`} key={topic.command} hidden={activeTopic?.command !== topic.command}>
+            <ResponseContent response={{ title: topic.label, items: topic.items, note: topic.note }} />
+          </div>)}
+          {!activeTopic && entry && <div className="console-entry" key={entry.id}><ResponseContent response={entry.response} /></div>}
         </div>
       </div>
       <p className="console-hint" id="console-hint">Search by keyword, or try <code>skills Rust</code> and <code>github paykit</code>.</p>

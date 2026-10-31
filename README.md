@@ -2,6 +2,12 @@
 
 Static portfolio website for Prem P S Tomar, built with React and Vite.
 
+Production builds pre-render the profile, skills, projects and future plans into
+HTML, then hydrate the same React application in the browser. The temporary
+rendering bundle stays under ignored `work/prerender/`; GitHub Pages serves only
+`dist/`. Search metadata, crawler files and favicon assets are described in
+[`design/seo-and-favicon.md`](design/seo-and-favicon.md).
+
 ## Continue on Another System
 
 Start with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) for confirmed content, current

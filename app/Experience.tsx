@@ -75,8 +75,8 @@ export default function Experience({ companies }: { companies: CompanyExperience
       const step = first.offsetWidth + (parseFloat(getComputedStyle(track).columnGap) || 0);
       const travel = Math.max(0, track.scrollWidth - viewport.clientWidth);
       const top = section.getBoundingClientRect().top + window.scrollY;
-      // Tall cards and small screens keep native horizontal scrolling and all controls.
-      const pinned = !reducedMotion.matches && window.innerWidth >= 900 && sticky.offsetHeight < window.innerHeight - 20;
+      // Portrait monitors, tall cards and small screens use the compact native carousel.
+      const pinned = !reducedMotion.matches && window.innerWidth >= 900 && window.innerWidth > window.innerHeight && sticky.offsetHeight < window.innerHeight - 20;
       const wasPinned = geometry.pinned;
       const wasInSection = window.scrollY >= geometry.top && window.scrollY <= geometry.top + geometry.travel;
       geometry = { pinned, travel, step, top };

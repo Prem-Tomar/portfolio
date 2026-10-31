@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#151515"/>
-  <path d="M14 47V17h18c7 0 12 5 12 11s-5 11-12 11h-8v8H14zm10-18h7c2 0 4-1 4-3s-2-3-4-3h-7v6z" fill="#f5f3ef"/>
-  <path d="M43 47V34h7v13h-7z" fill="#2f6f3e"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">PT favicon — silver monogram on charcoal</title>
+  <rect width="128" height="128" rx="24" fill="#101116"/>
+  <g transform="translate(-3 0)" fill="#f3f3f6">
+    <path fill-rule="evenodd" d="M22 96V32h24c15 0 23 8 23 21s-8 21-23 21H34v22H22Zm12-53v20h12c7 0 11-3 11-10s-4-10-11-10H34Z"/>
+    <path d="M73 32h39v11H99v53H87V43H73Z"/>
+  </g>
+  <rect x="86" y="106" width="23" height="4" rx="2" fill="#b3a9ec"/>
 </svg>

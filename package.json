@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 3000",
-    "build": "vite build",
+    "build": "node scripts/build-static.mjs",
     "start": "vite preview --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
     "test": "npm run build"
