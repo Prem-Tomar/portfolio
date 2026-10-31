@@ -188,7 +188,6 @@ export default function Home() {
           <div className="hero-content">
             <p className="eyebrow">Software Architect / Principal Engineer</p>
             <h1 id="hero-heading">Prem Tomar</h1>
-            <p className="hero-fullname">Prem Pratap Singh Tomar</p>
             <p className="hero-lead">Technical direction.<br />Hands-on engineering.</p>
             <p className="hero-copy">{profileSummary}</p>
             <div className="hero-actions" aria-label="Portfolio actions">
