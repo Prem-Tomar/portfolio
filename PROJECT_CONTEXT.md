@@ -94,6 +94,17 @@ document processing, public ML/research examples and bounded AI-assisted tooling
 Preserve the distinction between application exposure, professional work,
 research and ongoing/planned study; do not invent production claims or metrics.
 
+Recruiter Essentials editorial cleanup requested on 1 November 2026: keep
+employment dates and job titles in Chapters, not Skill experience, AI/ML exposure
+or Project details. Use short brand attribution where it adds context. Keep one
+sentiment-analysis entry attributed to Swift and TAPPP; do not repeat it in a
+generic application list. Skills describe use, AI/ML describes contributions and
+exposure, and projects describe architecture and outcomes. Research remains
+labelled as experimental, with detailed repository descriptions in Open Source.
+Avoid repeating the education timetable or repository verification date here.
+After local review, the user authorized publication of this cleanup on 1 November
+2026. Preserve this presentation rule in subsequent edits.
+
 D-SYS: Full-Stack / Mobile Developer Dec 2014 - Feb 2018; Senior Full-Stack
 Developer Mar 2018 - Nov 2020. User confirmed outsourced assignments on client
 payrolls: Omega Healthcare (Nov 2019), Collasys Global Services (Dec 2019 - Feb 2020),

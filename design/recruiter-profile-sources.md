@@ -6,6 +6,13 @@ Keep the console focused on additional recruiter details,
 skill-to-role evidence and public work. Show one response at a time; the page's
 career, education and contact sections remain the detailed source for those topics.
 
+1 November presentation cleanup: show short brand names where attribution is
+useful, with no repeated employment dates or job titles in Skills, AI/ML exposure
+or Project details. Keep sentiment analysis in a single entry. Preserve the
+underlying chronology in Chapters and this source record, not repeated console
+metadata. Education dates belong to Education; repository verification dates are
+maintenance evidence, not reader-facing content.
+
 - User-confirmed public details: open to work **No**, notice period **30 days**,
   date of birth **14 February 1989**.
 - The user confirmed DDN's Indian registered entity as **DataDirect Networks India
