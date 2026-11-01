@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 31 October 2026. Owner: Prem P S Tomar.
+Last updated: 1 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -68,8 +68,31 @@ git push alone does not prove the public website updated.
 | D-SYS Data Solutions Private Limited | Dec 2014 - Nov 2020 | Full-Stack / Mobile Developer, then Senior Full-Stack Developer |
 | Aadi Infotech Pvt. Ltd. | Feb 2010 - Feb 2014 | Software Intern, then Software Developer |
 
-DDN is upcoming as of this handoff. Do not invent responsibilities or achievements
-before the user supplies them. Confirm the actual start before changing to Present.
+Website display update requested on 1 November 2026: use "Staff Engineer" for DDN,
+remove "Next", the displayed start date and "Upcoming appointment", and link DDN
+to https://ddn.com in the hero. A later clarification removes links from chapter
+headings, including DDN; keep those headings as plain text. This does not alter
+the separately maintained resume or assert a different employment start date.
+Do not invent responsibilities or achievements. Confirm the actual start before
+adding a "Present" date range.
+
+Contact copy controls were also requested for the mobile number, email and
+LinkedIn URL. Keep their original links clickable, with adjacent small copy icons
+and accessible success/failure feedback. Do not add copy buttons to every paragraph.
+
+Keep CSS in external stylesheets and executable JavaScript in external bundles.
+Do not add style attributes, inline scripts, HTML event-handler attributes or
+JavaScript-written inline styles. The career carousel uses native scrolling,
+stylesheet-defined spacer geometry and a native progress element. JSON-LD in the
+static HTML is non-executable structured data, not inline JavaScript.
+
+AI/ML visibility update requested on 1 November 2026: include AI/ML, GenAI, RAG
+and LLM in the hero skills line after Python and before Go. Keep the detailed
+coverage in Recruiter Essentials, not a new standalone section. Its AI/ML topic
+covers sentiment/recommendation experiments, Bedrock/RAG integration, SenseEngine,
+document processing, public ML/research examples and bounded AI-assisted tooling.
+Preserve the distinction between application exposure, professional work,
+research and ongoing/planned study; do not invent production claims or metrics.
 
 D-SYS: Full-Stack / Mobile Developer Dec 2014 - Feb 2018; Senior Full-Stack
 Developer Mar 2018 - Nov 2020. User confirmed outsourced assignments on client

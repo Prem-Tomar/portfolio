@@ -51,14 +51,24 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
     },
     {
       command: "ai", label: "AI/ML exposure", aliases: ["ml", "ai/ml", "exposure"],
-      items: [{ title: "Application areas", points: [
-        "Sentiment analysis",
-        "Fraud detection",
-        "Customer heat profiling",
-        "Recommendation engines",
-        "Live translation engines",
-        "Event simulation",
-      ] }],
+      note: "Application exposure, professional engineering, research and ongoing learning are distinguished above.",
+      items: [
+        { title: "Application areas", meta: "AI/ML application exposure", points: [
+          "Sentiment analysis",
+          "Fraud detection",
+          "Customer heat profiling",
+          "Recommendation engines",
+          "Live translation engines",
+          "Event simulation",
+        ] },
+        { title: "Sentiment analysis and recommendation logic", meta: "D-SYS · Analytics and model experimentation", detail: "Python, Go and Rust-backed data collection and exploratory analysis, including sentiment signals, recommendation logic and multi-model experiments." },
+        { title: "Generative AI, RAG and LLM integration", meta: "TAPPP · Professional engineering", detail: "Integrated AWS Bedrock and retrieval-augmented generation (RAG) / LLM decision support. Related platform work included Rust event and insight pipelines and BPMN/Camunda/Temporal workflow orchestration." },
+        { title: "ML-driven shipment intelligence", meta: "Swift · SenseEngine · Professional engineering", detail: "Created SenseEngine for shipment intelligence across 300K+ monthly orders. Built Rust processing paths for high-volume shipment data feeding ML models and optimization logic." },
+        { title: "Intelligent Document Processing", meta: "mavQ · Professional contribution", detail: "Contributed to document-processing automation alongside AWS Connect customer-experience capabilities, with ownership of service design, testing, release planning and production support." },
+        { title: "Weight prediction and ensemble experiments", meta: "Python / scikit-learn · Notebook experiment", detail: "Compared tree and nearest-neighbour classifiers, including a soft-voting Random Forest and Gradient Boosting ensemble. This is an experiment, not a claimed production deployment.", links: [{ label: "Weight prediction notebook", href: "https://github.com/Prem-Tomar/swift_weight_prediction_model", newTab: true }] },
+        { title: "Probabilistic forensic modeling", meta: "Python · Image/video research", detail: "Synthetic-media detection research with image/video models, calibrated uncertainty, provenance evidence and distribution-shift evaluation. Research baselines are separate from production assurance.", links: [{ label: "Research and evaluation notes", href: "https://github.com/Prem-Tomar/prob_forensic_modeling", newTab: true }] },
+        { title: "AI-assisted engineering and agent tooling", meta: "Current workflow; orchestration tools under ongoing study", detail: "Use coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation, reviewing each step and validating changes through tests and profiling. Tool calling, MCP, LangChain/LangGraph, agent state and recovery, LLM evaluation and MLOps/LLMOps remain ongoing or planned study." },
+      ],
     },
     {
       command: "projects", label: "Project details", aliases: ["project"],

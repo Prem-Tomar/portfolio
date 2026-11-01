@@ -1,5 +1,6 @@
 import Experience from "./Experience";
 import ProfileConsole from "./ProfileConsole";
+import CopyButton from "./CopyButton";
 import { getRecruiterTopics } from "./recruiterProfile";
 
 const metrics = [
@@ -50,10 +51,8 @@ const systems = [
 
 const experience = [
   {
-    role: "Incoming Staff Engineer",
+    role: "Staff Engineer",
     company: "DataDirect Networks India Private Limited",
-    period: "Starting 2 November 2026",
-    status: "Upcoming appointment.",
     points: [],
   },
   {
@@ -194,16 +193,16 @@ export default function Home() {
             <div className="hero-actions" aria-label="Portfolio actions">
               <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Contact me <span aria-hidden="true">↗</span></a>
               <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="View resume PDF">Resume <span aria-hidden="true">↓</span></a>
-              <a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <span className="copyable-contact"><a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><CopyButton text={linkedinUrl} label="LinkedIn profile URL" /></span>
             </div>
-            <p className="hero-appointment"><span className="hero-kicker">Next</span><strong>Staff Engineer at DDN</strong><span>Starting <time dateTime="2026-11-02">2 November 2026</time></span></p>
+            <p className="hero-appointment"><strong>Staff Engineer at <a href="https://ddn.com" target="_blank" rel="noopener noreferrer">DDN</a></strong></p>
           </div>
           <div className="hero-sculpture" aria-hidden="true">
             <div className="sculpture-plane plane-back" /><div className="sculpture-plane plane-middle" />
             <div className="sculpture-plane plane-front"><span /><span /><span /><span /><span /></div>
             <div className="sculpture-light" />
           </div>
-          <div className="hero-bottom"><span>14+ years in architecture &amp; engineering</span><span>Rust · C++ · C · Python · Go · Java · Node.js</span></div>
+          <div className="hero-bottom"><span>14+ years in architecture &amp; engineering</span><span>Rust · C++ · C · Python · AI/ML · GenAI · RAG · LLM · Go · Java · Node.js</span></div>
         </div>
       </section>
 
@@ -256,9 +255,9 @@ export default function Home() {
         <div><p className="eyebrow">Contact / Pune, India</p><h2 id="contact-heading">Let's talk<br />architecture.</h2><p>Connect with me to exchange ideas on platform architecture, distributed systems and hands-on engineering.</p></div>
         <div className="contact-actions">
           <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
-          <a className="text-link" href="mailto:prem.tomar.blr@gmail.com">prem.tomar.blr@gmail.com</a>
-          <a className="text-link" href="tel:+919606379003">+91 9606379003</a>
-          <a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a>
+          <div className="copyable-contact"><a className="text-link" href="mailto:prem.tomar.blr@gmail.com">prem.tomar.blr@gmail.com</a><CopyButton text="prem.tomar.blr@gmail.com" label="email address" /></div>
+          <div className="copyable-contact"><a className="text-link" href="tel:+919606379003">+91 9606379003</a><CopyButton text="+919606379003" label="mobile number" /></div>
+          <div className="copyable-contact"><a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a><CopyButton text={linkedinUrl} label="LinkedIn profile URL" /></div>
         </div>
       </section>
       <ProfileConsole topics={getRecruiterTopics(resumeUrl)} />

@@ -28,6 +28,14 @@ career, education and contact sections remain the detailed source for those topi
   a Doctor of Business Administration. No institution, admission, enrolment or
   completion date is claimed for either future programme.
 
+1 November 2026: expanded the AI/ML topic using the existing sources above and
+below. D-SYS sentiment/recommendation experimentation, TAPPP Bedrock/RAG work,
+Swift SenseEngine and mavQ document-processing contributions come from the
+checked-in resume. The six application-exposure areas still do not imply
+production delivery. Notebook and forensic-model entries retain their experiment
+and research labels. Detailed coverage remains inside Recruiter Essentials;
+the hero skills line includes AI/ML, GenAI, RAG and LLM for visibility.
+
 Public repository links were verified using GitHub's repository search. Summaries
 come from each default-branch README, except the Swift notebook:
 

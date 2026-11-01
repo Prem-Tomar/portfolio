@@ -4,7 +4,7 @@ type CompanyExperience = {
   role: string;
   company: string;
   formerBrand?: string;
-  period: string;
+  period?: string;
   status?: string;
   points: string[];
 };
@@ -32,7 +32,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
   const stickyRef = useRef<HTMLDivElement>(null);
   const windowRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef<HTMLProgressElement>(null);
   const activeRef = useRef(0);
   const navigateRef = useRef<(index: number) => void>(() => {});
   const [active, setActive] = useState(0);
@@ -54,14 +54,14 @@ export default function Experience({ companies }: { companies: CompanyExperience
       const offset = geometry.pinned
         ? Math.max(0, Math.min(geometry.travel, window.scrollY - geometry.top))
         : viewport.scrollLeft;
-      if (geometry.pinned) track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+      if (geometry.pinned) viewport.scrollLeft = offset;
       const index = Math.min(companies.length - 1, Math.round(offset / geometry.step));
       if (activeRef.current !== index) {
         activeRef.current = index;
         setActive(index);
       }
       if (progressRef.current) {
-        progressRef.current.style.transform = `scaleX(${geometry.travel ? offset / geometry.travel : 0})`;
+        progressRef.current.value = geometry.travel ? offset / geometry.travel : 0;
       }
     };
 
@@ -90,11 +90,9 @@ export default function Experience({ companies }: { companies: CompanyExperience
       else if (!wheel && wasWheel) window.removeEventListener("wheel", onWheel);
       section.dataset.pinned = String(pinned);
       section.dataset.wheel = String(wheel);
-      section.style.height = pinned ? `${sticky.offsetHeight + travel}px` : "";
       if (pinned) {
         viewport.scrollLeft = 0;
       } else {
-        track.style.transform = "";
         if (wasPinned) {
           viewport.scrollLeft = Math.min(activeRef.current * step, travel);
           if (wasInSection) window.scrollTo({ top, behavior: "instant" });
@@ -167,10 +165,8 @@ export default function Experience({ companies }: { companies: CompanyExperience
       reducedMotion.removeEventListener("change", queueMeasure);
       window.cancelAnimationFrame(scrollFrame);
       window.cancelAnimationFrame(measureFrame);
-      section.style.height = "";
       delete section.dataset.pinned;
       delete section.dataset.wheel;
-      track.style.transform = "";
     };
   }, [companies]);
 
@@ -185,10 +181,10 @@ export default function Experience({ companies }: { companies: CompanyExperience
           <div className="experience-track" ref={trackRef}>
             {companies.map((company, index) => (
               <article className="experience-card" key={company.company} aria-label={`${companyNames[index]} experience`}>
-                <div className="experience-card-top"><p>{company.period}</p><span>{String(index + 1).padStart(2, "0")} / {String(companies.length).padStart(2, "0")}</span></div>
+                <div className="experience-card-top">{company.period && <p>{company.period}</p>}<span>{String(index + 1).padStart(2, "0")} / {String(companies.length).padStart(2, "0")}</span></div>
                 <div className="experience-title-row"><CompanyMark name={companyNames[index]} logo={companyLogos[index]} /><h3>{companyNames[index]}</h3></div>
                 <p className="experience-role">{company.role}</p>
-                {company.points.length ? <ul>{companyHighlights[index].map((point) => <li key={point}>{point}</li>)}</ul> : <div className="experience-incoming"><p>{company.status}</p><p>Data storage · Parallel file systems · HPC · AI infrastructure</p></div>}
+                {company.points.length ? <ul>{companyHighlights[index].map((point) => <li key={point}>{point}</li>)}</ul> : <div className="experience-incoming">{company.status && <p>{company.status}</p>}<p>Data storage · Parallel file systems · HPC · AI infrastructure</p></div>}
                 {company.points.length > 0 && <details><summary tabIndex={active === index ? 0 : -1}>More about this role</summary>{company.formerBrand && <p className="experience-history">Formerly {company.formerBrand}.</p>}<ul>{company.points.map((point) => <li key={point}>{point}</li>)}</ul></details>}
                 <p className="experience-company">{company.company}</p>
               </article>
@@ -202,7 +198,10 @@ export default function Experience({ companies }: { companies: CompanyExperience
           </nav>
           <div className="experience-arrows"><button type="button" disabled={active === 0} aria-label="Previous company" onClick={() => navigateRef.current(active - 1)}>←</button><button type="button" disabled={active === companies.length - 1} aria-label="Next company" onClick={() => navigateRef.current(active + 1)}>→</button></div>
         </div>
-        <div className="experience-progress content-width" aria-hidden="true"><div ref={progressRef} /></div>
+        <div className="experience-progress content-width" aria-hidden="true"><progress ref={progressRef} max={1} value={0} /></div>
+      </div>
+      <div className="experience-scroll-space content-width" aria-hidden="true">
+        {companies.slice(1).map((company) => <div className="experience-scroll-step" key={company.company} />)}
       </div>
     </section>
   );
