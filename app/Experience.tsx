@@ -18,7 +18,7 @@ const companyHighlights = [
   ["Built distributed backend systems and tooling for migrations, partner integrations and workflow automation.", "Delivered commerce integrations and modernized selected Java and Node.js components to Go."],
   ["Led architecture and delivery for no-code automation and workflow platforms.", "Owned service design, data models and release quality, including AWS Connect and document-processing capabilities."],
   ["Led commerce and logistics architecture across checkout, payments, couriers and partner integrations.", "Built Rust processing paths and SenseEngine for ML-driven shipment intelligence across 300K+ monthly orders."],
-  ["Delivered mobile, enterprise and transportation systems across backend, data and production operations.", "Expanded Python, Go and Rust engineering into analytics, ML data collection and intelligent product workflows."],
+  ["Delivered mobile, enterprise and transportation systems across backend, data and production operations.", "Used Python for analytics, structured data preparation and reporting."],
   ["Progressed from intern to developer, delivering mobile, enterprise and web applications.", "Built Java systems and Python/Django services while modernizing applications into database-backed architectures."],
 ];
 

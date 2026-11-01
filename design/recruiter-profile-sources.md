@@ -15,8 +15,9 @@ career, education and contact sections remain the detailed source for those topi
   stays in LINK's expandable role details so that historical context is retained.
 - User-confirmed AI/ML exposure: sentiment analysis, fraud detection, customer
   heat profiling, recommendation engines, live translation engines and event
-  simulation. Keep these at exposure level; no employer attribution, duration,
-  production-delivery claim or outcome metric has been supplied for this list.
+  simulation. Sentiment analysis is confirmed at Swift and TAPPP. Keep the other
+  application areas at exposure level; do not infer their employer attribution,
+  duration, production-delivery claims or outcome metrics.
 - Skill-to-role mapping and professional project details: the checked-in resume
   `resume/Prem_P_S_Tomar_Resume_2026-10-31.docx` and its authoring source
   `resume/tools/build_architect_resume.py`. Role dates are employment dates,
@@ -28,13 +29,18 @@ career, education and contact sections remain the detailed source for those topi
   a Doctor of Business Administration. No institution, admission, enrolment or
   completion date is claimed for either future programme.
 
-1 November 2026: expanded the AI/ML topic using the existing sources above and
-below. D-SYS sentiment/recommendation experimentation, TAPPP Bedrock/RAG work,
-Swift SenseEngine and mavQ document-processing contributions come from the
-checked-in resume. The six application-exposure areas still do not imply
-production delivery. Notebook and forensic-model entries retain their experiment
-and research labels. Detailed coverage remains inside Recruiter Essentials;
-the hero skills line includes AI/ML, GenAI, RAG and LLM for visibility.
+1 November 2026 correction: the user explicitly attributes sentiment analysis to
+Swift and TAPPP, not D-SYS. D-SYS had analytics, structured data preparation and
+reporting, not AI/ML or model experimentation. Earlier resume text and portfolio
+attributions to D-SYS were incorrect and must not be reused as evidence. Remove
+D-SYS Rust/Go skill mappings that relied solely on those withdrawn ML claims;
+retain the languages elsewhere in the portfolio. Other AI/ML application areas
+must not be reassigned to Swift or TAPPP without confirmation.
+
+TAPPP Bedrock/RAG work, Swift SenseEngine and mavQ document-processing
+contributions retain their existing sources. Notebook and forensic-model entries
+retain their experiment and research labels. Detailed coverage remains inside
+Recruiter Essentials; the hero skills line includes AI/ML, GenAI, RAG and LLM.
 
 Public repository links were verified using GitHub's repository search. Summaries
 come from each default-branch README, except the Swift notebook:

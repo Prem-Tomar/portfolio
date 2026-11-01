@@ -63,6 +63,7 @@ const experience = [
       "Directed product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
       "Drove platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
       "Built Rust event-processing workers and integrated AWS Bedrock with RAG/LLM decision support; led Java-to-Go modernization, workflow orchestration and production RCA.",
+      "Worked on sentiment analysis as part of the platform's AI/ML capabilities.",
     ],
   },
   {
@@ -94,6 +95,7 @@ const experience = [
       "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",
       "Designed resilient Java and Go microservices and Rust-backed processing paths for large-scale logistics datasets.",
       "Created SenseEngine, supporting ML-driven shipment optimization across 300K+ monthly orders.",
+      "Worked on sentiment analysis alongside shipment-intelligence capabilities.",
     ],
   },
   {
@@ -102,7 +104,7 @@ const experience = [
     period: "Dec 2014 - Nov 2020",
     points: [
       "Delivered transportation and e-way billing, safety/security, mobile, marketplace, database and production-server systems.",
-      "Expanded Python, Go and Rust work into data analysis, ML data collection, sentiment signals, recommendation logic and multi-model experiments.",
+      "Used Python for analytics, structured data preparation and reporting.",
       "Owned backend and application features from design through implementation, deployment support and client-facing resolution.",
       "D-SYS outsourced assignments on client payrolls included Omega Healthcare Management Solutions (Nov 2019), Collasys Global Services (Dec 2019 - Feb 2020), Technosoft Consulting (Feb 2020 - May 2020) and Cooey Technologies (Jul 2020 - Nov 2020).",
     ],
@@ -168,7 +170,7 @@ const consultingNote = "Additional consulting exposure includes Millennial Group
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
-  const resumeUrl = "/resume.pdf?v=20261031-r7";
+  const resumeUrl = "/resume.pdf?v=20261101-r8";
 
   return (
     <main id="top">

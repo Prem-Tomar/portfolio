@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from pathlib import Path
 
@@ -9,7 +10,7 @@ from pypdf import PdfReader
 
 root = Path(__file__).resolve().parents[2]
 resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-10-31.pdf'
-source = root / 'public/resume.pdf'
+source = Path(os.environ.get('RESUME_BASELINE_PDF', root / 'public/resume.pdf'))
 docx = Document(resume.with_suffix('.docx'))
 reader = PdfReader(resume)
 pages = [p.extract_text() for p in reader.pages]
@@ -53,15 +54,29 @@ for term in ['ppst89', 'Present', 'Oracle-ready', 'Est Id', 'Member Id', 'Jun 20
 
 inside_dsys = False
 dsys_count = 0
+dsys_text = []
+analytics_bullet = 'Used Python for analytics, structured data preparation, and reporting.'
 for para in docx.paragraphs:
     if para.text.startswith('D-SYS Data Solutions Private Limited |'):
         inside_dsys = True
     elif para.text.startswith('Aadi Infotech'):
         inside_dsys = False
+    if inside_dsys:
+        dsys_text.append(para.text)
     if inside_dsys and para.style.name == 'List Bullet':
-        assert normalize(para.text) in source_text, 'D-SYS responsibility was altered'
+        # User correction on 1 November: retain analytics, remove AI/ML claims.
+        if para.text != analytics_bullet:
+            assert normalize(para.text) in source_text, 'Unrelated D-SYS responsibility was altered'
         dsys_count += 1
-assert dsys_count == 11
+assert dsys_count == 9
+assert analytics_bullet in dsys_text
+assert not re.search(r'\b(?:AI|ML|sentiment|recommendation|semi-supervised|intelligence)\b|model experimentation', ' '.join(dsys_text), re.I)
+for start, end in [
+    ('SwissClear Services Private Limited (TAPPP)', 'Fermyon Technologies India Private Limited'),
+    ('GoSprint Logistics Private Limited (Swift)', 'D-SYS Data Solutions Private Limited'),
+]:
+    role_text = text.split(start, 1)[1].split(end, 1)[0]
+    assert 'sentiment analysis' in role_text.lower(), f'Sentiment analysis missing from {start}'
 
 links = []
 for page in reader.pages:
@@ -83,7 +98,8 @@ with pdfplumber.open(resume) as pdf:
             assert 0 <= char['top'] <= char['bottom'] <= page.height
 
 result = {'pages': len(pages), 'characters_per_page': list(map(len, pages)),
-          'docx_text_matches_pdf': True, 'dsys_bullets_preserved': dsys_count,
+          'docx_text_matches_pdf': True, 'dsys_bullets_after_correction': dsys_count,
+          'dsys_analytics_without_ai_ml': True, 'sentiment_at_swift_and_tappp': True,
           'links': links, 'text_only_pdf': True, 'text_within_page_bounds': True,
           'note': 'Local parsing and layout checks; not certification by an external ATS.'}
 dest = root / 'resume/qa/checks.json'

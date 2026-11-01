@@ -20,21 +20,19 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
         { title: "Rust", meta: "Professional use", points: [
           "TAPPP · Feb 2024 – Oct 2026: event and insight processing workers.",
           "Swift · Apr 2021 – Aug 2022: high-volume shipment processing paths feeding ML models.",
-          "D-SYS · Senior role, Mar 2018 – Nov 2020: Rust-backed engineering for ML data collection and product experiments.",
         ] },
         { title: "C++", meta: "Core systems-programming skill / ongoing study", detail: "Systems programming, concurrent processing and performance investigation. Selected C++ is also part of the ongoing Linux and storage study programme." },
         { title: "C", meta: "Core systems-programming skill / ongoing study", detail: "Systems programming and performance investigation, with ongoing independent study in Linux systems programming, storage and low-latency data paths." },
         { title: "Python / FastAPI / Django", meta: "Professional use", points: [
           "LINK · May 2023 – Jan 2024 and mavQ · Aug 2022 – May 2023: Python/FastAPI backend environments.",
           "Swift · Apr 2021 – Aug 2022: ML and shipment-data processing environment.",
-          "D-SYS · Dec 2014 – Nov 2020: Django-backed applications, data preparation, analysis and model experimentation.",
+          "D-SYS · Dec 2014 – Nov 2020: Django-backed applications, analytics, structured data preparation and reporting.",
           "Aadi Infotech · Feb 2010 – Feb 2014: Python/Django APIs and administrative tools.",
         ] },
         { title: "Go / Golang", meta: "Professional use", points: [
           "TAPPP · Feb 2024 – Oct 2026: Java-to-Go modernization and asynchronous processing.",
           "LINK · May 2023 – Jan 2024: modernization of selected Java and Node.js components to Go.",
           "Swift · Apr 2021 – Aug 2022: resilient microservices and logistics API boundaries.",
-          "D-SYS · Senior role, Mar 2018 – Nov 2020: Go-backed engineering in data and intelligent product work.",
         ] },
         { title: "Java / Spring Boot", meta: "Professional use", points: [
           "TAPPP · Feb 2024 – Oct 2026: distributed backend platforms and Java-to-Go modernization.",
@@ -61,7 +59,10 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
           "Live translation engines",
           "Event simulation",
         ] },
-        { title: "Sentiment analysis and recommendation logic", meta: "D-SYS · Analytics and model experimentation", detail: "Python, Go and Rust-backed data collection and exploratory analysis, including sentiment signals, recommendation logic and multi-model experiments." },
+        { title: "Sentiment analysis", meta: "Swift and TAPPP · Professional experience", points: [
+          "Swift · Platform Lead · Apr 2021 – Aug 2022: sentiment analysis.",
+          "TAPPP · Senior Architect / Principal Solutions Architect · Feb 2024 – Oct 2026: sentiment analysis.",
+        ] },
         { title: "Generative AI, RAG and LLM integration", meta: "TAPPP · Professional engineering", detail: "Integrated AWS Bedrock and retrieval-augmented generation (RAG) / LLM decision support. Related platform work included Rust event and insight pipelines and BPMN/Camunda/Temporal workflow orchestration." },
         { title: "ML-driven shipment intelligence", meta: "Swift · SenseEngine · Professional engineering", detail: "Created SenseEngine for shipment intelligence across 300K+ monthly orders. Built Rust processing paths for high-volume shipment data feeding ML models and optimization logic." },
         { title: "Intelligent Document Processing", meta: "mavQ · Professional contribution", detail: "Contributed to document-processing automation alongside AWS Connect customer-experience capabilities, with ownership of service design, testing, release planning and production support." },

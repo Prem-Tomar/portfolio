@@ -9,7 +9,7 @@ Last updated: 1 November 2026. Owner: Prem P S Tomar.
 - React 19 + Vite 8 + TypeScript; static output in `dist/`.
 - Main content: `app/page.tsx`; styles: `app/globals.css`; entry: `src/main.tsx`.
 - Hero asset: `public/architecture-fabric.png`; provenance: `design/hero-image-prompt.txt`.
-- Resume download: `public/resume.pdf`, linked with `?v=20261031-r7`.
+- Resume download: `public/resume.pdf`, linked with `?v=20261101-r8`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
 - Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
@@ -33,7 +33,7 @@ searchable text with working contact links and no image-based resume content.
 These are local parsing/layout checks, not external ATS certification.
 
 Expected deployed PDF SHA256:
-`39681dd4cb72fb6499ce92f16cfbe49500a209b07ba9e240b26675fbfdea3b76`.
+`20a614bf82858d224a26a77f0014bf86e870d4a0af12703a54fec2e4aca9460e`.
 Confirm the latest Pages workflow and live PDF after any deployment; a successful
 git push alone does not prove the public website updated.
 
@@ -89,7 +89,7 @@ static HTML is non-executable structured data, not inline JavaScript.
 AI/ML visibility update requested on 1 November 2026: include AI/ML, GenAI, RAG
 and LLM in the hero skills line after Python and before Go. Keep the detailed
 coverage in Recruiter Essentials, not a new standalone section. Its AI/ML topic
-covers sentiment/recommendation experiments, Bedrock/RAG integration, SenseEngine,
+covers sentiment analysis at Swift and TAPPP, Bedrock/RAG integration, SenseEngine,
 document processing, public ML/research examples and bounded AI-assisted tooling.
 Preserve the distinction between application exposure, professional work,
 research and ongoing/planned study; do not invent production claims or metrics.
@@ -101,6 +101,18 @@ Technosoft Consulting (Feb - May 2020), Cooey Technologies (Jul - Nov 2020).
 Keep the consolidated D-SYS structure and the clarified payroll note, not a claim
 that all clients were direct uninterrupted D-SYS payroll. User-confirmed joining
 dates take precedence over provident-fund deduction dates. Do not publish PF IDs.
+
+Authoritative correction on 1 November 2026: sentiment analysis was at Swift
+and TAPPP. D-SYS included analytics, structured data preparation and reporting,
+not AI/ML, ML data collection, model experimentation, sentiment analysis or
+recommendation logic. Earlier resume and website statements were incorrect.
+Do not restore them or infer D-SYS Rust/Go experience from those withdrawn claims.
+Preserve D-SYS enterprise, mobile, backend, database and operational work. Do not
+reassign other AI/ML application areas to an employer without confirmation.
+
+The user chose to retain GitHub Pages only. Do not add a file-backed visitor
+counter: the static host cannot persist per-visit writes. A browser-local count
+would not represent a shared website total.
 
 Aadi internship 2010-2012, developer 2012-2014. Concurrent freelance/consulting
 Dec 2014 - Nov 2019: Millennial Group Inc., Cloud Digital Arts, Cargo 3 IVS /
@@ -146,6 +158,7 @@ Do not convert roadmap coverage into claims of delivered production systems.
 2. Use Node >=22.13.0; run `npm ci`, then `npm run dev`.
 3. Read `app/page.tsx`, `app/globals.css` and `resume/README.md` before editing.
 4. Run `npm run build` and `npx tsc --noEmit --incremental false`.
+   Run `npm run test:profile` to guard the confirmed AI/ML company attribution.
 5. Check desktop and narrow mobile screenshots, no horizontal overflow, readable
    terminal text, WhatsApp/contact links and the downloaded PDF.
 6. Commit only intentional files. Keep generated builds, caches and QA images out

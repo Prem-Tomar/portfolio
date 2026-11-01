@@ -10,7 +10,8 @@
     "build": "node scripts/build-static.mjs",
     "start": "vite preview --host 127.0.0.1",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "npm run build"
+    "test": "npm run build",
+    "test:profile": "node --experimental-strip-types scripts/verify-profile-facts.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.66.0",

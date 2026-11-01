@@ -162,7 +162,7 @@ p('Software architect and hands-on senior individual contributor with 14+ years 
 section('Core Skills')
 for name, text in [
     ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
-    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), LLM integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment signals, recommendations, probabilistic and forensic modeling.'),
+    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), LLM integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
     ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, gRPC-style contracts, API gateways, service decomposition, event-driven design.'),
     ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
     ('Data and event platforms', 'PostgreSQL/Aurora, MongoDB, Redis/Valkey, Kafka-style streams, Spark-style processing, Elasticsearch-style search, schema governance, data integrity, analytics and feature-ready pipelines.'),
@@ -182,6 +182,7 @@ bullets([
     'Directed architecture for distributed backend, runtime, workflow and micro-app platforms serving 7M+ daily users across media, sports, fintech and engagement products.',
     'Consolidated client-specific capabilities into reusable modules, shared service contracts and configurable onboarding workflows, supporting ecosystems including DTV, Globo, FIFA, Roku, BetPlay and Blackhawk Network.',
     'Built Rust workers for high-volume event and insight pipelines, integrated AWS Bedrock and RAG/LLM decision support, and designed BPMN/Camunda/Temporal orchestration.',
+    'Worked on sentiment analysis as part of the platform\'s AI/ML capabilities.',
     'Led Java-to-Go modernization using CPU, memory and latency profiles; redesigned asynchronous processing, private AWS networking and Aurora/AppSync/Valkey data paths for more efficient execution.',
     'Established API, schema and release standards; led architecture reviews, senior-engineer mentorship, production RCA and PCI/SOC2-aligned delivery with product, SRE and compliance stakeholders.',
 ])
@@ -208,6 +209,7 @@ bullets([
     'Led architecture of commerce and logistics capabilities spanning checkout, payments, courier orchestration, merchant workflows and partner integrations.',
     'Implemented Rust processing paths for high-volume shipment data feeding ML models, improving throughput and control over logistics datasets.',
     'Created SenseEngine for ML-driven shipment intelligence across 300K+ monthly orders, reducing cost per shipment through optimization logic.',
+    'Worked on sentiment analysis alongside shipment-intelligence capabilities.',
     'Defined resilient Java/Go service boundaries and backward-compatible APIs across payment, courier and partner systems; built BYOC and BYOP platforms for configurable orchestration.',
     'Worked with product and operations teams on release quality, incident response and production scalability, retaining hands-on ownership of implementation and diagnosis.',
 ])
@@ -222,10 +224,8 @@ para.paragraph_format.line_spacing = Pt(11)
 para.paragraph_format.keep_with_next = True
 bullets([
     'Delivered enterprise full-stack systems with .NET MVC, C#, SQL, and Xamarin, including transportation and e-way billing workflows for national road-traffic compliance use cases.',
-    'Expanded Python use into data analysis, structured data preparation, reporting, and model experimentation for analytics-heavy product work.',
+    'Used Python for analytics, structured data preparation, and reporting.',
     'Built backend foundations for safety/security product workflows using Node.js and Express.js, guiding Angular, Node.js, Android, and backend engineers.',
-    'Extended Python, Go, and Rust-backed engineering into ML data collection, exploratory analysis, semi-supervised learning concepts, sentiment signals, recommendation logic, and multi-model experiments.',
-    'Contributed to smart security systems with ML data collection and security-domain intelligence to improve operational performance.',
     'Owned backend and application features from design through implementation, debugging, deployment support, and client-facing resolution.',
 ])
 p('Full-Stack / Mobile Developer | Dec 2014 - Feb 2018', 'Heading 3', keep=True)

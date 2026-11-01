@@ -2,6 +2,8 @@
 
 The editable final DOCX is `Prem_P_S_Tomar_Resume_2026-10-31.docx`.
 The final searchable PDF is `../public/resume.pdf`.
+Content revision: 1 November 2026. Sentiment analysis belongs to Swift and TAPPP;
+D-SYS retains analytics, structured data preparation and reporting, not AI/ML.
 
 ## Build
 
@@ -20,9 +22,12 @@ DOCX so the two artifacts have the same text. It embeds Calibri and Consolas fro
 `C:/Windows/Fonts` by default. Set `RESUME_FONT_DIR` to a licensed directory with
 the same font filenames on another machine. Do not redistribute font files.
 
-The verifier compares D-SYS bullets against the currently published PDF. If a
-future requested edit intentionally changes those bullets, preserve a baseline
-and adjust the relevant regression test deliberately, not merely to pass it.
+The verifier compares unchanged D-SYS bullets against the currently published PDF
+(or `RESUME_BASELINE_PDF`). The 1 November correction deliberately removes two
+AI/ML bullets and revises the analytics bullet. Tests require nine remaining
+bullets, no D-SYS AI/ML claims, and sentiment analysis under both Swift and TAPPP.
+For future intentional changes, preserve a baseline and adjust the relevant
+regression test deliberately, not merely to pass it.
 
 ## Visual QA
 
