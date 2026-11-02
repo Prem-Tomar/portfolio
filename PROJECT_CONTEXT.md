@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 1 November 2026. Owner: Prem P S Tomar.
+Last updated: 2 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -41,7 +41,7 @@ git push alone does not prove the public website updated.
 
 - Architecture-first senior individual contributor, roughly 70% architecture and
   30% implementation emphasis, with hands-on ownership throughout the career.
-- Role heading: Software Architect / Principal Engineer. Use 14+ years.
+- Role heading: Staff Engineer / Software Architect. Use 14+ years.
 - Language priority: Rust, C++, C, Python, Go (Golang), Java/Spring Boot, Node.js.
 - Preserve established backend, cloud, data, workflow, security and leadership skills.
 - Cross-domain experience: fintech, insurance, health, media/broadcasting, telecom,
@@ -60,7 +60,7 @@ git push alone does not prove the public website updated.
 
 | Employer / brand | Dates | Role |
 | --- | --- | --- |
-| DDN | Starts 2 November 2026 | Incoming Staff Engineer |
+| DDN | Nov 2026 - Present (started 2 November) | Staff Engineer, Global Engineering / Exascaler |
 | SwissClear Services Private Limited (TAPPP) | Feb 2024 - Oct 2026 | Senior Architect / Principal Solutions Architect |
 | Fermyon Technologies India Private Limited (LINK, formerly ShoppinPal) | May 2023 - Jan 2024 | Senior Software Engineer / Engineering Mentor |
 | Maverick Quantum India Private Limited (mavQ) | Aug 2022 - May 2023 | Software Development Lead |
@@ -68,13 +68,21 @@ git push alone does not prove the public website updated.
 | D-SYS Data Solutions Private Limited | Dec 2014 - Nov 2020 | Full-Stack / Mobile Developer, then Senior Full-Stack Developer |
 | Aadi Infotech Pvt. Ltd. | Feb 2010 - Feb 2014 | Software Intern, then Software Developer |
 
-Website display update requested on 1 November 2026: use "Staff Engineer" for DDN,
-remove "Next", the displayed start date and "Upcoming appointment", and link DDN
-to https://ddn.com in the hero. A later clarification removes links from chapter
-headings, including DDN; keep those headings as plain text. This does not alter
-the separately maintained resume or assert a different employment start date.
-Do not invent responsibilities or achievements. Confirm the actual start before
-adding a "Present" date range.
+On 2 November 2026, the user confirmed joining DDN that day as Staff Engineer in
+Global Engineering, working on Exascaler. Show "Nov 2026 - Present" in Chapters;
+this supersedes the earlier request to hide the date before joining. Describe
+the new role's focus prospectively: hands-on engineering and architecture for
+high-performance storage and distributed systems, emphasizing scalability,
+performance and reliability. Do not imply completed DDN achievements.
+Update the website and LinkedIn headlines to the current role. Keep DDN linked
+to https://ddn.com in the hero, but chapter headings remain plain text. The user
+authorized publishing these website updates and requested LinkedIn edits with
+network notifications off and no announcement post. The separately maintained
+resume was not included in this update request.
+
+The user subsequently resumed the LinkedIn update and requested the same DDN
+description and a revised headline. Preserve the confirmed Staff Engineer role,
+Nov 2026 - Present dates, and network notifications off; do not share a post.
 
 Contact copy controls were also requested for the mobile number, email and
 LinkedIn URL. Keep their original links clickable, with adjacent small copy icons

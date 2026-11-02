@@ -5,7 +5,8 @@ type CompanyExperience = {
   company: string;
   formerBrand?: string;
   period?: string;
-  status?: string;
+  team?: string;
+  summary?: string;
   points: string[];
 };
 
@@ -184,7 +185,7 @@ export default function Experience({ companies }: { companies: CompanyExperience
                 <div className="experience-card-top">{company.period && <p>{company.period}</p>}<span>{String(index + 1).padStart(2, "0")} / {String(companies.length).padStart(2, "0")}</span></div>
                 <div className="experience-title-row"><CompanyMark name={companyNames[index]} logo={companyLogos[index]} /><h3>{companyNames[index]}</h3></div>
                 <p className="experience-role">{company.role}</p>
-                {company.points.length ? <ul>{companyHighlights[index].map((point) => <li key={point}>{point}</li>)}</ul> : <div className="experience-incoming">{company.status && <p>{company.status}</p>}<p>Data storage · Parallel file systems · HPC · AI infrastructure</p></div>}
+                {company.points.length ? <ul>{companyHighlights[index].map((point) => <li key={point}>{point}</li>)}</ul> : <div className="experience-current">{company.team && <p>{company.team}</p>}{company.summary && <p>{company.summary}</p>}</div>}
                 {company.points.length > 0 && <details><summary tabIndex={active === index ? 0 : -1}>More about this role</summary>{company.formerBrand && <p className="experience-history">Formerly {company.formerBrand}.</p>}<ul>{company.points.map((point) => <li key={point}>{point}</li>)}</ul></details>}
                 <p className="experience-company">{company.company}</p>
               </article>
