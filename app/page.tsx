@@ -54,9 +54,11 @@ const experience = [
     role: "Staff Engineer",
     company: "DataDirect Networks India Private Limited",
     period: "Nov 2026 - Present",
-    team: "Global Engineering · Exascaler",
-    summary: "My focus will be hands-on engineering and architectural contributions to high-performance storage and distributed systems, with an emphasis on scalability, performance and reliability.",
-    points: [],
+    points: [
+      "Working on EXAScaler within DDN's Global Engineering team: Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).",
+      "My focus will be storage software architecture and hands-on implementation, with attention to I/O throughput, latency, data integrity, observability and operational reliability.",
+      "Product context: SFA (Storage Fusion Architecture) provides the storage foundation for EXAScaler appliance deployments. DDN's broader portfolio includes Infinia, a software-defined platform for multi-tenant data management and AI workflows, including inference and retrieval.",
+    ],
   },
   {
     role: "Senior Architect / Principal Solutions Architect",
@@ -200,7 +202,7 @@ export default function Home() {
               <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="View resume PDF">Resume <span aria-hidden="true">↓</span></a>
               <span className="copyable-contact"><a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><CopyButton text={linkedinUrl} label="LinkedIn profile URL" /></span>
             </div>
-            <p className="hero-appointment"><strong>Global Engineering at <a href="https://ddn.com" target="_blank" rel="noopener noreferrer">DDN</a></strong><span>· Exascaler</span></p>
+            <p className="hero-appointment"><strong>Global Engineering at <a href="https://ddn.com" target="_blank" rel="noopener noreferrer">DDN</a></strong><span>· EXAScaler</span></p>
           </div>
           <div className="hero-sculpture" aria-hidden="true">
             <div className="sculpture-plane plane-back" /><div className="sculpture-plane plane-middle" />

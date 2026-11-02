@@ -34,7 +34,7 @@ export const profileStructuredData = {
       url,
       jobTitle: "Staff Engineer",
       worksFor: { "@type": "Organization", name: "DDN", url: "https://ddn.com" },
-      description: "Staff Engineer in DDN's Global Engineering team, working on Exascaler. Architecture-first, hands-on engineer with 14+ years in distributed platforms, backend systems, cloud infrastructure and product delivery.",
+      description: "Staff Engineer in DDN's Global Engineering team, working on EXAScaler, a Lustre-based parallel file system for AI and HPC. Architecture-first, hands-on engineer with 14+ years in distributed platforms, backend systems, cloud infrastructure and product delivery.",
       homeLocation: { "@type": "Place", name: "Pune, India" },
       sameAs: ["https://www.linkedin.com/in/prem-tomar/", "https://github.com/Prem-Tomar"],
       knowsAbout: [...skills.items.map((item) => item.title), ...exposure.items.flatMap((item) => item.points ?? [])],

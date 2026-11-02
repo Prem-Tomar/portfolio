@@ -80,9 +80,28 @@ authorized publishing these website updates and requested LinkedIn edits with
 network notifications off and no announcement post. The separately maintained
 resume was not included in this update request.
 
-The user subsequently resumed the LinkedIn update and requested the same DDN
-description and a revised headline. Preserve the confirmed Staff Engineer role,
-Nov 2026 - Present dates, and network notifications off; do not share a post.
+LinkedIn was updated and verified on 2 November: Staff Engineer at DDN,
+Nov 2026 - Present, Global Engineering / EXAScaler, with the researched role
+description. The headline includes software architecture, storage/HPC,
+distributed systems, Rust, C++, C, Python, Go and AI/ML/GenAI/LLMs/RAG.
+Notify network was off when saving; the announcement prompt was dismissed
+without posting. The profile banner image and About section were not changed.
+
+The DDN chapter must use the same highlight list and expandable details layout
+as other chapter cards, not a separate paragraph-only treatment. Research on
+DDN's public products informs technical context, not claims of personal delivery:
+EXAScaler is Lustre-based parallel storage for AI/HPC; SFA is the storage
+foundation for appliance deployments; Infinia is part of the broader portfolio.
+Only EXAScaler is the user's confirmed assignment. Do not imply ownership of
+SFA or Infinia, or reuse product benchmarks as personal achievements.
+Sources checked on 2 November 2026:
+- https://www.ddn.com/products/lustre-file-system-exascaler/
+- https://www.ddn.com/wp-content/uploads/2024/08/ddn-sfa400nvx2-sfa200nvx2-data-sheet-2023.pdf
+- https://www.ddn.com/products/infinia/
+- https://www.ddn.com/products/data-intelligence-platform/
+
+Workflow preference: finish the current task before taking up an unrelated new
+request. Incorporate related follow-up instructions into the current task.
 
 Contact copy controls were also requested for the mobile number, email and
 LinkedIn URL. Keep their original links clickable, with adjacent small copy icons
