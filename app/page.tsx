@@ -56,11 +56,10 @@ const experience = [
     period: "Nov 2026 - Present",
     points: [
       "Working on EXAScaler within DDN's Global Engineering team: Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).",
-      "My engineering work focuses on the EXAScaler Management Framework (EMF) and the HTTP interface for integrating client applications with Lustre. Performance, data integrity and operational reliability guide that work.",
+      "I bring a background in Rust and distributed systems to my work on the EXAScaler Management Framework (EMF) and the Lustre HTTP interface for client integrations. My focus is I/O performance, data integrity and reliability.",
+      "Security considerations for these integrations include workload identity, tenant isolation and least-privilege access. Reading training data or writing a checkpoint is distinct from viewing cluster health or changing storage configuration.",
+      "Network guardrails limit where a client can send data. Audit trails make denied requests traceable to the caller and operation without disclosing credentials or payloads.",
       "Product context: SFA (Storage Fusion Architecture) provides the storage foundation for EXAScaler appliance deployments. DDN's broader portfolio includes Infinia, a software-defined platform for multi-tenant data management and AI workflows, including inference and retrieval.",
-      "Independent design interest: network security guardrails for AI storage. A training job should be able to read its dataset and write checkpoints without a network route to management endpoints.",
-      "In a Rust prototype, I would use mutual TLS to identify a monitoring client, then authorize each operation separately. A health check should succeed; a configuration change or access to another tenant's resources should be denied.",
-      "I would also test that egress policy blocks unapproved destinations. Audit events should identify the caller, operation and reason for denial without logging credentials or payloads. I would compare p99 request latency with and without policy checks under the same load.",
     ],
   },
   {

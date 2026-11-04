@@ -91,11 +91,12 @@ On 4 November, Prem specified that his DDN work includes EXAScaler Management
 Framework (EMF) engineering and the Lustre HTTP interface for client integrations.
 Describe this as current work, not a completed release or a native Lustre wire protocol.
 
-On 5 November, Prem requested a concise network-security design interest in the
-LinkedIn DDN experience and a detailed example in the portfolio. Keep the Rust
-gateway, segmented management access, workload identity, per-operation policy,
-egress, audit and p99 comparison prospective. These are not claims of shipped
-DDN controls, confidential-computing features or measured benchmark results.
+On 5 November, Prem requested feature and work-exposure descriptions in the
+portfolio's DDN chapter, not a prototype, implementation plan or benchmark.
+Lead with confirmed EMF engineering and Lustre HTTP client integration; describe
+workload identity, tenant boundaries, least privilege, egress and auditability
+as relevant security considerations, not controls Prem personally delivered.
+The wording correction applies only to the portfolio, not LinkedIn or the resume.
 
 The DDN chapter must use the same highlight list and expandable details layout
 as other chapter cards, not a separate paragraph-only treatment. Research on
