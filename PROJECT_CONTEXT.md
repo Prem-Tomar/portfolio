@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 2 November 2026. Owner: Prem P S Tomar.
+Last updated: 4 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -86,6 +86,10 @@ description. The headline includes software architecture, storage/HPC,
 distributed systems, Rust, C++, C, Python, Go and AI/ML/GenAI/LLMs/RAG.
 Notify network was off when saving; the announcement prompt was dismissed
 without posting. The profile banner image and About section were not changed.
+
+On 4 November, Prem specified that his DDN work includes EXAScaler Management
+Framework (EMF) engineering and the Lustre HTTP interface for client integrations.
+Describe this as current work, not a completed release or a native Lustre wire protocol.
 
 The DDN chapter must use the same highlight list and expandable details layout
 as other chapter cards, not a separate paragraph-only treatment. Research on

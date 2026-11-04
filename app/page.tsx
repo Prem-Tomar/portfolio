@@ -56,7 +56,7 @@ const experience = [
     period: "Nov 2026 - Present",
     points: [
       "Working on EXAScaler within DDN's Global Engineering team: Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).",
-      "My focus will be storage software architecture and hands-on implementation, with attention to I/O throughput, latency, data integrity, observability and operational reliability.",
+      "My engineering work focuses on the EXAScaler Management Framework (EMF) and the HTTP interface for integrating client applications with Lustre. Performance, data integrity and operational reliability guide that work.",
       "Product context: SFA (Storage Fusion Architecture) provides the storage foundation for EXAScaler appliance deployments. DDN's broader portfolio includes Infinia, a software-defined platform for multi-tenant data management and AI workflows, including inference and retrieval.",
     ],
   },
