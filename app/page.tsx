@@ -58,6 +58,9 @@ const experience = [
       "Working on EXAScaler within DDN's Global Engineering team: Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).",
       "My engineering work focuses on the EXAScaler Management Framework (EMF) and the HTTP interface for integrating client applications with Lustre. Performance, data integrity and operational reliability guide that work.",
       "Product context: SFA (Storage Fusion Architecture) provides the storage foundation for EXAScaler appliance deployments. DDN's broader portfolio includes Infinia, a software-defined platform for multi-tenant data management and AI workflows, including inference and retrieval.",
+      "Independent design interest: network security guardrails for AI storage. A training job should be able to read its dataset and write checkpoints without a network route to management endpoints.",
+      "In a Rust prototype, I would use mutual TLS to identify a monitoring client, then authorize each operation separately. A health check should succeed; a configuration change or access to another tenant's resources should be denied.",
+      "I would also test that egress policy blocks unapproved destinations. Audit events should identify the caller, operation and reason for denial without logging credentials or payloads. I would compare p99 request latency with and without policy checks under the same load.",
     ],
   },
   {

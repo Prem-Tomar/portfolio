@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 4 November 2026. Owner: Prem P S Tomar.
+Last updated: 5 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -90,6 +90,12 @@ without posting. The profile banner image and About section were not changed.
 On 4 November, Prem specified that his DDN work includes EXAScaler Management
 Framework (EMF) engineering and the Lustre HTTP interface for client integrations.
 Describe this as current work, not a completed release or a native Lustre wire protocol.
+
+On 5 November, Prem requested a concise network-security design interest in the
+LinkedIn DDN experience and a detailed example in the portfolio. Keep the Rust
+gateway, segmented management access, workload identity, per-operation policy,
+egress, audit and p99 comparison prospective. These are not claims of shipped
+DDN controls, confidential-computing features or measured benchmark results.
 
 The DDN chapter must use the same highlight list and expandable details layout
 as other chapter cards, not a separate paragraph-only treatment. Research on
