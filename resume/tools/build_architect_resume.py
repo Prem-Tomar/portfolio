@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'resume' / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
-DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-10-31.docx'
+DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-05.docx'
 INK = RGBColor.from_string('202525')
 MUTED = RGBColor.from_string('566260')
 ACCENT = RGBColor.from_string('006B67')
@@ -147,7 +147,7 @@ def link(para, label_text, url):
 
 
 p('PREM P S TOMAR', 'Title', keep=True)
-p('Software Architect | Principal Engineer', 'Subtitle', keep=True)
+p('Staff Engineer at DDN | Software Architect', 'Subtitle', keep=True)
 contact = p('+91 9606379003  |  ', size=9.5, keep=True)
 link(contact, 'prem.tomar.blr@gmail.com', 'mailto:prem.tomar.blr@gmail.com')
 contact.add_run('  |  Pune, India').font.size = Pt(9.5)
@@ -157,11 +157,12 @@ links.add_run('  |  ').font.size = Pt(9.5)
 link(links, 'linkedin.com/in/prem-tomar', 'https://www.linkedin.com/in/prem-tomar/')
 
 section('Professional Summary')
-p('Software architect and hands-on senior individual contributor with 14+ years designing, modernizing and shipping distributed platforms. Combines Rust, C++, C and Python with AI/ML and Generative AI integration, complemented by Go and Java backend architecture and Node.js delivery. Defines service boundaries, integration contracts and cloud architecture while staying hands-on through implementation, performance investigation and production reliability. Builds reusable platforms across fintech, insurance, healthcare, media, telecom, commerce and logistics; mentors engineers and balances scale, security, cost and release velocity.')
+p('Staff Engineer in DDN\'s Global Engineering team, working on EXAScaler, with 14+ years of hands-on architecture and engineering across distributed platforms. Defines service boundaries, integration contracts and reusable platform foundations while remaining involved in code, profiling and production reliability. Experience spans systems programming, AI/ML integration and cloud-native products across fintech, insurance, healthcare, media, telecom, commerce and logistics. Balances performance, security, cost and release velocity; leads technical decisions and mentors engineers.')
 
 section('Core Skills')
 for name, text in [
     ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
+    ('Storage and HPC', 'EXAScaler/Lustre parallel storage, EMF, HTTP client integrations, AI training and checkpointing data paths.'),
     ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), LLM integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
     ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, gRPC-style contracts, API gateways, service decomposition, event-driven design.'),
     ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
@@ -174,24 +175,26 @@ for name, text in [
     label(name, text, 10)
 
 section('Professional Experience')
-role('DDN', 'Incoming Staff Engineer', 'Starts 2 November 2026')
-# No DDN responsibilities or achievements are represented before the start date.
-doc.paragraphs[-1].paragraph_format.keep_with_next = False
+role('DDN (DataDirect Networks India Private Limited)', 'Staff Engineer | Global Engineering', 'Nov 2026 - Present')
+bullets([
+    'Work on the EXAScaler Management Framework (EMF) and the Lustre HTTP interface for client integrations, within DDN\'s Global Engineering team.',
+    'Focus on I/O performance, data integrity and reliability in Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).',
+    'Relevant integration security considerations include workload identity, tenant isolation, least-privilege access, network egress guardrails and auditable client operations.',
+])
+
+section('Professional Experience', new_page=True)
 role('SwissClear Services Private Limited (TAPPP)', 'Senior Architect / Principal Solutions Architect', 'Feb 2024 - Oct 2026')
 bullets([
     'Directed architecture for distributed backend, runtime, workflow and micro-app platforms serving 7M+ daily users across media, sports, fintech and engagement products.',
     'Consolidated client-specific capabilities into reusable modules, shared service contracts and configurable onboarding workflows, supporting ecosystems including DTV, Globo, FIFA, Roku, BetPlay and Blackhawk Network.',
-    'Built Rust workers for high-volume event and insight pipelines, integrated AWS Bedrock and RAG/LLM decision support, and designed BPMN/Camunda/Temporal orchestration.',
-    'Worked on sentiment analysis as part of the platform\'s AI/ML capabilities.',
+    'Built Rust event-processing workers, integrated AWS Bedrock and RAG/LLM decision support, and contributed sentiment analysis; designed BPMN/Camunda/Temporal orchestration.',
     'Led Java-to-Go modernization using CPU, memory and latency profiles; redesigned asynchronous processing, private AWS networking and Aurora/AppSync/Valkey data paths for more efficient execution.',
     'Established API, schema and release standards; led architecture reviews, senior-engineer mentorship, production RCA and PCI/SOC2-aligned delivery with product, SRE and compliance stakeholders.',
 ])
 
-section('Professional Experience', new_page=True)
 role('Fermyon Technologies India Private Limited (LINK, formerly ShoppinPal)', 'Senior Software Engineer / Engineering Mentor', 'May 2023 - Jan 2024', 'Python/FastAPI, Go, Java, Node.js, AWS, REST integrations, CI/CD, observability')
 bullets([
-    'Designed backend systems and internal tools for data migration, partner integrations, workflow automation, QA traceability and operational dashboards.',
-    'Delivered REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed, preserving data integrity and backward compatibility across partner contracts.',
+    'Designed migration, workflow and operational tools; delivered REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed with data integrity and backward-compatible contracts.',
     'Modernized selected Java and Node.js components to Go to reduce runtime overhead and improve concurrency, CPU and memory behavior in high-volume integration jobs.',
     'Strengthened logging, QA automation, release controls and RCA-led fixes; mentored engineers through design reviews, debugging and production-readiness assessments.',
 ])
@@ -199,17 +202,14 @@ bullets([
 role('Maverick Quantum India Private Limited (mavQ)', 'Software Development Lead', 'Aug 2022 - May 2023', 'Python/FastAPI, Java, Node.js, AWS Connect, API-first architecture, workflow automation, CI/CD')
 bullets([
     'Led architecture and delivery of no-code automation capabilities, with API-first services, reusable abstractions and workflow execution designed for scale.',
-    'Owned service design, data models and test strategy through release and production support; developed shared database and platform components to shorten service rollout and improve consistency.',
+    'Owned service design, data models, testing and release; developed shared database and platform components and mentored engineers on production readiness.',
     'Delivered AWS Connect customer-experience capabilities and contributed to Intelligent Document Processing automation in collaboration with product, operations and support teams.',
-    'Mentored engineers on API design, testing and production readiness while coordinating delivery decisions across QA, DevOps and business stakeholders.',
 ])
 
 role('GoSprint Logistics Private Limited (Swift)', 'Platform Lead', 'Apr 2021 - Aug 2022', 'Rust, Python, ML processing, Go, Java, Node.js, AWS, MySQL, MongoDB, checkout, payments and logistics')
 bullets([
     'Led architecture of commerce and logistics capabilities spanning checkout, payments, courier orchestration, merchant workflows and partner integrations.',
-    'Implemented Rust processing paths for high-volume shipment data feeding ML models, improving throughput and control over logistics datasets.',
-    'Created SenseEngine for ML-driven shipment intelligence across 300K+ monthly orders, reducing cost per shipment through optimization logic.',
-    'Worked on sentiment analysis alongside shipment-intelligence capabilities.',
+    'Built Rust processing paths for ML datasets and created SenseEngine shipment intelligence across 300K+ monthly orders, reducing cost per shipment; also contributed sentiment analysis.',
     'Defined resilient Java/Go service boundaries and backward-compatible APIs across payment, courier and partner systems; built BYOC and BYOP platforms for configurable orchestration.',
     'Worked with product and operations teams on release quality, incident response and production scalability, retaining hands-on ownership of implementation and diagnosis.',
 ])
@@ -266,9 +266,9 @@ footer._p.append(field)
 for r in footer.runs:
     r.font.color.rgb = MUTED
 
-doc.core_properties.title = 'Prem P S Tomar - Software Architect and Principal Engineer'
+doc.core_properties.title = 'Prem P S Tomar - Staff Engineer and Software Architect'
 doc.core_properties.subject = 'Professional resume'
 doc.core_properties.author = 'Prem P S Tomar'
-doc.core_properties.keywords = 'Software Architect, Principal Engineer, Rust, C++, C, Python, AI/ML, Generative AI, GenAI, LLM, RAG, Agentic AI, MCP, Go, Golang, Java, Node.js, Distributed Systems, Cloud'
+doc.core_properties.keywords = 'Staff Engineer, Software Architect, DDN, EXAScaler, Lustre, Storage, HPC, Rust, C++, C, Python, AI/ML, Generative AI, GenAI, LLM, RAG, Agentic AI, MCP, Go, Golang, Java, Node.js, Distributed Systems, Cloud'
 doc.save(DEST)
 print(DEST)

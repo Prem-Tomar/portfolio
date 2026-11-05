@@ -177,7 +177,7 @@ const consultingNote = "Additional consulting exposure includes Millennial Group
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
-  const resumeUrl = "/resume.pdf?v=20261101-r8";
+  const resumeUrl = "/resume.pdf?v=20261105-r9";
 
   return (
     <main id="top">

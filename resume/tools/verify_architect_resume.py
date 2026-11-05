@@ -9,7 +9,7 @@ from pypdf import PdfReader
 
 
 root = Path(__file__).resolve().parents[2]
-resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-10-31.pdf'
+resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-05.pdf'
 source = Path(os.environ.get('RESUME_BASELINE_PDF', root / 'public/resume.pdf'))
 docx = Document(resume.with_suffix('.docx'))
 reader = PdfReader(resume)
@@ -35,7 +35,9 @@ for para in docx.paragraphs:
     if para.text.strip():
         assert normalize(para.text) in text, f'Missing or changed text: {para.text}'
 for term in [
-    'Incoming Staff Engineer', 'Starts 2 November 2026', 'Feb 2024 - Oct 2026',
+    'Staff Engineer at DDN', 'Global Engineering', 'Nov 2026 - Present', 'Feb 2024 - Oct 2026',
+    'EXAScaler Management Framework (EMF)', 'Lustre HTTP interface',
+    'workload identity', 'tenant isolation', 'least-privilege access', 'network egress guardrails',
     'May 2023 - Jan 2024', 'Apr 2021 - Aug 2022', 'Aug 2022 - May 2023', 'Feb 2010 - Feb 2014',
     'Fermyon Technologies India Private Limited', 'Maverick Quantum India Private Limited',
     'GoSprint Logistics Private Limited', 'SwissClear Services Private Limited',
@@ -49,8 +51,13 @@ for term in [
     'Lustre', 'HPC', 'ultra-low-latency',
 ]:
     assert term in text, f'Missing expected detail: {term}'
-for term in ['ppst89', 'Present', 'Oracle-ready', 'Est Id', 'Member Id', 'Jun 2024 - Oct 2026', 'Sep 2021 - Aug 2022', 'Nov 2019 - Aug 2021', 'Aug 2021 - May 2023']:
+for term in ['ppst89', 'Incoming Staff Engineer', 'Starts 2 November 2026', 'Oracle-ready', 'Est Id', 'Member Id', 'Jun 2024 - Oct 2026', 'Sep 2021 - Aug 2022', 'Nov 2019 - Aug 2021', 'Aug 2021 - May 2023', '\ufffd']:
     assert term not in text, f'Unexpected or outdated text: {term}'
+assert text.count('Present') == 1, 'Only DDN is a current employer'
+assert 'DDN (DataDirect Networks India Private Limited)' in pages[0]
+ddn_text = text.split('DDN (DataDirect Networks India Private Limited)', 1)[1].split('SwissClear Services', 1)[0]
+assert 'Relevant integration security considerations' in ddn_text
+assert not re.search(r'\b(?:SFA|Infinia|prototype|benchmark|achieved|delivered)\b|\d+%', ddn_text, re.I)
 
 inside_dsys = False
 dsys_count = 0

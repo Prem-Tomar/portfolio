@@ -1,9 +1,14 @@
 # Resume Source and Verification
 
-The editable final DOCX is `Prem_P_S_Tomar_Resume_2026-10-31.docx`.
+The editable final DOCX is `Prem_P_S_Tomar_Resume_2026-11-05.docx`.
 The final searchable PDF is `../public/resume.pdf`.
-Content revision: 1 November 2026. Sentiment analysis belongs to Swift and TAPPP;
-D-SYS retains analytics, structured data preparation and reporting, not AI/ML.
+Content revision: 5 November 2026. DDN is the current Staff Engineer role,
+Nov 2026 - Present, within Global Engineering. Current work covers EXAScaler
+Management Framework (EMF) and the Lustre HTTP interface for client integrations.
+Security coverage describes relevant integration considerations, not personally
+delivered controls or benchmarks. Only EXAScaler is the confirmed DDN assignment.
+Sentiment analysis belongs to Swift and TAPPP; D-SYS retains analytics, structured
+data preparation and reporting, not AI/ML.
 
 ## Build
 
@@ -42,7 +47,7 @@ The included PowerShell helper exports a Word layout preview:
 Word's PDF export on the original machine rasterized text despite export flags.
 It was used only to verify DOCX layout. The delivered PDF was produced by the
 text-preserving ReportLab exporter. Never replace the public PDF with an image-only
-export. The verifier checks three pages, text order/content, dates, links, page
+export. The verifier checks three pages, text order/content, current DDN facts, dates, links, page
 bounds and absence of rasterized text. It does not certify any particular ATS.
 
 After checks, copy the verified DOCX to this directory and the verified PDF to

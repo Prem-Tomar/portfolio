@@ -9,7 +9,7 @@ Last updated: 5 November 2026. Owner: Prem P S Tomar.
 - React 19 + Vite 8 + TypeScript; static output in `dist/`.
 - Main content: `app/page.tsx`; styles: `app/globals.css`; entry: `src/main.tsx`.
 - Hero asset: `public/architecture-fabric.png`; provenance: `design/hero-image-prompt.txt`.
-- Resume download: `public/resume.pdf`, linked with `?v=20261101-r8`.
+- Resume download: `public/resume.pdf`, linked with `?v=20261105-r9`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
 - Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
@@ -21,11 +21,15 @@ Last updated: 5 November 2026. Owner: Prem P S Tomar.
 
 ## Latest Scope
 
-The user requested Generative AI, agentic AI and tooling coverage in the resume,
-website and Naukri profile, while preserving existing skills. The current site
-adds practical AI-assisted engineering and explicit ongoing learning sections.
-The latest three-page PDF and DOCX retain all corrected dates and D-SYS content.
-The user explicitly authorized publication and asked for this portable handoff.
+On 5 November, the user requested that the resume reflect the current career
+snapshot and authorized publishing the replacement on the portfolio. The current
+editable file is `resume/Prem_P_S_Tomar_Resume_2026-11-05.docx`; the public PDF is
+`public/resume.pdf`. Both are three pages. The title and summary now reflect Staff
+Engineer at DDN; experience shows Nov 2026 - Present, Global Engineering, EMF and
+Lustre HTTP client integration. Storage/HPC skills are explicit. Security content
+describes relevant considerations, not delivered controls. Prior skills, corrected
+dates, D-SYS content and education are preserved; recent roles are tightened to
+remove repetition. LinkedIn and Naukri were not changed in this resume refresh.
 
 Local verification completed: production build, TypeScript, desktop and mobile
 overflow checks; all PDF and Word-rendered pages visually inspected. The PDF is
@@ -33,7 +37,7 @@ searchable text with working contact links and no image-based resume content.
 These are local parsing/layout checks, not external ATS certification.
 
 Expected deployed PDF SHA256:
-`20a614bf82858d224a26a77f0014bf86e870d4a0af12703a54fec2e4aca9460e`.
+`f333be668e0efaf3c6e25e976fc84158fb9898febabf003d5d96de5673b24d5f`.
 Confirm the latest Pages workflow and live PDF after any deployment; a successful
 git push alone does not prove the public website updated.
 

@@ -13,7 +13,7 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-10-31.docx'
+SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-05.docx'
 OUTPUT = SOURCE.with_suffix('.pdf')
 FONTS = Path(os.environ.get('RESUME_FONT_DIR', 'C:/Windows/Fonts'))
 for name, filename in [
@@ -72,7 +72,7 @@ for para in docx.paragraphs:
     if para.paragraph_format.line_spacing_rule is not None and para.paragraph_format.line_spacing:
         style.leading = para.paragraph_format.line_spacing.pt
     style.keepWithNext = bool(para.paragraph_format.keep_with_next)
-    story.append(Paragraph(''.join(parts), style, bulletText=chr(0x2022) if para.style.name == 'List Bullet' else None))
+    story.append(Paragraph(''.join(parts), style, bulletText='-' if para.style.name == 'List Bullet' else None))
 
 
 def footer(canvas, document):
@@ -90,7 +90,7 @@ class ResumePDF(SimpleDocTemplate):
 
 pdf = ResumePDF(str(OUTPUT), pagesize=A4, leftMargin=.58*72, rightMargin=.58*72,
                         topMargin=.5*72, bottomMargin=.5*72,
-                        title='Prem P S Tomar - Software Architect and Principal Engineer',
+                        title='Prem P S Tomar - Staff Engineer and Software Architect',
                         author='Prem P S Tomar', pageCompression=1)
 pdf.build(story)
 print(OUTPUT)
