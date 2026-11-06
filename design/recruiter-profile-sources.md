@@ -26,7 +26,7 @@ maintenance evidence, not reader-facing content.
   application areas at exposure level; do not infer their employer attribution,
   duration, production-delivery claims or outcome metrics.
 - Skill-to-role mapping and professional project details: the checked-in resume
-  `resume/Prem_P_S_Tomar_Resume_2026-10-31.docx` and its authoring source
+  `resume/Prem_P_S_Tomar_Resume_2026-11-06.docx` and its authoring source
   `resume/tools/build_architect_resume.py`. Role dates are employment dates,
   not a calculation of continuous years with each language. No skill duration
   or private employer repository is inferred.
@@ -48,6 +48,13 @@ TAPPP Bedrock/RAG work, Swift SenseEngine and mavQ document-processing
 contributions retain their existing sources. Notebook and forensic-model entries
 retain their experiment and research labels. Detailed coverage remains inside
 Recruiter Essentials; the hero skills line includes AI/ML, GenAI, RAG and LLM.
+
+6 November 2026: Prem requested explicit AI/ML, GenAI, RAG, LLM and agentic AI
+coverage in portfolio/resume skills and existing responsibilities. TAPPP's
+Bedrock/RAG/LLM work and Swift's ML shipment intelligence are now stated directly.
+Agentic tooling refers to confirmed, human-reviewed coding-agent use; no employer
+assignment or delivered agent-orchestration system is inferred. Advanced tooling
+and framework study retain their ongoing/planned status.
 
 Public repository links were verified using GitHub's repository search. Summaries
 come from each default-branch README, except the Swift notebook:

@@ -1,14 +1,20 @@
 # Resume Source and Verification
 
-The editable final DOCX is `Prem_P_S_Tomar_Resume_2026-11-05.docx`.
+The editable final DOCX is `Prem_P_S_Tomar_Resume_2026-11-06.docx`.
 The final searchable PDF is `../public/resume.pdf`.
-Content revision: 5 November 2026. DDN is the current Staff Engineer role,
+Content revision: 6 November 2026. DDN is the current Staff Engineer role,
 Nov 2026 - Present, within Global Engineering. Current work covers EXAScaler
 Management Framework (EMF) and the Lustre HTTP interface for client integrations.
 Security coverage describes relevant integration considerations, not personally
 delivered controls or benchmarks. Only EXAScaler is the confirmed DDN assignment.
 Sentiment analysis belongs to Swift and TAPPP; D-SYS retains analytics, structured
 data preparation and reporting, not AI/ML.
+
+AI coverage is explicit in the summary, Core Skills and relevant responsibilities:
+GenAI/Bedrock/RAG/LLM decision support at TAPPP; ML shipment intelligence at Swift.
+Agentic AI describes bounded coding-agent use with human review, not ownership of
+production autonomous agents. MCP, LangChain/LangGraph and agent orchestration
+remain ongoing or planned study. Keep existing non-AI skills and dates intact.
 
 ## Build
 

@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'resume' / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
-DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-05.docx'
+DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-06.docx'
 INK = RGBColor.from_string('202525')
 MUTED = RGBColor.from_string('566260')
 ACCENT = RGBColor.from_string('006B67')
@@ -157,18 +157,18 @@ links.add_run('  |  ').font.size = Pt(9.5)
 link(links, 'linkedin.com/in/prem-tomar', 'https://www.linkedin.com/in/prem-tomar/')
 
 section('Professional Summary')
-p('Staff Engineer in DDN\'s Global Engineering team, working on EXAScaler, with 14+ years of hands-on architecture and engineering across distributed platforms. Defines service boundaries, integration contracts and reusable platform foundations while remaining involved in code, profiling and production reliability. Experience spans systems programming, AI/ML integration and cloud-native products across fintech, insurance, healthcare, media, telecom, commerce and logistics. Balances performance, security, cost and release velocity; leads technical decisions and mentors engineers.')
+p('Staff Engineer in DDN\'s Global Engineering team, working on EXAScaler, with 14+ years of hands-on architecture and engineering across distributed platforms. Defines service boundaries, integration contracts and reusable platform foundations while remaining involved in code, profiling and production reliability. Experience spans systems programming, applied AI/ML, GenAI and RAG/LLM integrations, and cloud-native products across fintech, insurance, healthcare, media, telecom, commerce and logistics. Balances performance, security, cost and release velocity; leads technical decisions and mentors engineers.')
 
 section('Core Skills')
 for name, text in [
     ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
     ('Storage and HPC', 'EXAScaler/Lustre parallel storage, EMF, HTTP client integrations, AI training and checkpointing data paths.'),
-    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), LLM integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
+    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), large language model (LLM) integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
     ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, gRPC-style contracts, API gateways, service decomposition, event-driven design.'),
     ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
     ('Data and event platforms', 'PostgreSQL/Aurora, MongoDB, Redis/Valkey, Kafka-style streams, Spark-style processing, Elasticsearch-style search, schema governance, data integrity, analytics and feature-ready pipelines.'),
     ('Cloud and reliability', 'AWS, Kubernetes, Docker, OpenShift-aligned patterns, service mesh concepts, CI/CD, Git, monitoring, tracing, logging, profiling, production RCA and capacity planning.'),
-    ('AI-assisted engineering', 'AI tools and coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step, validate with tests and profiling, retain design ownership and code integrity.'),
+    ('Agentic AI and AI-assisted engineering', 'Coding agents and AI tools for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step, validate with tests and profiling, retain design ownership and code integrity.'),
     ('Technical leadership', 'Architecture and code reviews, platform standards, API governance, roadmap and release planning, executive communication, cross-functional decisions, mentoring senior and architect-level engineers.'),
     ('Security and compliance', 'PCI/SOC2-aligned workflows, secure service boundaries, privacy-aware data handling, auditability, regulated delivery and operational readiness.'),
 ]:
@@ -187,7 +187,8 @@ role('SwissClear Services Private Limited (TAPPP)', 'Senior Architect / Principa
 bullets([
     'Directed architecture for distributed backend, runtime, workflow and micro-app platforms serving 7M+ daily users across media, sports, fintech and engagement products.',
     'Consolidated client-specific capabilities into reusable modules, shared service contracts and configurable onboarding workflows, supporting ecosystems including DTV, Globo, FIFA, Roku, BetPlay and Blackhawk Network.',
-    'Built Rust event-processing workers, integrated AWS Bedrock and RAG/LLM decision support, and contributed sentiment analysis; designed BPMN/Camunda/Temporal orchestration.',
+    'Integrated Generative AI (GenAI) capabilities using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis.',
+    'Built Rust workers for high-volume event and insight pipelines and designed BPMN/Camunda/Temporal orchestration.',
     'Led Java-to-Go modernization using CPU, memory and latency profiles; redesigned asynchronous processing, private AWS networking and Aurora/AppSync/Valkey data paths for more efficient execution.',
     'Established API, schema and release standards; led architecture reviews, senior-engineer mentorship, production RCA and PCI/SOC2-aligned delivery with product, SRE and compliance stakeholders.',
 ])
@@ -209,7 +210,7 @@ bullets([
 role('GoSprint Logistics Private Limited (Swift)', 'Platform Lead', 'Apr 2021 - Aug 2022', 'Rust, Python, ML processing, Go, Java, Node.js, AWS, MySQL, MongoDB, checkout, payments and logistics')
 bullets([
     'Led architecture of commerce and logistics capabilities spanning checkout, payments, courier orchestration, merchant workflows and partner integrations.',
-    'Built Rust processing paths for ML datasets and created SenseEngine shipment intelligence across 300K+ monthly orders, reducing cost per shipment; also contributed sentiment analysis.',
+    'Architected SenseEngine\'s ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment; contributed sentiment analysis.',
     'Defined resilient Java/Go service boundaries and backward-compatible APIs across payment, courier and partner systems; built BYOC and BYOP platforms for configurable orchestration.',
     'Worked with product and operations teams on release quality, incident response and production scalability, retaining hands-on ownership of implementation and diagnosis.',
 ])

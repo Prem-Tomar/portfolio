@@ -13,7 +13,7 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-05.docx'
+SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-06.docx'
 OUTPUT = SOURCE.with_suffix('.pdf')
 FONTS = Path(os.environ.get('RESUME_FONT_DIR', 'C:/Windows/Fonts'))
 for name, filename in [

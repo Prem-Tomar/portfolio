@@ -13,7 +13,7 @@ const companyYears = ["2026", "2024", "2023", "2022", "2021", "2014", "2010"];
 const companyLogos = ["/company-logos/ddn.svg", "/company-logos/tappp.svg", "/company-logos/link.svg", "/company-logos/mavq.svg", "/company-logos/swift.svg", "/company-logos/dsys.png"];
 const companyHighlights = [
   ["Part of Global Engineering, working on EXAScaler, DDN's Lustre-based parallel file system for AI and HPC.", "Work on the EXAScaler Management Framework and the Lustre HTTP interface for client integrations."],
-  ["Architected distributed runtime, workflow and micro-app platforms serving 7M+ daily users.", "Consolidated client capabilities into reusable modules, shared contracts and configurable onboarding."],
+  ["Architected distributed runtime, workflow and micro-app platforms serving 7M+ daily users.", "Integrated GenAI with AWS Bedrock and RAG-backed LLM decision support."],
   ["Built distributed backend systems and tooling for migrations, partner integrations and workflow automation.", "Delivered commerce integrations and modernized selected Java and Node.js components to Go."],
   ["Led architecture and delivery for no-code automation and workflow platforms.", "Owned service design, data models and release quality, including AWS Connect and document-processing capabilities."],
   ["Led commerce and logistics architecture across checkout, payments, couriers and partner integrations.", "Built Rust processing paths and SenseEngine for ML-driven shipment intelligence across 300K+ monthly orders."],

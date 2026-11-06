@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 5 November 2026. Owner: Prem P S Tomar.
+Last updated: 6 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -9,7 +9,7 @@ Last updated: 5 November 2026. Owner: Prem P S Tomar.
 - React 19 + Vite 8 + TypeScript; static output in `dist/`.
 - Main content: `app/page.tsx`; styles: `app/globals.css`; entry: `src/main.tsx`.
 - Hero asset: `public/architecture-fabric.png`; provenance: `design/hero-image-prompt.txt`.
-- Resume download: `public/resume.pdf`, linked with `?v=20261105-r9`.
+- Resume download: `public/resume.pdf`, linked with `?v=20261106-r10`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
 - Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
@@ -21,15 +21,18 @@ Last updated: 5 November 2026. Owner: Prem P S Tomar.
 
 ## Latest Scope
 
-On 5 November, the user requested that the resume reflect the current career
-snapshot and authorized publishing the replacement on the portfolio. The current
-editable file is `resume/Prem_P_S_Tomar_Resume_2026-11-05.docx`; the public PDF is
-`public/resume.pdf`. Both are three pages. The title and summary now reflect Staff
-Engineer at DDN; experience shows Nov 2026 - Present, Global Engineering, EMF and
-Lustre HTTP client integration. Storage/HPC skills are explicit. Security content
-describes relevant considerations, not delivered controls. Prior skills, corrected
-dates, D-SYS content and education are preserved; recent roles are tightened to
-remove repetition. LinkedIn and Naukri were not changed in this resume refresh.
+On 6 November, the user requested explicit AI/ML, GenAI, RAG, LLM and agentic AI
+coverage in resume responsibilities and in both portfolio and resume skills, then
+authorized publication. The current editable file is
+`resume/Prem_P_S_Tomar_Resume_2026-11-06.docx`; the public PDF is `public/resume.pdf`.
+Both are three pages. TAPPP has explicit Bedrock/GenAI/RAG/LLM decision support;
+Swift retains ML shipment intelligence and sentiment analysis. Agentic tooling
+describes bounded coding-agent use with human review, tests and profiling, not a
+delivered autonomous-agent platform. MCP, LangChain/LangGraph, orchestration and
+evaluation stay in ongoing/planned study. The portfolio hero, Core Profile,
+Recruiter Essentials and relevant Chapters reflect the same distinctions.
+The current DDN role, existing non-AI skills, corrected dates, D-SYS content and
+education are preserved. LinkedIn and Naukri were not changed in this refresh.
 
 Local verification completed: production build, TypeScript, desktop and mobile
 overflow checks; all PDF and Word-rendered pages visually inspected. The PDF is
@@ -37,7 +40,7 @@ searchable text with working contact links and no image-based resume content.
 These are local parsing/layout checks, not external ATS certification.
 
 Expected deployed PDF SHA256:
-`f333be668e0efaf3c6e25e976fc84158fb9898febabf003d5d96de5673b24d5f`.
+`2c8891a0530fb24cb3e7913c90439c49689b95af4b9ad5d1504cadb1dc7127ad`.
 Confirm the latest Pages workflow and live PDF after any deployment; a successful
 git push alone does not prove the public website updated.
 

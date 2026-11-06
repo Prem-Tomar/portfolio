@@ -17,8 +17,8 @@ const strengths = [
   "Kafka-style event streams and analytics-ready data pipelines",
   "AWS, Kubernetes, Aurora / PostgreSQL, MongoDB and Redis / Valkey",
   "Observability, performance profiling and production RCA",
-  "Generative AI, AWS Bedrock, RAG / LLM integrations and ML decisioning",
-  "AI-assisted tooling, scoped changes, tests and human review",
+  "AI/ML, GenAI, AWS Bedrock and RAG / LLM integrations",
+  "Agentic AI tooling, bounded coding tasks, tests and human review",
   "Architecture governance, technical standards and senior mentorship",
 ];
 
@@ -69,8 +69,8 @@ const experience = [
     points: [
       "Directed product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
       "Drove platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
-      "Built Rust event-processing workers and integrated AWS Bedrock with RAG/LLM decision support; led Java-to-Go modernization, workflow orchestration and production RCA.",
-      "Worked on sentiment analysis as part of the platform's AI/ML capabilities.",
+      "Integrated Generative AI (GenAI) capabilities using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis.",
+      "Built Rust event and insight processing workers; led Java-to-Go modernization, BPMN/Camunda/Temporal workflow orchestration and production RCA.",
     ],
   },
   {
@@ -101,7 +101,7 @@ const experience = [
     points: [
       "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",
       "Designed resilient Java and Go microservices and Rust-backed processing paths for large-scale logistics datasets.",
-      "Created SenseEngine, supporting ML-driven shipment optimization across 300K+ monthly orders.",
+      "Architected SenseEngine's ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment.",
       "Worked on sentiment analysis alongside shipment-intelligence capabilities.",
     ],
   },
@@ -177,7 +177,7 @@ const consultingNote = "Additional consulting exposure includes Millennial Group
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
-  const resumeUrl = "/resume.pdf?v=20261105-r9";
+  const resumeUrl = "/resume.pdf?v=20261106-r10";
 
   return (
     <main id="top">
@@ -211,7 +211,7 @@ export default function Home() {
             <div className="sculpture-plane plane-front"><span /><span /><span /><span /><span /></div>
             <div className="sculpture-light" />
           </div>
-          <div className="hero-bottom"><span>14+ years in architecture &amp; engineering</span><span>Rust · C++ · C · Python · AI/ML · GenAI · RAG · LLM · Go · Java · Node.js</span></div>
+          <div className="hero-bottom"><span>14+ years in architecture &amp; engineering</span><span>Rust · C++ · C · Python · AI/ML · GenAI · RAG · LLM · Agentic AI · Go · Java · Node.js</span></div>
         </div>
       </section>
 

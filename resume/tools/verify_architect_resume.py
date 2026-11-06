@@ -9,7 +9,7 @@ from pypdf import PdfReader
 
 
 root = Path(__file__).resolve().parents[2]
-resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-05.pdf'
+resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-06.pdf'
 source = Path(os.environ.get('RESUME_BASELINE_PDF', root / 'public/resume.pdf'))
 docx = Document(resume.with_suffix('.docx'))
 reader = PdfReader(resume)
@@ -20,8 +20,8 @@ source_text = normalize(' '.join(p.extract_text() for p in PdfReader(source).pag
 assert len(pages) == 3
 assert all(len(page) > 2000 for page in pages)
 assert pages[0].startswith('PREM P S TOMAR')
-assert 'AI-assisted engineering:' in pages[0]
-assert text.index('AI-assisted engineering:') < text.index('PROFESSIONAL EXPERIENCE')
+assert 'Agentic AI and AI-assisted engineering:' in pages[0]
+assert text.index('Agentic AI and AI-assisted engineering:') < text.index('PROFESSIONAL EXPERIENCE')
 assert 'AI ASSISTED ENGINEERING' not in text
 assert 'Systems programming: Rust, C++, C, Python;' in text
 assert text.index('Systems programming:') < text.index('AI/ML and Generative AI:') < text.index('Backend and architecture:')
@@ -58,6 +58,13 @@ assert 'DDN (DataDirect Networks India Private Limited)' in pages[0]
 ddn_text = text.split('DDN (DataDirect Networks India Private Limited)', 1)[1].split('SwissClear Services', 1)[0]
 assert 'Relevant integration security considerations' in ddn_text
 assert not re.search(r'\b(?:SFA|Infinia|prototype|benchmark|achieved|delivered)\b|\d+%', ddn_text, re.I)
+assert not re.search(r'\b(?:RAG|LLM|GenAI|LangChain|LangGraph)\b', ddn_text)
+tappp_text = text.split('SwissClear Services Private Limited (TAPPP)', 1)[1].split('Fermyon Technologies India Private Limited', 1)[0]
+for term in ['Generative AI (GenAI)', 'AWS Bedrock', 'retrieval-augmented generation (RAG)', 'LLM-backed decision support']:
+    assert term in tappp_text, f'Missing TAPPP AI responsibility: {term}'
+skills_text = text.split('CORE SKILLS', 1)[1].split('PROFESSIONAL EXPERIENCE', 1)[0]
+for term in ['AI/ML', 'GenAI', 'RAG', 'LLM', 'Agentic AI', 'Coding agents', 'diff-set generation']:
+    assert term in skills_text, f'Missing AI skill: {term}'
 
 inside_dsys = False
 dsys_count = 0

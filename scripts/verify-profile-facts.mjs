@@ -12,6 +12,15 @@ assert.equal(ai.items.filter((item) => /sentiment/i.test(JSON.stringify(item))).
 assert.doesNotMatch(JSON.stringify(ai.items), /D-SYS/i);
 
 const skills = topics.find((topic) => topic.command === "skills");
+for (const term of ["AI/ML", "GenAI", "RAG", "LLM", "Agentic AI"]) {
+  assert.ok(skills.items.some((item) => item.title.includes(term)), `Missing explicit skill: ${term}`);
+}
+const agentSkill = skills.items.find((item) => item.title === "Agentic AI and tooling");
+assert.match(agentSkill.detail, /bounded diff-set generation/);
+assert.match(agentSkill.detail, /ongoing study/);
+const genaiSkill = skills.items.find((item) => item.title === "GenAI / RAG / LLM integration");
+assert.match(genaiSkill.meta, /TAPPP/);
+assert.equal(skills.items.filter((item) => /RAG/.test(item.title)).length, 1);
 const dsys = skills.items.flatMap((item) => item.points ?? [])
   .filter((point) => point.includes("D-SYS")).join(" ");
 assert.match(dsys, /analytics, structured data preparation and reporting/);

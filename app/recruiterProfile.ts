@@ -28,6 +28,9 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
           "D-SYS: Django-backed applications, analytics, structured data preparation and reporting.",
           "Aadi Infotech: Python/Django APIs and administrative tools.",
         ] },
+        { title: "AI/ML", meta: "Applied engineering", detail: "ML data processing and shipment decisioning at Swift; document-processing automation contributions at mavQ." },
+        { title: "GenAI / RAG / LLM integration", meta: "TAPPP · Professional use", detail: "AWS Bedrock integration, retrieval-augmented generation and LLM-backed decision support within product platforms." },
+        { title: "Agentic AI and tooling", meta: "Current engineering workflow", detail: "Coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation, with human review, tests and profiling. Agent-orchestration frameworks remain ongoing study." },
         { title: "Go / Golang", meta: "Professional use", points: [
           "TAPPP: Java-to-Go modernization and asynchronous processing.",
           "LINK: modernization of selected Java and Node.js components to Go.",
@@ -41,7 +44,6 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
           "LINK, mavQ and Swift: backend services and integrations.",
           "D-SYS: Node.js/Express foundations for safety and security workflows.",
         ] },
-        { title: "AWS Bedrock / RAG / LLM integration", meta: "TAPPP · Professional use", detail: "Retrieval-augmented decision support and LLM integration." },
       ],
     },
     {
@@ -55,11 +57,11 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
           "Live translation engines",
           "Event simulation",
         ] },
-        { title: "Generative AI, RAG and LLM integration", meta: "TAPPP · Professional engineering", detail: "Integrated AWS Bedrock and retrieval-augmented generation for LLM decision support." },
+        { title: "Generative AI (GenAI), RAG and LLM integration", meta: "TAPPP · Professional engineering", detail: "Integrated AWS Bedrock and retrieval-augmented generation for large language model (LLM) decision support." },
         { title: "ML-driven shipment intelligence", meta: "Swift · Professional engineering", detail: "Built Rust data-processing paths feeding ML models and shipment-optimization logic." },
         { title: "Intelligent Document Processing", meta: "mavQ · Professional contribution", detail: "Contributed to automated document processing within the product platform." },
         { title: "ML experiments and research", meta: "Python / scikit-learn · Experimental work", detail: "Ensemble classification experiments and synthetic-media detection research, including calibrated uncertainty and distribution-shift evaluation. Separate from production delivery.", links: [{ label: "Weight prediction notebook", href: "https://github.com/Prem-Tomar/swift_weight_prediction_model", newTab: true }, { label: "Forensic modeling research", href: "https://github.com/Prem-Tomar/prob_forensic_modeling", newTab: true }] },
-        { title: "AI-assisted engineering and agent tooling", meta: "Current workflow", detail: "Bounded coding-agent tasks with human review, tests and profiling. Agent orchestration, evaluation and MLOps/LLMOps remain ongoing or planned study.", links: [{ label: "Learning roadmap", href: "#learning" }] },
+        { title: "Agentic AI and AI-assisted engineering", meta: "Current workflow", detail: "Use coding agents for reviewable tasks such as diff-set generation and test scaffolding, retaining architecture and code ownership. Agent orchestration, evaluation and MLOps/LLMOps remain ongoing or planned study.", links: [{ label: "Learning roadmap", href: "#learning" }] },
       ],
     },
     {
