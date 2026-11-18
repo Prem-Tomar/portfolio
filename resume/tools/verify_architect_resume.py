@@ -8,7 +8,7 @@ from pypdf import PdfReader
 
 
 root = Path(__file__).resolve().parents[2]
-resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.pdf'
+resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership_AI.pdf'
 docx = Document(resume.with_suffix('.docx'))
 reader = PdfReader(resume)
 pages = [p.extract_text() for p in reader.pages]
@@ -17,7 +17,7 @@ text = normalize(' '.join(pages))
 assert len(pages) == 3
 assert all(len(page) > 2000 for page in pages)
 assert pages[0].startswith('PREM P S TOMAR')
-assert 'Agentic AI and AI-assisted engineering:' in pages[2]
+assert 'AI-assisted engineering:' in pages[2]
 assert text.index('PROFESSIONAL EXPERIENCE') < text.index('CORE SKILLS')
 assert 'SwissClear Services Private Limited (TAPPP)' in pages[0]
 assert 'Fermyon Technologies India Private Limited' in pages[0]
@@ -28,8 +28,8 @@ assert 'concurrent processing, CPU/memory profiling and production diagnosis' in
 assert 'AI ASSISTED ENGINEERING' not in text
 assert 'Systems programming: Rust, C++, C, Python;' in text
 assert text.index('Systems programming:') < text.index('AI/ML and Generative AI:') < text.index('Backend and architecture:')
-assert text.index('EDUCATION') < text.index('Ongoing study and planned practice:')
-assert 'Ongoing study and planned practice:' in pages[2]
+assert text.index('EDUCATION') < text.index('Continuing development:')
+assert 'Continuing development:' in pages[2]
 assert 'Agentic AI and tooling:' in pages[2]
 assert 'Go (Golang), Java/Spring Boot, Node.js' in text
 assert not docx.tables
@@ -71,8 +71,21 @@ assert tappp_text.index('built Rust workers') < tappp_text.index('Led concurrent
 for term in ['Generative AI (GenAI)', 'AWS Bedrock', 'retrieval-augmented generation (RAG)', 'LLM-backed decision support']:
     assert term in tappp_text, f'Missing TAPPP AI responsibility: {term}'
 skills_text = text.split('CORE SKILLS', 1)[1].split('EDUCATION', 1)[0]
-for term in ['AI/ML', 'GenAI', 'RAG', 'LLM', 'Agentic AI', 'Coding agents', 'diff-set generation']:
+for term in ['AI/ML', 'GenAI', 'RAG', 'LLM', 'Agentic AI', 'LangChain', 'LangGraph',
+             'Model Context Protocol (MCP)', 'tool calling', 'agent orchestration',
+             'PyTorch', 'TensorFlow', 'Hugging Face', 'MLflow', 'LangSmith',
+             'Vector databases', 'NumPy', 'pandas', 'SciPy', 'MLOps/LLMOps',
+             'scikit-learn', 'Jupyter', 'Coding agents', 'diff-set generation',
+             'LlamaIndex', 'FAISS', 'Chroma', 'Qdrant', 'Pinecone', 'Weaviate',
+             'pgvector', 'RAGAS', 'vLLM', 'NeMo Guardrails', 'prefix caching', 'Jev AI']:
     assert term in skills_text, f'Missing AI skill: {term}'
+continuing_text = text.split('Continuing development:', 1)[1]
+assert not any(term in continuing_text for term in ['LangChain', 'LangGraph', 'MCP'])
+assert 'Next-Concept Modeling (NCM)' in continuing_text
+assert 'Next-Concept Modeling' not in skills_text
+experience_text = text.split('PROFESSIONAL EXPERIENCE', 1)[1].split('CORE SKILLS', 1)[0]
+for term in ['Jev AI', 'Next-Concept Modeling', 'LangGraph', 'MCP', 'RAGAS', 'vLLM']:
+    assert term not in experience_text, f'New tooling must not be backdated or assigned to an employer: {term}'
 
 inside_dsys = False
 dsys_count = 0

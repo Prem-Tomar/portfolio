@@ -9,7 +9,7 @@ Last updated: 18 November 2026. Owner: Prem P S Tomar.
 - React 19 + Vite 8 + TypeScript; static output in `dist/`.
 - Main content: `app/page.tsx`; styles: `app/globals.css`; entry: `src/main.tsx`.
 - Hero asset: `public/architecture-fabric.png`; provenance: `design/hero-image-prompt.txt`.
-- Local resume download: `public/resume.pdf`, linked with `?v=20261118-r12`.
+- Local resume download: `public/resume.pdf`, linked with `?v=20261118-r13`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
 - Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
@@ -20,6 +20,22 @@ Last updated: 18 November 2026. Owner: Prem P S Tomar.
 - No backend, visitor counter, account system or secret is needed to run this site.
 
 ## Latest Scope
+
+18 November AI skills confirmation: LangChain, LangGraph, MCP, tool calling,
+agent orchestration, PyTorch, TensorFlow, Hugging Face, MLflow, LangSmith,
+NumPy, pandas, SciPy and vector databases are existing skills, not merely planned
+study. The M.Tech formalizes and extends that expertise. Broader/prior experience
+also includes LlamaIndex, FAISS, Chroma, Qdrant, Pinecone, Weaviate, pgvector,
+RAGAS, vLLM and NeMo Guardrails, with the associated retrieval, evaluation,
+fine-tuning, serving and safety capabilities recorded in the source notes.
+Group by capability; do not imply equally recent hands-on practice with every
+tool. The user's 6-8-year reference describes the wider journey, not each tool's
+tenure. Do not assign these tools to employers without specific attribution.
+Keep pre-Swift company content compact and do not backdate newer technologies.
+Jev AI is recent exposure only (TypeSafe release: September 2026). Stanford
+Next-Concept Modeling (NCM) is a learning/research interest, not a current skill,
+production accomplishment or Stanford affiliation. See sources in
+`design/recruiter-profile-sources.md`.
 
 18 November refinement: preserve a strong systems-engineering identity while
 showing leadership scope. Systems engineering is the foundation; leadership is
@@ -51,7 +67,7 @@ not a repeated generic task list. Do not extend that scope to D-SYS/Aadi.
 requested publication of the systems-first website and resume revision. Publish
 through the existing GitHub Pages workflow and verify the live page and PDF hash.
 LinkedIn is unchanged and remains a separate task. Current editable file:
-`resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx` (three pages).
+`resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership_AI.docx` (three pages).
 The earlier same-day draft is retained locally for comparison. Completed leadership
 experience now begins on page one; detailed skills are on page three, with a
 compact technical-focus line up front. Earlier D-SYS responsibilities are
@@ -59,10 +75,10 @@ condensed from nine repetitive bullets to four, retaining dates, role progressio
 outsourcing note and analytics-only attribution.
 
 Release PDF SHA256:
-`9a149c6f5a174d7086bee821923f4c6dfe0484e35b8900846dbac5d13765cf8a`.
+`9ae98f1a5735eff8b80ea7f3974bca90a8cbd54ae024832e402320acd89d275c`.
 The release supersedes the previously published revision below once Pages
 deployment completes. Verification requires the live site to show the systems-first
-headline and resume query `20261118-r12`, with the PDF hash above. Local checks
+headline and resume query `20261118-r13`, with the PDF hash above. Local checks
 include searchable PDF/DOCX text agreement, all PDF pages visually checked,
 profile tests, TypeScript and production build. Desktop/mobile browser checks
 found no text overflow; chapter expansion and updated resume links work. Word
@@ -80,7 +96,8 @@ Both are three pages. TAPPP has explicit Bedrock/GenAI/RAG/LLM decision support;
 Swift retains ML shipment intelligence and sentiment analysis. Agentic tooling
 describes bounded coding-agent use with human review, tests and profiling, not a
 delivered autonomous-agent platform. MCP, LangChain/LangGraph, orchestration and
-evaluation stay in ongoing/planned study. The portfolio hero, Core Profile,
+evaluation stayed in ongoing/planned study at that time, superseded by the
+18 November explicit skills confirmation above. The portfolio hero, Core Profile,
 Recruiter Essentials and relevant Chapters reflect the same distinctions.
 The current DDN role, existing non-AI skills, corrected dates, D-SYS content and
 education are preserved. LinkedIn and Naukri were not changed in this refresh.
@@ -240,11 +257,12 @@ RAG/LLM integration, multi-LLM gateways and ML-enabled decisioning. The user use
 AI for bounded diff-set generation, refactoring analysis, test scaffolding and
 performance investigation, reviewing every step and retaining design ownership.
 
-Agentic AI, tool calling, MCP, LangChain, LangGraph, state, approvals, recovery,
-LLM evaluation, MLOps/LLMOps and inference optimization are explicit ongoing or
-planned development topics. The academic and storage learning programmes have
-not established independent production expertise or completed benchmark projects.
-Do not convert roadmap coverage into claims of delivered production systems.
+Agentic AI, tool calling, MCP, LangChain, LangGraph, state, approvals and recovery
+are user-confirmed existing skills. ML and agent evaluation tooling is confirmed
+separately from continued advanced study. Academic and storage learning
+programmes do not establish completed production projects or benchmarks.
+NCM remains an exploratory learning interest. Do not convert roadmap coverage
+into claims of delivered production systems.
 
 ## Public Contact and Profile Notes
 

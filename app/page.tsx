@@ -20,7 +20,9 @@ const strengths = [
   "AWS, Kubernetes, Aurora / PostgreSQL, MongoDB and Redis / Valkey",
   "Observability, performance profiling and production RCA",
   "AI/ML, GenAI, AWS Bedrock and RAG / LLM integrations",
-  "Agentic AI tooling, bounded coding tasks, tests and human review",
+  "Agentic AI, LangChain, LangGraph, MCP and tool calling",
+  "PyTorch, TensorFlow, Hugging Face, scikit-learn and Jupyter",
+  "NumPy, pandas, SciPy, vector databases, MLflow and LangSmith",
   "RFCs, ADRs, HLD/LLD, sequence diagrams and architecture reviews",
   "Multi-project delivery, stakeholder alignment and engineering mentorship",
   "Release readiness, runbooks and engineering-to-support handover",
@@ -166,16 +168,20 @@ const practices = [
 
 const learningAreas = [
   {
-    title: "AI/ML foundations and applications",
-    text: "Studying the foundations behind model development, training and evaluation, then working toward implementations that connect model behavior to application requirements.",
+    title: "Formal AI/ML study",
+    text: "My M.Tech builds on existing AI/ML engineering skills and applied work, adding formal academic depth in model development, training and evaluation.",
   },
   {
     title: "Generative AI and LLM systems",
-    text: "Building on my professional Bedrock and RAG integration work, my study roadmap covers transformers, embeddings, hybrid retrieval, reranking, fine-tuning and LLM evaluation. Planned MLOps/LLMOps work connects model serving and observability with inference latency, cost, release controls and rollback.",
+    text: "Building on my professional Bedrock and RAG integration work and current ML tooling skills, continued development focuses on advanced retrieval, model adaptation and LLM evaluation, connecting inference performance and cost with operational reliability.",
   },
   {
-    title: "Agentic AI and tooling",
-    text: "Planned hands-on work includes tool calling, Model Context Protocol (MCP), LangChain and LangGraph. The focus is controlled execution: explicit tool permissions, agent state, human approvals, recovery and evaluations that make multi-step workflows reviewable and reliable.",
+    title: "Agent reliability and evaluation",
+    text: "Building on my skills in LangChain, LangGraph, Model Context Protocol (MCP), tool calling and agent orchestration, continued work focuses on evaluating multi-step workflows, recovery behavior and operational reliability.",
+  },
+  {
+    title: "Next-Concept Modeling (NCM)",
+    text: "I am exploring Stanford Hazy Research's Next-Concept Modeling, curious about coarse-to-fine text generation, parallel prediction and the trade-offs between generation quality and inference efficiency. This is a current learning interest.",
   },
   {
     title: "Storage, HPC and AI infrastructure",
@@ -194,7 +200,7 @@ const consultingNote = "Additional consulting exposure includes Millennial Group
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
-  const resumeUrl = "/resume.pdf?v=20261118-r12";
+  const resumeUrl = "/resume.pdf?v=20261118-r13";
 
   return (
     <main id="top">
@@ -272,7 +278,7 @@ export default function Home() {
 
       <section className="section learning-section content-width" id="learning" aria-labelledby="learning-heading">
         <div className="section-heading"><p className="eyebrow">Ongoing learning</p><h2 id="learning-heading">AI and data<br />infrastructure.</h2></div>
-        <p className="learning-intro">Alongside my hands-on architecture career, I am deepening my AI/ML understanding through M.Tech study and independent engineering practice. These are active learning directions, distinct from the production experience above.</p>
+        <p className="learning-intro">My M.Tech formalizes and extends existing AI/ML skills alongside continued engineering practice. The directions below build on that experience; planned research and systems labs remain distinct from completed production work.</p>
         <div className="learning-list">{learningAreas.map((area) => <article className="learning-item" key={area.title}><h3>{area.title}</h3><p>{area.text}</p></article>)}</div>
         <p className="learning-method">My approach: understand the mechanisms, implement and evaluate, investigate failures, and document reproducible evidence. Architecture first, grounded in hands-on code and experiments, with clear limits on what a lab or simulation demonstrates.</p>
       </section>

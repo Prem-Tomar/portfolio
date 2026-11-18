@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'resume' / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
-DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx'
+DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership_AI.docx'
 INK = RGBColor.from_string('202525')
 MUTED = RGBColor.from_string('566260')
 ACCENT = RGBColor.from_string('006B67')
@@ -159,7 +159,7 @@ link(links, 'linkedin.com/in/prem-tomar', 'https://www.linkedin.com/in/prem-toma
 section('Professional Summary')
 p('Hands-on systems engineer and architect with 14+ years building and modernizing distributed products; currently Staff Engineer at DDN in Global Engineering, working on EXAScaler. Combines service and data architecture with concurrent processing, CPU/memory profiling and production diagnosis. Leads multiple concurrent projects, guiding engineers and aligning stakeholders on technical trade-offs, dependencies, releases and support. Built shared platforms across fintech, insurance, healthcare, media, telecom, commerce and logistics, balancing performance, resilience and security with operating cost and delivery pace.')
 
-label('Technical focus', 'Rust, C++, C, Python, Go, Java/Spring Boot, Node.js; distributed systems, cloud platforms, storage/HPC, AI/ML, GenAI, RAG and LLM integrations.', 10)
+label('Technical focus', 'Rust, C++, C, Python, Go, Java/Spring Boot, Node.js; distributed systems, storage/HPC, AI/ML, GenAI, RAG/LLM integration and agentic AI tooling.', 10)
 
 section('Professional Experience')
 role('DDN (DataDirect Networks India Private Limited)', 'Staff Engineer | Global Engineering', 'Nov 2026 - Present')
@@ -238,12 +238,17 @@ for name, text in [
     ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
     ('Storage and HPC', 'EXAScaler/Lustre parallel storage, EMF, HTTP client integrations, AI training and checkpointing data paths.'),
     ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), large language model (LLM) integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
+    ('ML development', 'NumPy, pandas, SciPy, scikit-learn, PyTorch, TensorFlow, Hugging Face and Jupyter; feature engineering, cross-validation, class imbalance, ensemble methods, calibration and fine-tuning.'),
+    ('Retrieval and vector search', 'Vector databases, document loading, chunking, embeddings and metadata filtering; broader tool experience with LlamaIndex, FAISS, Chroma, Qdrant, Pinecone, Weaviate and pgvector.'),
+    ('Evaluation and MLOps/LLMOps', 'MLflow, LangSmith, model comparison and distribution-shift evaluation; experience with RAGAS, retrieval precision, faithfulness, groundedness, tool-call accuracy and prompt versioning.'),
+    ('Agentic AI and tooling', 'LangChain, LangGraph, Model Context Protocol (MCP), tool calling, agent orchestration, state management, human approvals and recovery workflows; recent Jev AI exposure for structured judgments.'),
+    ('Inference and AI safety', 'Broader experience with vLLM, batching, streaming and prefix caching; NeMo Guardrails, input/output validation and tool-access controls.'),
     ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, API gateways, service decomposition and event-driven design; gRPC contract concepts.'),
     ('Architecture practice', 'Requests for Comments (RFCs), Architecture Decision Records (ADRs), high-level and low-level design (HLD/LLD), sequence and process diagrams, requirements analysis, non-functional requirements, technical trade-offs, service/data contracts, integration reviews and migration planning.'),
     ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
     ('Data and event platforms', 'PostgreSQL/Aurora, MongoDB, Redis/Valkey, schema governance, data integrity, analytics and feature-ready pipelines; Kafka event-streaming, Spark processing and Elasticsearch search patterns.'),
     ('Cloud and reliability', 'AWS, Kubernetes, Docker, CI/CD, Git, monitoring, tracing, logging, profiling, production RCA and capacity planning; OpenShift and service mesh concepts.'),
-    ('Agentic AI and AI-assisted engineering', 'Coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step and validate through tests, profiling and code review, retaining design ownership and code integrity.'),
+    ('AI-assisted engineering', 'Coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step and validate through tests, profiling and code review, retaining design ownership and code integrity.'),
     ('Engineering leadership', 'Multi-project delivery, stakeholder management, scope/priorities, dependencies and delivery risks, roadmap planning, architecture/code reviews, platform standards, API governance, executive communication, mentoring engineers and technical leads.'),
     ('Delivery and service operations', 'Release-impact assessment, readiness reviews, operational runbooks, engineering-to-support handover, incident coordination and corrective-action follow-through.'),
     ('Security and compliance', 'PCI/SOC2-aligned workflows, secure service boundaries, privacy-aware data handling, auditability, regulated delivery and operational readiness.'),
@@ -255,7 +260,7 @@ label('M.Tech in Artificial Intelligence and Machine Learning', 'BITS Pilani | O
 label('Postgraduate Program in Artificial Intelligence and Machine Learning', 'The University of Texas at Austin; facilitated by Great Learning.', 10)
 label('B.E. in Information Technology', 'Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV) | 2007 - 2012.', 10)
 
-label('Ongoing study and planned practice', 'Agentic AI and tooling: tool calling, Model Context Protocol (MCP), LangChain, LangGraph, agent state, approvals and recovery; LLM evaluation, MLOps/LLMOps and inference optimization. Separate systems track: Linux systems programming, storage, Lustre, HPC and ultra-low-latency design.', 10)
+label('Continuing development', 'Advanced LLM evaluation and inference optimization; independent systems practice in Linux, storage, Lustre, HPC and ultra-low-latency design. Exploring Stanford\'s Next-Concept Modeling (NCM), with an interest in coarse-to-fine generation and inference efficiency.', 10)
 
 footer = sec.footer.paragraphs[0]
 footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
@@ -270,6 +275,6 @@ for r in footer.runs:
 doc.core_properties.title = 'Prem P S Tomar - Systems Engineering Architecture and Leadership'
 doc.core_properties.subject = 'Professional resume'
 doc.core_properties.author = 'Prem P S Tomar'
-doc.core_properties.keywords = 'Staff Engineer, Software Architect, DDN, EXAScaler, Lustre, Storage, HPC, Rust, C++, C, Python, AI/ML, Generative AI, GenAI, LLM, RAG, Agentic AI, MCP, Go, Golang, Java, Node.js, Distributed Systems, Cloud'
+doc.core_properties.keywords = 'Systems Engineering, Architecture, Engineering Leadership, Distributed Systems, Storage, HPC, AI/ML, GenAI, RAG, LLM, Agentic AI, LangChain, LangGraph, MCP, MLOps'
 doc.save(DEST)
 print(DEST)

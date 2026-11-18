@@ -1,6 +1,6 @@
 # Resume Source and Verification
 
-The current release DOCX is `Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx`.
+The current release DOCX is `Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership_AI.docx`.
 The final searchable PDF is `../public/resume.pdf`.
 Content revision: 18 November 2026. The user reviewed and authorized publication
 of this revision on 18 November; LinkedIn remains unchanged. Positioning is systems engineering and
@@ -21,9 +21,19 @@ data preparation and reporting, not AI/ML.
 
 AI coverage is explicit in the summary, Core Skills and relevant responsibilities:
 GenAI/Bedrock/RAG/LLM decision support at TAPPP; ML shipment intelligence at Swift.
-Agentic AI describes bounded coding-agent use with human review, not ownership of
-production autonomous agents. MCP, LangChain/LangGraph and agent orchestration
-remain ongoing or planned study. Keep existing non-AI skills and dates intact.
+LangChain, LangGraph, MCP, tool calling and agent orchestration are user-confirmed
+current skills, alongside PyTorch, TensorFlow, Hugging Face, MLflow, LangSmith,
+NumPy, pandas, SciPy and vector databases. Bounded coding-agent use is a separate
+engineering practice. The M.Tech formalizes and extends existing expertise.
+Broader experience includes LlamaIndex, FAISS, Chroma, Qdrant, Pinecone, Weaviate,
+pgvector, RAGAS, vLLM and NeMo Guardrails; these are grouped by capability, with
+no implication of equal hands-on recency or a deployment at a particular employer.
+The user describes this as exposure acquired across their wider 6-8-year journey,
+not 6-8 years with every newer framework. Do not add that duration to individual
+skills. Keep company entries before Swift compact and free of new AI attribution;
+do not backdate newer technologies. Preserve existing non-AI skills and dates.
+Jev AI is recent exposure; Stanford Next-Concept Modeling is a learning interest
+under Continuing development, not a delivered project or institutional affiliation.
 
 ## Build
 
@@ -74,7 +84,10 @@ pages were visually checked in Word's print preview as the native-layout fallbac
 The systems-first revision also passes three-page text/layout checks; all PDF
 pages and Word pagination were reviewed. Desktop (1280 x 900) and mobile
 (390 x 844) browser checks found no text overflow, including expanded TAPPP
-details. The local website links to the new PDF with `?v=20261118-r12`.
+details. The local website links to the new PDF with `?v=20261118-r13`.
+The expanded AI revision also passes all three-page PDF checks and native Word
+print-preview inspection. Recruiter search finds Jev under recent exposure and
+NCM under learning interests; desktop/mobile text remains within its containers.
 
 After checks, copy the verified DOCX to this directory and the verified PDF to
 `public/resume.pdf`. Increment the resume URL query in `app/page.tsx`, update the

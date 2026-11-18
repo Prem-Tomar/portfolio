@@ -26,7 +26,7 @@ maintenance evidence, not reader-facing content.
   application areas at exposure level; do not infer their employer attribution,
   duration, production-delivery claims or outcome metrics.
 - Skill-to-role mapping and professional project details: the checked-in resume
-  `resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx` and its authoring source
+  `resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership_AI.docx` and its authoring source
   `resume/tools/build_architect_resume.py`. Role dates are employment dates,
   not a calculation of continuous years with each language. No skill duration
   or private employer repository is inferred.
@@ -54,7 +54,8 @@ coverage in portfolio/resume skills and existing responsibilities. TAPPP's
 Bedrock/RAG/LLM work and Swift's ML shipment intelligence are now stated directly.
 Agentic tooling refers to confirmed, human-reviewed coding-agent use; no employer
 assignment or delivered agent-orchestration system is inferred. Advanced tooling
-and framework study retain their ongoing/planned status.
+and framework study retained their ongoing/planned status at that time, superseded
+by the explicit 18 November skills confirmation below.
 
 18 November refinement: the user requested systems engineering remain the core
 identity while preserving leadership scope. Systems-performance and storage
@@ -68,8 +69,33 @@ delivery leadership, runbooks, observability, support handover, simultaneous
 project ownership and continuing hands-on engineering. The rewrite targets
 principal architecture and engineering-management/director-track positioning;
 actual roles remain unchanged. No direct-report counts, budgets, hiring authority
-or executive appointments are inferred. Changes are local for review; LinkedIn
-and the public website are not updated by this revision.
+or executive appointments are inferred. The user subsequently authorized website
+and resume publication; LinkedIn remains unchanged.
+
+18 November AI tooling confirmation: LangChain, LangGraph, MCP, tool calling and
+agent orchestration are existing skills. The user additionally confirmed PyTorch,
+TensorFlow, Hugging Face, MLflow, vector databases, LangSmith, SciPy, NumPy and
+pandas. They then confirmed prior use and broader experience with the suggested
+LlamaIndex, FAISS, Chroma, Qdrant, Pinecone, Weaviate, pgvector, RAGAS, vLLM and
+NeMo Guardrails; feature engineering, cross-validation, class imbalance,
+calibration, fine-tuning, document loading/chunking, embeddings, metadata filtering,
+retrieval precision, faithfulness, groundedness, tool-call accuracy, prompt
+versioning, agent state, approvals, recovery, batching, streaming, prefix caching,
+validation and tool controls. Depth and hands-on recency vary. Their reference to
+the last 6-8 years describes the wider journey, not each technology's tenure.
+No named employer use or production outcome is inferred for these additions.
+Keep them in Skills; preserve older company entries and technology chronology.
+The M.Tech formalizes existing skills rather than being their sole source.
+The user also requested Jev AI. It is listed as recent tooling exposure, not in
+employer achievements. TypeSafe's official introduction is dated 15 September
+2026: https://typesafe.ai/blog/introducing-system-one-models-and-jev . Its System
+One framing and typed judgments are described at
+https://typesafe.ai/blog/dont-call-it-a-decision-model . Do not backdate it.
+NCM is explicitly a learning/curiosity interest, not professional expertise or
+Stanford affiliation. The user clarified Next-Concept Modeling from Stanford.
+Primary source: https://hazyresearch.stanford.edu/blog/2026-10-12-ncm (12 October
+2026). Use only its high-level coarse-to-fine / parallel-generation description;
+do not reuse paper benchmarks as personal results.
 
 Public repository links were verified using GitHub's repository search. Summaries
 come from each default-branch README, except the Swift notebook:

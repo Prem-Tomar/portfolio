@@ -16,8 +16,24 @@ for (const term of ["AI/ML", "GenAI", "RAG", "LLM", "Agentic AI"]) {
   assert.ok(skills.items.some((item) => item.title.includes(term)), `Missing explicit skill: ${term}`);
 }
 const agentSkill = skills.items.find((item) => item.title === "Agentic AI and tooling");
-assert.match(agentSkill.detail, /bounded diff-set generation/);
-assert.match(agentSkill.detail, /ongoing study/);
+assert.equal(agentSkill.meta, "Current skills");
+for (const term of ["LangChain", "LangGraph", "Model Context Protocol (MCP)", "tool calling", "agent orchestration"]) {
+  assert.ok(agentSkill.detail.includes(term), `Missing confirmed current skill: ${term}`);
+}
+assert.doesNotMatch(agentSkill.detail, /ongoing study|planned/i);
+for (const term of ["PyTorch", "TensorFlow", "Hugging Face", "MLflow", "LangSmith", "Vector databases", "SciPy", "NumPy", "pandas"]) {
+  assert.ok(skills.items.some((item) => item.detail?.includes(term)), `Missing confirmed AI/ML tool: ${term}`);
+}
+for (const term of ["LlamaIndex", "FAISS", "Chroma", "Qdrant", "Pinecone", "Weaviate", "pgvector", "RAGAS", "vLLM", "NeMo Guardrails"]) {
+  const item = skills.items.find((entry) => entry.detail?.includes(term));
+  assert.ok(item, `Missing confirmed broader experience: ${term}`);
+  assert.match(item.meta, /experience/i, `${term} must retain its broader-experience context`);
+}
+const assistedEngineering = skills.items.find((item) => item.title === "AI-assisted engineering");
+assert.equal(skills.items.find((item) => item.title === "Jev AI / TypeSafe").meta, "Recent tooling exposure");
+assert.ok(!skills.items.some((item) => item.title.includes("Next-Concept")));
+assert.equal(topics.find((topic) => topic.command === "plans").items.find((item) => item.title.includes("Next-Concept")).meta, "Learning and research interest");
+assert.match(assistedEngineering.detail, /bounded diff-set generation/);
 const genaiSkill = skills.items.find((item) => item.title === "GenAI / RAG / LLM integration");
 assert.match(genaiSkill.meta, /TAPPP/);
 assert.equal(skills.items.filter((item) => /RAG/.test(item.title)).length, 1);
