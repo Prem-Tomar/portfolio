@@ -26,7 +26,7 @@ maintenance evidence, not reader-facing content.
   application areas at exposure level; do not infer their employer attribution,
   duration, production-delivery claims or outcome metrics.
 - Skill-to-role mapping and professional project details: the checked-in resume
-  `resume/Prem_P_S_Tomar_Resume_2026-11-06.docx` and its authoring source
+  `resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx` and its authoring source
   `resume/tools/build_architect_resume.py`. Role dates are employment dates,
   not a calculation of continuous years with each language. No skill duration
   or private employer repository is inferred.
@@ -55,6 +55,21 @@ Bedrock/RAG/LLM work and Swift's ML shipment intelligence are now stated directl
 Agentic tooling refers to confirmed, human-reviewed coding-agent use; no employer
 assignment or delivered agent-orchestration system is inferred. Advanced tooling
 and framework study retain their ongoing/planned status.
+
+18 November refinement: the user requested systems engineering remain the core
+identity while preserving leadership scope. Systems-performance and storage
+skill entries consolidate existing employer evidence, not new achievements.
+Technical contributions precede governance and delivery language in recent roles.
+
+18 November 2026: user clarified architecture responsibilities from Swift to
+current DDN, including RFCs, ADRs, design discussions, HLD/LLD, sequence/process
+diagrams, product/integration decisions and releases. Requested stakeholder and
+delivery leadership, runbooks, observability, support handover, simultaneous
+project ownership and continuing hands-on engineering. The rewrite targets
+principal architecture and engineering-management/director-track positioning;
+actual roles remain unchanged. No direct-report counts, budgets, hiring authority
+or executive appointments are inferred. Changes are local for review; LinkedIn
+and the public website are not updated by this revision.
 
 Public repository links were verified using GitHub's repository search. Summaries
 come from each default-branch README, except the Swift notebook:

@@ -21,6 +21,26 @@ assert.match(agentSkill.detail, /ongoing study/);
 const genaiSkill = skills.items.find((item) => item.title === "GenAI / RAG / LLM integration");
 assert.match(genaiSkill.meta, /TAPPP/);
 assert.equal(skills.items.filter((item) => /RAG/.test(item.title)).length, 1);
+const governance = skills.items.find((item) => item.title === "Architecture governance");
+assert.equal(governance.meta, "Swift · mavQ · LINK · TAPPP · DDN");
+for (const term of ["RFCs", "ADRs", "HLD/LLD", "sequence", "process diagrams", "release"]) {
+  assert.ok(governance.detail.includes(term), `Missing architecture practice: ${term}`);
+}
+const leadership = skills.items.find((item) => item.title === "Engineering and delivery leadership");
+assert.match(leadership.detail, /Concurrent project/);
+assert.match(leadership.detail, /hands-on/);
+const systems = skills.items.find((item) => item.title === "Systems performance and reliability");
+assert.match(systems.detail, /CPU\/memory profiling/);
+assert.match(systems.detail, /concurrent processing/);
+assert.match(systems.detail, /Go modernization/);
+assert.ok(skills.items.indexOf(systems) < skills.items.indexOf(leadership),
+  "Technical depth should precede leadership scope");
+const storage = skills.items.find((item) => item.title === "Storage and HPC integrations");
+assert.match(storage.meta, /DDN/);
+assert.match(storage.detail, /Lustre HTTP interface/);
+const operations = skills.items.find((item) => item.title === "Operational ownership and team development");
+assert.match(operations.detail, /runbooks/);
+assert.match(operations.detail, /mentoring/);
 const dsys = skills.items.flatMap((item) => item.points ?? [])
   .filter((point) => point.includes("D-SYS")).join(" ");
 assert.match(dsys, /analytics, structured data preparation and reporting/);

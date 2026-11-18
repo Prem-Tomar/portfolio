@@ -4,7 +4,7 @@ import CopyButton from "./CopyButton";
 import { getRecruiterTopics } from "./recruiterProfile";
 
 const metrics = [
-  { value: "Architecture", label: "Technical direction, service boundaries and platform modernization, with hands-on ownership through production." },
+  { value: "Architecture", label: "Hands-on system design and modernization, setting technical direction across concurrent projects and engineering teams." },
   { value: "Scale", label: "Cloud-native, distributed systems serving millions of daily users and transactions." },
   { value: "Domains", label: "Fintech, insurance, health, media, telecom, sports, commerce, logistics, transportation, social platforms, data storage, parallel file systems, HPC and AI infrastructure." },
   { value: "Reusable IP", label: "Shared platforms, integration contracts and reference implementations that give teams a stronger foundation to build on." },
@@ -12,39 +12,43 @@ const metrics = [
 
 const strengths = [
   "Rust, C++, C, Python / FastAPI, Go, Java / Spring Boot and Node.js",
-  "Distributed systems, microservices, REST and gRPC-style contracts",
+  "Concurrent processing, CPU/memory profiling and production diagnosis",
+  "Distributed systems, microservices, REST and gRPC contract concepts",
+  "EXAScaler / Lustre, storage integrations and AI / HPC data paths",
   "BPMN, Camunda, Temporal and workflow orchestration",
-  "Kafka-style event streams and analytics-ready data pipelines",
+  "Event-streaming patterns and analytics-ready data pipelines",
   "AWS, Kubernetes, Aurora / PostgreSQL, MongoDB and Redis / Valkey",
   "Observability, performance profiling and production RCA",
   "AI/ML, GenAI, AWS Bedrock and RAG / LLM integrations",
   "Agentic AI tooling, bounded coding tasks, tests and human review",
-  "Architecture governance, technical standards and senior mentorship",
+  "RFCs, ADRs, HLD/LLD, sequence diagrams and architecture reviews",
+  "Multi-project delivery, stakeholder alignment and engineering mentorship",
+  "Release readiness, runbooks and engineering-to-support handover",
 ];
 
 const systems = [
   {
     name: "Runtime and Micro-App Platform",
     detail:
-      "Reusable plug-and-play modules, shared service contracts, common onboarding flows and configurable runtime capabilities for high-scale client ecosystems.",
+      "TAPPP: consolidated client-specific capabilities into shared runtime modules, service contracts and configurable onboarding, giving multiple client ecosystems a common platform foundation.",
     stack: "Go, Java, Spring Boot, AWS, Kubernetes, Aurora, AppSync, Valkey",
   },
   {
     name: "Workflow and Decisioning Platform",
     detail:
-      "Stateful orchestration for intelligent routing, approvals, case lifecycles, SLA visibility and audit-friendly event-driven execution.",
+      "Defined execution flows and integration contracts for routing, approvals and case lifecycles, connecting workflow design with SLA visibility and audit-friendly operations.",
     stack: "BPMN, Camunda, Temporal, REST APIs, event-driven architecture",
   },
   {
     name: "Event and Insight Processing",
     detail:
-      "Rust workers and data paths that transform high-volume telemetry, engagement and shipment payloads into analytics-ready streams and feature-ready datasets.",
-    stack: "Rust, Go, Kafka-style streams, Spark-style processing, observability",
+      "TAPPP and Swift: hands-on Rust processing for event, insight and shipment workloads, connecting high-volume data paths with analytics and ML-driven decisions.",
+    stack: "Rust, Go, event-streaming and distributed-processing patterns, observability",
   },
   {
     name: "Commerce and Logistics Platform",
     detail:
-      "Checkout, payment and courier orchestration, merchant workflows, partner integrations and ML-driven shipment intelligence at production scale.",
+      "Swift: defined payment, courier and merchant service boundaries, backward-compatible partner contracts and configurable orchestration alongside SenseEngine shipment intelligence.",
     stack: "Go, Java, Python, Rust, Node.js, MySQL, MongoDB, AWS",
   },
 ];
@@ -57,6 +61,7 @@ const experience = [
     points: [
       "Working on EXAScaler within DDN's Global Engineering team: Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).",
       "I bring a background in Rust and distributed systems to my work on the EXAScaler Management Framework (EMF) and the Lustre HTTP interface for client integrations. My focus is I/O performance, data integrity and reliability.",
+      "Contribute to product and integration design through RFCs, ADRs, sequence diagrams and design/release reviews, connecting client requirements with implementation and operational considerations.",
       "Security considerations for these integrations include workload identity, tenant isolation and least-privilege access. Reading training data or writing a checkpoint is distinct from viewing cluster health or changing storage configuration.",
       "Network guardrails limit where a client can send data. Audit trails make denied requests traceable to the caller and operation without disclosing credentials or payloads.",
       "Product context: SFA (Storage Fusion Architecture) provides the storage foundation for EXAScaler appliance deployments. DDN's broader portfolio includes Infinia, a software-defined platform for multi-tenant data management and AI workflows, including inference and retrieval.",
@@ -67,10 +72,13 @@ const experience = [
     company: "SwissClear Services Private Limited",
     period: "Feb 2024 - Oct 2026",
     points: [
-      "Directed product architecture and platform engineering for distributed backend, runtime, workflow and micro-app systems serving 7M+ daily users.",
-      "Drove platform consolidation through reusable modules, shared contracts, API standards, configurable workflows and common onboarding patterns.",
-      "Integrated Generative AI (GenAI) capabilities using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis.",
-      "Built Rust event and insight processing workers; led Java-to-Go modernization, BPMN/Camunda/Temporal workflow orchestration and production RCA.",
+      "Set architecture direction for runtime, workflow and micro-app platforms serving 7M+ daily users. Consolidated client-specific capabilities into shared modules, service contracts and configurable onboarding across DTV, Globo, FIFA, Roku, BetPlay and Blackhawk ecosystems.",
+      "Led profile-driven Java-to-Go modernization around CPU, memory and latency behavior; redesigned asynchronous execution, private AWS networking and Aurora/AppSync/Valkey data paths for workload needs. Built Rust event workers and designed BPMN/Camunda/Temporal orchestration.",
+      "Integrated GenAI using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis within the product platform.",
+      "Led concurrent product and integration initiatives, aligning product, engineering, SRE, compliance and client stakeholders on platform trade-offs, dependencies and release priorities.",
+      "Reviewed service boundaries, data contracts and integration behavior through RFCs, ADRs, high- and low-level designs and sequence diagrams, giving teams a shared basis for implementation and change-impact decisions.",
+      "Connected observability and incident RCA to corrective engineering, API/schema governance and PCI/SOC2-aligned operations. Carried production requirements into release-readiness reviews, runbooks and support handover.",
+      "Mentored senior and architect-level engineers through design and code reviews, helping teams apply shared standards while staying hands-on in implementation and performance diagnosis.",
     ],
   },
   {
@@ -79,9 +87,11 @@ const experience = [
     formerBrand: "ShoppinPal",
     period: "May 2023 - Jan 2024",
     points: [
-      "Built distributed backend systems and internal tools for data migrations, partner integrations, workflow automation, QA traceability and operations.",
-      "Designed reliable REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed.",
-      "Modernized selected Java and Node.js components to Go and strengthened observability, CI/CD governance and RCA-led fixes.",
+      "Designed REST integrations and migration workflows for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed, making data integrity and backward compatibility explicit service-contract requirements.",
+      "Modernized selected Java and Node.js components to Go to address concurrency and runtime overhead in high-volume integration jobs, guided by CPU and memory behavior.",
+      "Reviewed partner behavior, contract changes and migration dependencies with engineers and stakeholders through RFCs, ADRs and sequence diagrams, connecting technical decisions to release impact.",
+      "Used incident RCA to identify reliability gaps and improve the diagnostic evidence needed to investigate integration failures. Connected observability with automated QA, release controls and operational runbooks, bridging engineering and support through corrective releases.",
+      "Mentored engineers through design reviews and production debugging, coordinating integration and migration work without losing hands-on ownership of complex changes.",
     ],
   },
   {
@@ -89,9 +99,11 @@ const experience = [
     company: "Maverick Quantum India Private Limited",
     period: "Aug 2022 - May 2023",
     points: [
-      "Led product delivery for no-code automation and workflow-oriented platform capabilities using API-first architecture and reusable abstractions.",
-      "Owned complex modules from service design and data modeling through testing, release planning and production support.",
-      "Delivered AWS Connect customer-experience capabilities and contributed to Intelligent Document Processing automation.",
+      "Shaped no-code automation architecture through API-first service boundaries, workflow execution flows and shared database/platform components for reuse across product modules.",
+      "Led design-to-release delivery of AWS Connect capabilities and contributed to Intelligent Document Processing. Reviewed implementation and tests against service designs and remained hands-on in complex modules.",
+      "Resolved data-model and integration choices through HLD/LLD, process and sequence diagrams, RFCs and ADRs, aligning product requirements with platform reuse and release scope.",
+      "Coordinated concurrent automation, customer-experience and document-processing work with product, engineering, operations and support, making delivery dependencies and release readiness visible across teams.",
+      "Guided engineers on shared components and production readiness; connected release checks, runbooks and support handover with follow-up fixes and platform improvements.",
     ],
   },
   {
@@ -99,10 +111,11 @@ const experience = [
     company: "GoSprint Logistics Private Limited",
     period: "Apr 2021 - Aug 2022",
     points: [
-      "Led checkout, payment and courier orchestration, merchant workflows, partner integrations and shipment-intelligence capabilities.",
-      "Designed resilient Java and Go microservices and Rust-backed processing paths for large-scale logistics datasets.",
-      "Architected SenseEngine's ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment.",
-      "Worked on sentiment analysis alongside shipment-intelligence capabilities.",
+      "Defined commerce and logistics platform boundaries across checkout, payments, couriers and merchant workflows. Built configurable BYOC/BYOP orchestration with backward-compatible partner contracts.",
+      "Architected SenseEngine's ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment. Also contributed sentiment analysis.",
+      "Designed Java/Go services and stayed hands-on in implementation, profiling and incident diagnosis, using production feedback to guide reliability and scalability decisions.",
+      "Led architecture discussions using RFCs, ADRs, process flows and sequence diagrams to review payment/courier interactions, technical trade-offs and release impact with product and operations teams.",
+      "Coordinated parallel commerce, logistics and shipment-intelligence initiatives, resolving delivery dependencies and connecting release readiness with operational support, runbooks and incident follow-up.",
     ],
   },
   {
@@ -130,16 +143,20 @@ const experience = [
 
 const practices = [
   {
-    title: "Platform architecture and governance",
-    text: "I translate product, business, compliance and operational expectations into service boundaries, platform roadmaps, API standards, data contracts and secure production controls.",
+    title: "System design and technical trade-offs",
+    text: "I define service boundaries, data contracts and execution flows around workload behavior, compatibility and failure conditions. RFCs, ADRs and design diagrams make the alternatives and consequences explicit; implementation and production evidence keep those decisions grounded.",
   },
   {
-    title: "Delivery and operational excellence",
-    text: "I connect architecture decisions to release planning, observability, capacity, production readiness and RCA-led improvements in throughput, resilience and auditability.",
+    title: "Runtime performance and reliability",
+    text: "I work directly with code, CPU/memory profiles and production traces to investigate latency, concurrency and runtime overhead. That diagnosis informs modernization and data-path decisions, with observability, incident RCA and runbooks connecting engineering changes to operational reliability.",
   },
   {
-    title: "Cross-functional technical leadership",
-    text: "I lead architecture and code reviews, mentor senior and architect-level engineers, and align product, QA, infrastructure, DevOps/SRE, compliance, operations and client stakeholders.",
+    title: "Technical direction across projects",
+    text: "I lead concurrent initiatives while staying involved in their critical designs and implementation. I align product, engineering, QA, SRE and client stakeholders on priorities, dependencies and risks, carrying technical decisions through release readiness and engineering-to-support handover.",
+  },
+  {
+    title: "Engineering standards and team development",
+    text: "I build shared components and reference implementations, then help engineers apply them through design reviews, code review and production debugging. Mentoring includes the reasoning behind a design, its tests and its operating limits, so teams can make sound decisions independently.",
   },
   {
     title: "AI-assisted engineering and tooling",
@@ -171,13 +188,13 @@ const education = [
   { type: "Postgraduate Program", subject: "Artificial Intelligence and Machine Learning", institute: "The University of Texas at Austin", period: "Facilitated by Great Learning" },
   { type: "Bachelor of Engineering", subject: "Information Technology", institute: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)", period: "2007 - 2012" },
 ];
-const profileSummary = "I set technical direction for distributed platforms and stay hands-on from system design and code to production. I balance scale, performance and reliability with cost, delivery speed and a lean, maintainable stack.";
+const profileSummary = "I am a hands-on systems engineer and architect. I design service boundaries and data paths, modernize runtimes and investigate performance in production. Across concurrent projects, I set technical direction, guide engineers and align stakeholders on trade-offs, dependencies and releases, balancing reliability and security with cost and delivery pace.";
 const consultingNote = "Additional consulting exposure includes Millennial Group Inc., Cloud Digital Arts, Cargo 3 IVS / FindACargo and independent client delivery from 2014 to 2019.";
 
 export default function Home() {
   const whatsappUrl = "https://wa.me/919606379003?text=Hi%20Prem%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const linkedinUrl = "https://www.linkedin.com/in/prem-tomar/";
-  const resumeUrl = "/resume.pdf?v=20261106-r10";
+  const resumeUrl = "/resume.pdf?v=20261118-r12";
 
   return (
     <main id="top">
@@ -195,16 +212,16 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero-inner content-width">
           <div className="hero-content">
-            <p className="eyebrow">Staff Engineer / Software Architect</p>
+            <p className="eyebrow">Systems Engineering &amp; Architecture / Engineering Leadership</p>
             <h1 id="hero-heading">Prem Tomar</h1>
-            <p className="hero-lead">Technical direction.<br />Hands-on engineering.</p>
+            <p className="hero-lead">Systems engineering.<br />Technical leadership.</p>
             <p className="hero-copy">{profileSummary}</p>
             <div className="hero-actions" aria-label="Portfolio actions">
               <a className="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Contact me <span aria-hidden="true">↗</span></a>
               <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer" aria-label="View resume PDF">Resume <span aria-hidden="true">↓</span></a>
               <span className="copyable-contact"><a className="text-link" href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><CopyButton text={linkedinUrl} label="LinkedIn profile URL" /></span>
             </div>
-            <p className="hero-appointment"><strong>Global Engineering at <a href="https://ddn.com" target="_blank" rel="noopener noreferrer">DDN</a></strong><span>· EXAScaler</span></p>
+            <p className="hero-appointment"><strong>Staff Engineer at <a href="https://ddn.com" target="_blank" rel="noopener noreferrer">DDN</a></strong><span>· Global Engineering / EXAScaler</span></p>
           </div>
           <div className="hero-sculpture" aria-hidden="true">
             <div className="sculpture-plane plane-back" /><div className="sculpture-plane plane-middle" />
@@ -233,14 +250,14 @@ export default function Home() {
       <section className="section expertise-section content-width" aria-labelledby="expertise-heading">
         <div className="section-heading"><p className="eyebrow">Core profile</p><h2 id="expertise-heading">Architecture first.<br />Hands-on throughout.</h2></div>
         <div className="expertise-layout">
-          <div className="expertise-intro"><p>My work sits where backend design, cloud infrastructure, performance engineering and product delivery meet.</p><p>I have led systems from architecture through implementation, release, incident analysis and long-term reliability improvement.</p></div>
+          <div className="expertise-intro"><p>My architecture work is grounded in implementation: concurrent processing, service and data contracts, runtime behavior and production reliability. That foundation spans shared product platforms, partner integrations, workflow engines and current EXAScaler storage work.</p><p>I take the same depth into technical leadership, guiding engineers and coordinating concurrent initiatives without stepping away from complex code, performance diagnosis or the consequences of design decisions.</p></div>
           <ul className="strength-list">{strengths.map((strength) => <li key={strength}>{strength}</li>)}</ul>
         </div>
       </section>
 
       <section className="section practice-section" aria-labelledby="practice-heading">
         <div className="content-width">
-          <div className="section-heading"><p className="eyebrow">Engineering practice</p><h2 id="practice-heading">From product strategy<br />to production outcomes.</h2></div>
+          <div className="section-heading"><p className="eyebrow">Engineering practice</p><h2 id="practice-heading">System design, engineering<br />and technical leadership.</h2></div>
           <div className="practice-list">{practices.map((practice, index) => <article className="practice-item" key={practice.title}><span className="row-index" aria-hidden="true">0{index + 1}</span><h3>{practice.title}</h3><p>{practice.text}</p></article>)}</div>
         </div>
       </section>

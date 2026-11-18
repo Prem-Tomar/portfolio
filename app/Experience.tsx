@@ -13,10 +13,10 @@ const companyYears = ["2026", "2024", "2023", "2022", "2021", "2014", "2010"];
 const companyLogos = ["/company-logos/ddn.svg", "/company-logos/tappp.svg", "/company-logos/link.svg", "/company-logos/mavq.svg", "/company-logos/swift.svg", "/company-logos/dsys.png"];
 const companyHighlights = [
   ["Part of Global Engineering, working on EXAScaler, DDN's Lustre-based parallel file system for AI and HPC.", "Work on the EXAScaler Management Framework and the Lustre HTTP interface for client integrations."],
-  ["Architected distributed runtime, workflow and micro-app platforms serving 7M+ daily users.", "Integrated GenAI with AWS Bedrock and RAG-backed LLM decision support."],
-  ["Built distributed backend systems and tooling for migrations, partner integrations and workflow automation.", "Delivered commerce integrations and modernized selected Java and Node.js components to Go."],
-  ["Led architecture and delivery for no-code automation and workflow platforms.", "Owned service design, data models and release quality, including AWS Connect and document-processing capabilities."],
-  ["Led commerce and logistics architecture across checkout, payments, couriers and partner integrations.", "Built Rust processing paths and SenseEngine for ML-driven shipment intelligence across 300K+ monthly orders."],
+  ["Architected shared runtime and workflow platforms serving 7M+ daily users.", "Led Java-to-Go modernization, Rust event processing and concurrent client initiatives, connecting performance engineering with platform standards and delivery."],
+  ["Designed commerce integration and migration contracts around data integrity and backward compatibility.", "Modernized high-volume jobs to Go, investigating concurrency and runtime overhead while guiding engineers through design, release and production support."],
+  ["Shaped API-first architecture, execution flows and shared components for no-code automation.", "Led AWS Connect delivery and contributed document processing, staying hands-on in complex modules while coordinating parallel product work."],
+  ["Defined commerce and logistics service boundaries and configurable payment/courier orchestration.", "Led parallel platform initiatives and SenseEngine shipment intelligence across 300K+ monthly orders, with hands-on Java, Go and Rust engineering."],
   ["Delivered mobile, enterprise and transportation systems across backend, data and production operations.", "Used Python for analytics, structured data preparation and reporting."],
   ["Progressed from intern to developer, delivering mobile, enterprise and web applications.", "Built Java systems and Python/Django services while modernizing applications into database-backed architectures."],
 ];

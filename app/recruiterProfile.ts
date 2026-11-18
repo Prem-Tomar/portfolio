@@ -44,6 +44,11 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
           "LINK, mavQ and Swift: backend services and integrations.",
           "D-SYS: Node.js/Express foundations for safety and security workflows.",
         ] },
+        { title: "Systems performance and reliability", meta: "TAPPP · LINK · Swift", detail: "CPU/memory profiling, concurrent processing and runtime-overhead investigation; hands-on Go modernization, Rust processing paths and incident diagnosis informing architecture decisions." },
+        { title: "Storage and HPC integrations", meta: "DDN · Current work", detail: "EXAScaler Management Framework and the Lustre HTTP interface for client integrations, with attention to I/O behavior, data integrity and reliability for AI/HPC workloads." },
+        { title: "Architecture governance", meta: "Swift · mavQ · LINK · TAPPP · DDN", detail: "Service boundaries, data contracts, integration trade-offs and release impact, reviewed through RFCs, ADRs, HLD/LLD, sequence and process diagrams and implementation evidence." },
+        { title: "Engineering and delivery leadership", detail: "Concurrent project leadership grounded in hands-on system design and implementation; stakeholder alignment, priorities, dependencies, delivery risks and release readiness across engineering initiatives." },
+        { title: "Operational ownership and team development", detail: "Production diagnosis, observability and incident RCA carried into corrective engineering, runbooks and engineering-to-support handover; mentoring through design, code and production-readiness reviews." },
       ],
     },
     {
@@ -67,11 +72,11 @@ export function getRecruiterTopics(resumeUrl: string): ProfileTopic[] {
     {
       command: "projects", label: "Project details", aliases: ["project"],
       items: [
-        { title: "BYOC / BYOP Orchestration", meta: "Swift", detail: "Configurable payment, courier and partner service boundaries, with backward-compatible APIs." },
-        { title: "SenseEngine", meta: "Swift", detail: "Shipment intelligence supporting 300K+ monthly orders, combining data processing and ML-driven optimization to reduce cost per shipment." },
-        { title: "Partner Integration Modernization", meta: "LINK", detail: "REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed, with compatibility and data-integrity controls across platform migrations." },
-        { title: "Shared Runtime and Onboarding", meta: "TAPPP", detail: "Reusable modules, shared service contracts and configurable onboarding across ecosystems including DTV, Globo, FIFA, Roku, BetPlay and Blackhawk Network." },
-        { title: "Customer Experience and Document Automation", meta: "mavQ", detail: "AWS Connect capabilities and document-processing automation, with ownership of service boundaries, testing and release quality." },
+        { title: "BYOC / BYOP Orchestration", meta: "Swift", detail: "Defined payment, courier and partner boundaries so orchestration could be configured through stable contracts; aligned integration dependencies and release plans across commerce and logistics work." },
+        { title: "SenseEngine", meta: "Swift", detail: "Architected shipment intelligence supporting 300K+ monthly orders, combining Rust data-processing paths and ML-driven optimization to reduce cost per shipment while coordinating wider platform delivery." },
+        { title: "Partner Integration Modernization", meta: "LINK", detail: "Designed migration and REST integration contracts for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed. Connected compatibility and data integrity with Go modernization, release controls and incident-driven reliability improvements." },
+        { title: "Shared Runtime and Onboarding", meta: "TAPPP", detail: "Consolidated client-specific capabilities into shared modules, contracts and configurable onboarding across DTV, Globo, FIFA, Roku, BetPlay and Blackhawk ecosystems, aligning platform standards with concurrent client releases." },
+        { title: "Customer Experience and Document Automation", meta: "mavQ", detail: "Shaped service boundaries and shared components for automation modules; led AWS Connect delivery and contributed document-processing capabilities with coordinated testing, release readiness and support handover." },
       ],
     },
     {

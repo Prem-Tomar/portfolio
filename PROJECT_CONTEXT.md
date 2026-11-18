@@ -1,6 +1,6 @@
 # Portfolio and Resume Handoff
 
-Last updated: 6 November 2026. Owner: Prem P S Tomar.
+Last updated: 18 November 2026. Owner: Prem P S Tomar.
 
 ## Project
 
@@ -9,7 +9,7 @@ Last updated: 6 November 2026. Owner: Prem P S Tomar.
 - React 19 + Vite 8 + TypeScript; static output in `dist/`.
 - Main content: `app/page.tsx`; styles: `app/globals.css`; entry: `src/main.tsx`.
 - Hero asset: `public/architecture-fabric.png`; provenance: `design/hero-image-prompt.txt`.
-- Resume download: `public/resume.pdf`, linked with `?v=20261106-r10`.
+- Local resume download: `public/resume.pdf`, linked with `?v=20261118-r12`.
 - Editable resume and authoring tools: `resume/`.
 - GitHub Actions: `.github/workflows/deploy.yml`, triggered by pushes to `main`.
 - Pages repository setting is `build_type: workflow` (Source: GitHub Actions).
@@ -20,6 +20,57 @@ Last updated: 6 November 2026. Owner: Prem P S Tomar.
 - No backend, visitor counter, account system or secret is needed to run this site.
 
 ## Latest Scope
+
+18 November refinement: preserve a strong systems-engineering identity while
+showing leadership scope. Systems engineering is the foundation; leadership is
+the scope of responsibility. Headline: Systems Engineering and Architecture /
+Engineering Leadership. Lead with service/data architecture, concurrent processing,
+runtime modernization, CPU/memory profiling and production diagnosis. Show
+multi-project direction, stakeholders, mentoring, releases and support alongside
+that technical evidence. RFCs/ADRs and delivery process support the narrative;
+they must not dominate it. Do not invent low-level production work in C/C++,
+kernel/RDMA/NUMA achievements, people-management authority or new metrics.
+
+18 November: the user requested a substantive leadership rewrite of the website
+and resume for Principal Solutions Architect, EM/Senior EM and director-track
+opportunities. Emphasize architecture, stakeholder alignment, people development,
+multiple concurrent projects, delivery dependencies, release readiness and
+engineering-to-support ownership, while remaining hands-on in code, profiling and
+production diagnosis. Preserve actual employment titles; do not invent director
+appointments, budgets, direct-report counts, hiring/performance-management scope
+or executive authority.
+
+The user explicitly clarified that architecture responsibilities from Swift
+through current DDN include RFCs/ADRs and the surrounding product/integration
+design process: HLD/LLD, sequence/process diagrams, technical discussions and
+release planning. Runbooks, observability and support handover are part of the
+requested leadership coverage. Tie these to each employer's product context,
+not a repeated generic task list. Do not extend that scope to D-SYS/Aadi.
+
+**PUBLICATION AUTHORIZED on 18 November 2026.** After local review, the user
+requested publication of the systems-first website and resume revision. Publish
+through the existing GitHub Pages workflow and verify the live page and PDF hash.
+LinkedIn is unchanged and remains a separate task. Current editable file:
+`resume/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx` (three pages).
+The earlier same-day draft is retained locally for comparison. Completed leadership
+experience now begins on page one; detailed skills are on page three, with a
+compact technical-focus line up front. Earlier D-SYS responsibilities are
+condensed from nine repetitive bullets to four, retaining dates, role progression,
+outsourcing note and analytics-only attribution.
+
+Release PDF SHA256:
+`9a149c6f5a174d7086bee821923f4c6dfe0484e35b8900846dbac5d13765cf8a`.
+The release supersedes the previously published revision below once Pages
+deployment completes. Verification requires the live site to show the systems-first
+headline and resume query `20261118-r12`, with the PDF hash above. Local checks
+include searchable PDF/DOCX text agreement, all PDF pages visually checked,
+profile tests, TypeScript and production build. Desktop/mobile browser checks
+found no text overflow; chapter expansion and updated resume links work. Word
+reports three pages but its PDF exporter fails on this machine; do not claim a
+successful Word PDF export for this revision. All three DOCX pages were instead
+visually inspected in Microsoft Word's print preview, with no clipping or spillover.
+
+## Previously Published Revision
 
 On 6 November, the user requested explicit AI/ML, GenAI, RAG, LLM and agentic AI
 coverage in resume responsibilities and in both portfolio and resume skills, then
@@ -39,7 +90,7 @@ overflow checks; all PDF and Word-rendered pages visually inspected. The PDF is
 searchable text with working contact links and no image-based resume content.
 These are local parsing/layout checks, not external ATS certification.
 
-Expected deployed PDF SHA256:
+Previous 6 November PDF SHA256:
 `2c8891a0530fb24cb3e7913c90439c49689b95af4b9ad5d1504cadb1dc7127ad`.
 Confirm the latest Pages workflow and live PDF after any deployment; a successful
 git push alone does not prove the public website updated.
@@ -48,7 +99,8 @@ git push alone does not prove the public website updated.
 
 - Architecture-first senior individual contributor, roughly 70% architecture and
   30% implementation emphasis, with hands-on ownership throughout the career.
-- Role heading: Staff Engineer / Software Architect. Use 14+ years.
+- Positioning heading: Systems Engineering and Architecture / Engineering Leadership.
+  Actual current role remains Staff Engineer at DDN. Use 14+ years.
 - Language priority: Rust, C++, C, Python, Go (Golang), Java/Spring Boot, Node.js.
 - Preserve established backend, cloud, data, workflow, security and leadership skills.
 - Cross-domain experience: fintech, insurance, health, media/broadcasting, telecom,

@@ -1,5 +1,4 @@
 import json
-import os
 import re
 from pathlib import Path
 
@@ -9,19 +8,23 @@ from pypdf import PdfReader
 
 
 root = Path(__file__).resolve().parents[2]
-resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-06.pdf'
-source = Path(os.environ.get('RESUME_BASELINE_PDF', root / 'public/resume.pdf'))
+resume = root / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.pdf'
 docx = Document(resume.with_suffix('.docx'))
 reader = PdfReader(resume)
 pages = [p.extract_text() for p in reader.pages]
 normalize = lambda text: re.sub(r'\s+', ' ', text).strip()
 text = normalize(' '.join(pages))
-source_text = normalize(' '.join(p.extract_text() for p in PdfReader(source).pages))
 assert len(pages) == 3
 assert all(len(page) > 2000 for page in pages)
 assert pages[0].startswith('PREM P S TOMAR')
-assert 'Agentic AI and AI-assisted engineering:' in pages[0]
-assert text.index('Agentic AI and AI-assisted engineering:') < text.index('PROFESSIONAL EXPERIENCE')
+assert 'Agentic AI and AI-assisted engineering:' in pages[2]
+assert text.index('PROFESSIONAL EXPERIENCE') < text.index('CORE SKILLS')
+assert 'SwissClear Services Private Limited (TAPPP)' in pages[0]
+assert 'Fermyon Technologies India Private Limited' in pages[0]
+assert 'multiple concurrent projects' in pages[0]
+assert 'Hands-on systems engineer and architect with 14+ years' in normalize(pages[0])
+assert 'Systems Engineering and Architecture | Engineering Leadership' in normalize(pages[0])
+assert 'concurrent processing, CPU/memory profiling and production diagnosis' in normalize(pages[0])
 assert 'AI ASSISTED ENGINEERING' not in text
 assert 'Systems programming: Rust, C++, C, Python;' in text
 assert text.index('Systems programming:') < text.index('AI/ML and Generative AI:') < text.index('Backend and architecture:')
@@ -48,28 +51,32 @@ for term in [
     'Great Learning', 'BITS Pilani', 'Oct 2028 (expected)',
     'diff-set generation', 'prem.tomar.blr@gmail.com', '9606379003',
     'GenAI', 'Model Context Protocol (MCP)', 'LangChain', 'LangGraph', 'MLOps/LLMOps',
+    'Requests for Comments (RFCs)', 'Architecture Decision Records (ADRs)', 'HLD/LLD',
+    'sequence and process diagrams', 'stakeholder management', 'runbooks',
+    'engineering-to-support handover', 'release-impact assessment',
     'Lustre', 'HPC', 'ultra-low-latency',
 ]:
-    assert term in text, f'Missing expected detail: {term}'
+    assert term.lower() in text.lower(), f'Missing expected detail: {term}'
 for term in ['ppst89', 'Incoming Staff Engineer', 'Starts 2 November 2026', 'Oracle-ready', 'Est Id', 'Member Id', 'Jun 2024 - Oct 2026', 'Sep 2021 - Aug 2022', 'Nov 2019 - Aug 2021', 'Aug 2021 - May 2023', '\ufffd']:
     assert term not in text, f'Unexpected or outdated text: {term}'
 assert text.count('Present') == 1, 'Only DDN is a current employer'
 assert 'DDN (DataDirect Networks India Private Limited)' in pages[0]
 ddn_text = text.split('DDN (DataDirect Networks India Private Limited)', 1)[1].split('SwissClear Services', 1)[0]
-assert 'Relevant integration security considerations' in ddn_text
+assert 'Integration design considers' in ddn_text
 assert not re.search(r'\b(?:SFA|Infinia|prototype|benchmark|achieved|delivered)\b|\d+%', ddn_text, re.I)
 assert not re.search(r'\b(?:RAG|LLM|GenAI|LangChain|LangGraph)\b', ddn_text)
 tappp_text = text.split('SwissClear Services Private Limited (TAPPP)', 1)[1].split('Fermyon Technologies India Private Limited', 1)[0]
+assert tappp_text.index('Java-to-Go modernization') < tappp_text.index('Led concurrent initiatives')
+assert tappp_text.index('built Rust workers') < tappp_text.index('Led concurrent initiatives')
 for term in ['Generative AI (GenAI)', 'AWS Bedrock', 'retrieval-augmented generation (RAG)', 'LLM-backed decision support']:
     assert term in tappp_text, f'Missing TAPPP AI responsibility: {term}'
-skills_text = text.split('CORE SKILLS', 1)[1].split('PROFESSIONAL EXPERIENCE', 1)[0]
+skills_text = text.split('CORE SKILLS', 1)[1].split('EDUCATION', 1)[0]
 for term in ['AI/ML', 'GenAI', 'RAG', 'LLM', 'Agentic AI', 'Coding agents', 'diff-set generation']:
     assert term in skills_text, f'Missing AI skill: {term}'
 
 inside_dsys = False
 dsys_count = 0
 dsys_text = []
-analytics_bullet = 'Used Python for analytics, structured data preparation, and reporting.'
 for para in docx.paragraphs:
     if para.text.startswith('D-SYS Data Solutions Private Limited |'):
         inside_dsys = True
@@ -78,13 +85,26 @@ for para in docx.paragraphs:
     if inside_dsys:
         dsys_text.append(para.text)
     if inside_dsys and para.style.name == 'List Bullet':
-        # User correction on 1 November: retain analytics, remove AI/ML claims.
-        if para.text != analytics_bullet:
-            assert normalize(para.text) in source_text, 'Unrelated D-SYS responsibility was altered'
         dsys_count += 1
-assert dsys_count == 9
-assert analytics_bullet in dsys_text
+# 18 November: condense repeated earlier-career tasks without changing their scope.
+assert dsys_count == 4
+for term in ['analytics, structured data preparation and reporting', '.NET MVC', 'Xamarin',
+             'Node.js/Express', 'Python/Django', 'Android/iOS', 'P2P', 'Linux/AWS',
+             'Dec 2014 - Feb 2018', 'Mar 2018 - Nov 2020']:
+    assert term in ' '.join(dsys_text), f'Missing earlier-career evidence: {term}'
 assert not re.search(r'\b(?:AI|ML|sentiment|recommendation|semi-supervised|intelligence)\b|model experimentation', ' '.join(dsys_text), re.I)
+assert not re.search(r'\b(?:RFCs|ADRs|HLD|LLD)\b', ' '.join(dsys_text))
+
+employers = ['DDN (DataDirect Networks India Private Limited)',
+             'SwissClear Services Private Limited (TAPPP)',
+             'Fermyon Technologies India Private Limited',
+             'Maverick Quantum India Private Limited',
+             'GoSprint Logistics Private Limited', 'D-SYS Data Solutions Private Limited']
+for start, end in zip(employers, employers[1:]):
+    role_text = text.split(start, 1)[1].split(end, 1)[0]
+    for term in ['RFCs', 'ADRs', 'sequence', 'release']:
+        assert term.lower() in role_text.lower(), f'Missing architecture responsibility at {start}: {term}'
+assert not re.search(r'\b(?:Director|Vice President|VP|P&L|headcount)\b', text), 'Do not invent executive titles or authority'
 for start, end in [
     ('SwissClear Services Private Limited (TAPPP)', 'Fermyon Technologies India Private Limited'),
     ('GoSprint Logistics Private Limited (Swift)', 'D-SYS Data Solutions Private Limited'),
@@ -112,7 +132,10 @@ with pdfplumber.open(resume) as pdf:
             assert 0 <= char['top'] <= char['bottom'] <= page.height
 
 result = {'pages': len(pages), 'characters_per_page': list(map(len, pages)),
-          'docx_text_matches_pdf': True, 'dsys_bullets_after_correction': dsys_count,
+          'docx_text_matches_pdf': True, 'condensed_dsys_bullets': dsys_count,
+          'architecture_governance_from_swift_to_ddn': True,
+          'leadership_experience_on_first_page': True,
+          'systems_engineering_first_positioning': True,
           'dsys_analytics_without_ai_ml': True, 'sentiment_at_swift_and_tappp': True,
           'links': links, 'text_only_pdf': True, 'text_within_page_bounds': True,
           'note': 'Local parsing and layout checks; not certification by an external ATS.'}

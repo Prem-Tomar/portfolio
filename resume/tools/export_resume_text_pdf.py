@@ -13,7 +13,7 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-06.docx'
+SOURCE = ROOT / 'resume/generated/Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx'
 OUTPUT = SOURCE.with_suffix('.pdf')
 FONTS = Path(os.environ.get('RESUME_FONT_DIR', 'C:/Windows/Fonts'))
 for name, filename in [
@@ -90,7 +90,7 @@ class ResumePDF(SimpleDocTemplate):
 
 pdf = ResumePDF(str(OUTPUT), pagesize=A4, leftMargin=.58*72, rightMargin=.58*72,
                         topMargin=.5*72, bottomMargin=.5*72,
-                        title='Prem P S Tomar - Staff Engineer and Software Architect',
+                        title='Prem P S Tomar - Systems Engineering Architecture and Leadership',
                         author='Prem P S Tomar', pageCompression=1)
 pdf.build(story)
 print(OUTPUT)

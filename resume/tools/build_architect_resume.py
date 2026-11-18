@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'resume' / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
-DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-06.docx'
+DEST = OUT / 'Prem_P_S_Tomar_Resume_2026-11-18_Systems_Leadership.docx'
 INK = RGBColor.from_string('202525')
 MUTED = RGBColor.from_string('566260')
 ACCENT = RGBColor.from_string('006B67')
@@ -147,7 +147,7 @@ def link(para, label_text, url):
 
 
 p('PREM P S TOMAR', 'Title', keep=True)
-p('Staff Engineer at DDN | Software Architect', 'Subtitle', keep=True)
+p('Systems Engineering and Architecture | Engineering Leadership', 'Subtitle', keep=True)
 contact = p('+91 9606379003  |  ', size=9.5, keep=True)
 link(contact, 'prem.tomar.blr@gmail.com', 'mailto:prem.tomar.blr@gmail.com')
 contact.add_run('  |  Pune, India').font.size = Pt(9.5)
@@ -157,65 +157,53 @@ links.add_run('  |  ').font.size = Pt(9.5)
 link(links, 'linkedin.com/in/prem-tomar', 'https://www.linkedin.com/in/prem-tomar/')
 
 section('Professional Summary')
-p('Staff Engineer in DDN\'s Global Engineering team, working on EXAScaler, with 14+ years of hands-on architecture and engineering across distributed platforms. Defines service boundaries, integration contracts and reusable platform foundations while remaining involved in code, profiling and production reliability. Experience spans systems programming, applied AI/ML, GenAI and RAG/LLM integrations, and cloud-native products across fintech, insurance, healthcare, media, telecom, commerce and logistics. Balances performance, security, cost and release velocity; leads technical decisions and mentors engineers.')
+p('Hands-on systems engineer and architect with 14+ years building and modernizing distributed products; currently Staff Engineer at DDN in Global Engineering, working on EXAScaler. Combines service and data architecture with concurrent processing, CPU/memory profiling and production diagnosis. Leads multiple concurrent projects, guiding engineers and aligning stakeholders on technical trade-offs, dependencies, releases and support. Built shared platforms across fintech, insurance, healthcare, media, telecom, commerce and logistics, balancing performance, resilience and security with operating cost and delivery pace.')
 
-section('Core Skills')
-for name, text in [
-    ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
-    ('Storage and HPC', 'EXAScaler/Lustre parallel storage, EMF, HTTP client integrations, AI training and checkpointing data paths.'),
-    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), large language model (LLM) integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
-    ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, gRPC-style contracts, API gateways, service decomposition, event-driven design.'),
-    ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
-    ('Data and event platforms', 'PostgreSQL/Aurora, MongoDB, Redis/Valkey, Kafka-style streams, Spark-style processing, Elasticsearch-style search, schema governance, data integrity, analytics and feature-ready pipelines.'),
-    ('Cloud and reliability', 'AWS, Kubernetes, Docker, OpenShift-aligned patterns, service mesh concepts, CI/CD, Git, monitoring, tracing, logging, profiling, production RCA and capacity planning.'),
-    ('Agentic AI and AI-assisted engineering', 'Coding agents and AI tools for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step, validate with tests and profiling, retain design ownership and code integrity.'),
-    ('Technical leadership', 'Architecture and code reviews, platform standards, API governance, roadmap and release planning, executive communication, cross-functional decisions, mentoring senior and architect-level engineers.'),
-    ('Security and compliance', 'PCI/SOC2-aligned workflows, secure service boundaries, privacy-aware data handling, auditability, regulated delivery and operational readiness.'),
-]:
-    label(name, text, 10)
+label('Technical focus', 'Rust, C++, C, Python, Go, Java/Spring Boot, Node.js; distributed systems, cloud platforms, storage/HPC, AI/ML, GenAI, RAG and LLM integrations.', 10)
 
 section('Professional Experience')
 role('DDN (DataDirect Networks India Private Limited)', 'Staff Engineer | Global Engineering', 'Nov 2026 - Present')
 bullets([
     'Work on the EXAScaler Management Framework (EMF) and the Lustre HTTP interface for client integrations, within DDN\'s Global Engineering team.',
-    'Focus on I/O performance, data integrity and reliability in Lustre-based parallel storage for AI training, checkpointing and high-performance computing (HPC).',
-    'Relevant integration security considerations include workload identity, tenant isolation, least-privilege access, network egress guardrails and auditable client operations.',
+    'Address I/O performance, data integrity and reliability in product and integration design for AI training, checkpointing and HPC; contribute RFCs, ADRs, sequence diagrams and design/release reviews.',
+    'Integration design considers workload identity, tenant isolation, least-privilege access, network egress guardrails and auditable client operations.',
 ])
 
-section('Professional Experience', new_page=True)
 role('SwissClear Services Private Limited (TAPPP)', 'Senior Architect / Principal Solutions Architect', 'Feb 2024 - Oct 2026')
 bullets([
-    'Directed architecture for distributed backend, runtime, workflow and micro-app platforms serving 7M+ daily users across media, sports, fintech and engagement products.',
-    'Consolidated client-specific capabilities into reusable modules, shared service contracts and configurable onboarding workflows, supporting ecosystems including DTV, Globo, FIFA, Roku, BetPlay and Blackhawk Network.',
-    'Integrated Generative AI (GenAI) capabilities using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis.',
-    'Built Rust workers for high-volume event and insight pipelines and designed BPMN/Camunda/Temporal orchestration.',
-    'Led Java-to-Go modernization using CPU, memory and latency profiles; redesigned asynchronous processing, private AWS networking and Aurora/AppSync/Valkey data paths for more efficient execution.',
-    'Established API, schema and release standards; led architecture reviews, senior-engineer mentorship, production RCA and PCI/SOC2-aligned delivery with product, SRE and compliance stakeholders.',
+    'Set architecture direction for runtime, workflow and micro-app platforms serving 7M+ daily users across media, sports and fintech; consolidated client-specific capabilities into shared modules, service contracts and configurable onboarding.',
+    'Led profile-driven Java-to-Go modernization, evaluating CPU, memory and latency behavior; redesigned asynchronous execution, private AWS networking and Aurora/AppSync/Valkey data paths around workload requirements.',
+    'Defined workflow execution with BPMN, Camunda and Temporal; built Rust workers for high-volume event and insight processing, keeping architecture decisions grounded in implementation and production behavior.',
+    'Integrated Generative AI (GenAI) using AWS Bedrock and retrieval-augmented generation (RAG) for LLM-backed decision support; contributed sentiment analysis within the product platform.',
+    'Led concurrent initiatives across DTV, Globo, FIFA, Roku, BetPlay and Blackhawk; aligned product, engineering, SRE and compliance on platform trade-offs, dependencies and releases, using RFCs, ADRs, HLD/LLD and sequence diagrams to review integration decisions.',
+    'Connected API/schema governance, observability and incident RCA to corrective engineering and PCI/SOC2-aligned delivery; mentored engineers through design/code reviews and established release readiness, runbooks and support handover.',
 ])
 
 role('Fermyon Technologies India Private Limited (LINK, formerly ShoppinPal)', 'Senior Software Engineer / Engineering Mentor', 'May 2023 - Jan 2024', 'Python/FastAPI, Go, Java, Node.js, AWS, REST integrations, CI/CD, observability')
 bullets([
-    'Designed migration, workflow and operational tools; delivered REST integrations for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed with data integrity and backward-compatible contracts.',
-    'Modernized selected Java and Node.js components to Go to reduce runtime overhead and improve concurrency, CPU and memory behavior in high-volume integration jobs.',
-    'Strengthened logging, QA automation, release controls and RCA-led fixes; mentored engineers through design reviews, debugging and production-readiness assessments.',
+    'Designed partner integrations and migration workflows for GoDaddy, Shopify, Clover, Square, Promenade and LightSpeed, making data integrity and backward compatibility explicit service-contract requirements.',
+    'Modernized selected Java and Node.js components to Go to address concurrency and runtime overhead in high-volume integration jobs, guided by CPU and memory behavior.',
+    'Reviewed partner behavior, contract changes and migration dependencies with engineers and stakeholders through RFCs, ADRs and integration sequence diagrams, connecting technical decisions to release impact.',
+    'Connected incident RCA to observability, automated QA, release controls and runbooks; bridged engineering and support during diagnosis and corrective releases, mentoring engineers through design and code reviews.',
 ])
 
+section('Professional Experience', new_page=True)
 role('Maverick Quantum India Private Limited (mavQ)', 'Software Development Lead', 'Aug 2022 - May 2023', 'Python/FastAPI, Java, Node.js, AWS Connect, API-first architecture, workflow automation, CI/CD')
 bullets([
-    'Led architecture and delivery of no-code automation capabilities, with API-first services, reusable abstractions and workflow execution designed for scale.',
-    'Owned service design, data models, testing and release; developed shared database and platform components and mentored engineers on production readiness.',
-    'Delivered AWS Connect customer-experience capabilities and contributed to Intelligent Document Processing automation in collaboration with product, operations and support teams.',
+    'Shaped the architecture of no-code automation and workflow capabilities, defining API-first service boundaries, execution flows and shared database/platform components for reuse across product modules.',
+    'Led AWS Connect capabilities from design through release and contributed Intelligent Document Processing; remained hands-on in complex modules, reviewing implementation and tests against service designs.',
+    'Resolved data-model and integration choices through HLD/LLD, process and sequence diagrams, RFCs and ADRs, aligning product requirements with platform reuse and release scope.',
+    'Coordinated parallel automation initiatives across product, engineering, operations and support; guided engineers on shared components, delivery dependencies, production readiness, runbooks and support handover.',
 ])
 
 role('GoSprint Logistics Private Limited (Swift)', 'Platform Lead', 'Apr 2021 - Aug 2022', 'Rust, Python, ML processing, Go, Java, Node.js, AWS, MySQL, MongoDB, checkout, payments and logistics')
 bullets([
-    'Led architecture of commerce and logistics capabilities spanning checkout, payments, courier orchestration, merchant workflows and partner integrations.',
-    'Architected SenseEngine\'s ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment; contributed sentiment analysis.',
-    'Defined resilient Java/Go service boundaries and backward-compatible APIs across payment, courier and partner systems; built BYOC and BYOP platforms for configurable orchestration.',
-    'Worked with product and operations teams on release quality, incident response and production scalability, retaining hands-on ownership of implementation and diagnosis.',
+    'Defined commerce and logistics platform boundaries across checkout, payments, couriers and merchant workflows; built configurable BYOC/BYOP orchestration with backward-compatible partner contracts.',
+    'Architected SenseEngine\'s ML-driven shipment intelligence across 300K+ monthly orders, combining Rust data-processing paths and optimization logic to reduce cost per shipment; also contributed sentiment analysis.',
+    'Designed and implemented Java/Go services; used profiling and incident diagnosis to guide scalability and reliability decisions across payment, courier and shipment workflows.',
+    'Led parallel platform initiatives with product and operations; used RFCs, ADRs, process flows and sequence diagrams to review integration trade-offs, dependencies and releases, carrying decisions into runbooks and support handover.',
 ])
 
-section('Professional Experience', new_page=True)
 p('D-SYS Data Solutions Private Limited | Gwalior, MP', 'Heading 2', keep=True)
 p('Employment and outsourced assignments | Dec 2014 - Nov 2020', size=10.5, keep=True)
 p('D-SYS outsourced assignments on client payrolls: Omega Healthcare Management Solutions (Nov 2019); Collasys Global Services (Dec 2019 - Feb 2020); Technosoft Consulting (Feb 2020 - May 2020); Cooey Technologies (Jul 2020 - Nov 2020).', size=9.5, muted=True, keep=True)
@@ -224,21 +212,16 @@ para = label('Environment', 'Python, Data Analysis, SQL, .NET MVC, C#, Entity Fr
 para.paragraph_format.line_spacing = Pt(11)
 para.paragraph_format.keep_with_next = True
 bullets([
-    'Delivered enterprise full-stack systems with .NET MVC, C#, SQL, and Xamarin, including transportation and e-way billing workflows for national road-traffic compliance use cases.',
-    'Used Python for analytics, structured data preparation, and reporting.',
-    'Built backend foundations for safety/security product workflows using Node.js and Express.js, guiding Angular, Node.js, Android, and backend engineers.',
-    'Owned backend and application features from design through implementation, debugging, deployment support, and client-facing resolution.',
+    'Delivered transportation and e-way billing compliance systems using .NET MVC, C#, SQL and Xamarin; used Python for analytics, structured data preparation and reporting.',
+    'Built Node.js/Express backend foundations for safety/security workflows and guided web, mobile and backend engineers from feature design through deployment and client-facing resolution.',
 ])
 p('Full-Stack / Mobile Developer | Dec 2014 - Feb 2018', 'Heading 3', keep=True)
 para = label('Environment', 'Java, Java OOP, Python/Django, .NET MVC, Entity Framework, Android, iOS, MySQL, MongoDB, AWS, Linux, P2P Server Management', 9.5)
 para.paragraph_format.keep_with_next = True
 para.paragraph_format.line_spacing = Pt(11)
 bullets([
-    'Delivered mobile, backend, marketplace, database, and production-server capabilities for client-facing product and enterprise engagements.',
-    'Engineered Java-led client systems with Python/Django support for admin workflows, APIs, client portals, and database-backed applications.',
-    'Implemented Android/iOS applications, server-side components, P2P server support, .NET MVC marketplace features, database designs, and operational deployment workflows.',
-    'Supported D-SYS Data Solutions product and client-delivery initiatives across mobile, marketplace, database-backed workflow, and server operations work.',
-    'Coordinated with distributed designers, developers, marketing teams, and business stakeholders to move requirements from concept to working production applications.',
+    'Built Java-led client systems, Python/Django APIs and administrative tools, Android/iOS applications and .NET MVC marketplace features, including database design and production deployment.',
+    'Supported Linux/AWS and P2P server operations; coordinated distributed design, engineering and business stakeholders from requirements through working client applications.',
 ])
 
 role('Aadi Infotech Pvt. Ltd. | Gwalior, MP', 'Software Developer / Software Intern', 'Feb 2010 - Feb 2014')
@@ -249,6 +232,23 @@ bullets([
 
 p('Concurrent Freelance and Consulting | Dec 2014 - Nov 2019', 'Heading 3', keep=True)
 p('Millennial Group Inc., Cloud Digital Arts, Cargo 3 IVS / FindACargo and independent clients: mobile apps, marketplace features, database workflows, server operations and release coordination.', size=10)
+
+section('Core Skills', new_page=True)
+for name, text in [
+    ('Systems programming', 'Rust, C++, C, Python; CPU and memory profiling, concurrent processing and high-volume data pipelines.'),
+    ('Storage and HPC', 'EXAScaler/Lustre parallel storage, EMF, HTTP client integrations, AI training and checkpointing data paths.'),
+    ('AI/ML and Generative AI', 'GenAI, AWS Bedrock, retrieval-augmented generation (RAG), large language model (LLM) integration, multi-LLM gateways, ML decisioning, fraud analytics, sentiment analysis, recommendations, probabilistic and forensic modeling.'),
+    ('Backend and architecture', 'Go (Golang), Java/Spring Boot, Node.js, TypeScript, FastAPI; distributed systems, microservices, REST APIs, API gateways, service decomposition and event-driven design; gRPC contract concepts.'),
+    ('Architecture practice', 'Requests for Comments (RFCs), Architecture Decision Records (ADRs), high-level and low-level design (HLD/LLD), sequence and process diagrams, requirements analysis, non-functional requirements, technical trade-offs, service/data contracts, integration reviews and migration planning.'),
+    ('Workflow and decisioning', 'BPMN, Camunda, Temporal, Flowable concepts, state machines, routing, approvals, SLA visibility, audit trails, case lifecycles and document-processing automation.'),
+    ('Data and event platforms', 'PostgreSQL/Aurora, MongoDB, Redis/Valkey, schema governance, data integrity, analytics and feature-ready pipelines; Kafka event-streaming, Spark processing and Elasticsearch search patterns.'),
+    ('Cloud and reliability', 'AWS, Kubernetes, Docker, CI/CD, Git, monitoring, tracing, logging, profiling, production RCA and capacity planning; OpenShift and service mesh concepts.'),
+    ('Agentic AI and AI-assisted engineering', 'Coding agents for bounded diff-set generation, refactoring analysis, test scaffolding and performance investigation; review each step and validate through tests, profiling and code review, retaining design ownership and code integrity.'),
+    ('Engineering leadership', 'Multi-project delivery, stakeholder management, scope/priorities, dependencies and delivery risks, roadmap planning, architecture/code reviews, platform standards, API governance, executive communication, mentoring engineers and technical leads.'),
+    ('Delivery and service operations', 'Release-impact assessment, readiness reviews, operational runbooks, engineering-to-support handover, incident coordination and corrective-action follow-through.'),
+    ('Security and compliance', 'PCI/SOC2-aligned workflows, secure service boundaries, privacy-aware data handling, auditability, regulated delivery and operational readiness.'),
+]:
+    label(name, text, 10)
 
 section('Education')
 label('M.Tech in Artificial Intelligence and Machine Learning', 'BITS Pilani | Oct 2026 - Oct 2028 (expected); in progress.', 10)
@@ -267,7 +267,7 @@ footer._p.append(field)
 for r in footer.runs:
     r.font.color.rgb = MUTED
 
-doc.core_properties.title = 'Prem P S Tomar - Staff Engineer and Software Architect'
+doc.core_properties.title = 'Prem P S Tomar - Systems Engineering Architecture and Leadership'
 doc.core_properties.subject = 'Professional resume'
 doc.core_properties.author = 'Prem P S Tomar'
 doc.core_properties.keywords = 'Staff Engineer, Software Architect, DDN, EXAScaler, Lustre, Storage, HPC, Rust, C++, C, Python, AI/ML, Generative AI, GenAI, LLM, RAG, Agentic AI, MCP, Go, Golang, Java, Node.js, Distributed Systems, Cloud'
