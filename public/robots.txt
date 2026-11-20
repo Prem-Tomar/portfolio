@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /resume-old.pdf
 
 Sitemap: https://premtomar.com/sitemap.xml
